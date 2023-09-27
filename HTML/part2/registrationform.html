@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+
+    <form>
+
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fname">First Name:</label>
+            <input id="fname" type="text"> <br>
+            <label for="lname">Last Name:</label>
+            <input id="lname" type="text"> <br>
+            <label for="age">Age:</label>
+            <input id="age" type="number"> <br>
+            <label for="gender">Gender:</label>
+            <select name="" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="email">Email address:</label>
+            <input id="email" type="text"> <br>
+            <label for="pass">Password:</label>
+            <input id="pass" type="text"> <br>
+            <label for="country">Country</label>
+            <select name="" id="country">
+                <optgroup label="Europe">
+                    <option value="">France</option>
+                    <option value="">Germany</option>
+                    <option value="">Italy</option>
+                </optgroup>
+
+                <optgroup label="Asia">
+                    <option value="">China</option>
+                    <option value="">India</option>
+                    <option value="">Japan</option>
+
+                </optgroup>
+
+                <optgroup label="Other">
+                    <option value="">United States</option>
+                    <option value="">Canada</option>
+                    <option value="">United Kingdom</option>
+
+                </optgroup>
+
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Address Information</legend>
+
+            <label for="address">Address:</label>
+            <input id="address" type="text"> <br>
+            <label for="city">City:</label>
+            <input id="city" type="text"> <br>
+            <label for="postalcode">Postal Code:</label>
+            <input id="postalcode" type="text"> <br>
+            <label for="phonenumber">Phone Number:</label>
+            <input id="phonenumber" type="text">
+
+        </fieldset>
+
+        <label for="comments">Additional Comments:</label> <br>
+        <textarea name="" id="comments" cols="30" rows="10"></textarea> <br>
+        <input id="subscribe" type="checkbox">
+        <label for="subscribe">Subscribe to our newsletter</label> <br>
+        <input type="submit" value="Register">
+
+
+    </form>
+
+
+</body>
+
+</html>
