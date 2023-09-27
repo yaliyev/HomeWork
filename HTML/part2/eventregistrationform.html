@@ -15,13 +15,13 @@
         <legend>Personal Information</legend>
 
         <label for="fname">Full Name:</label>
-        <input id="fname" type="text">  <br>
+        <input required minlength="2" id="fname" type="text">  <br>
 
         <label for="email">Email address:</label>
-        <input id="email" type="text">  <br>
+        <input required id="email" type="text">  <br>
 
         <label for="pnumber">Phone Number:</label>
-        <input id="pnumber" type="text">  <br>
+        <input required id="pnumber" type="text">  <br>
 
     </fieldset>
 
@@ -57,9 +57,11 @@
     <label for="comments">Additional Comments:</label> <br>
     <textarea name="" id="comments" cols="30" rows="10"></textarea> <br>
 
-    <input type="checkbox" name="" id="agreement"> <label for="agreement">I agree to the terms and conditions</label> <br>
+    <input required type="checkbox" name="" id="agreement"> <label for="agreement">I agree to the terms and conditions</label> <br>
 
     <input type="submit" value="Register">
+
+    <input type="reset">
 
 </body>
 

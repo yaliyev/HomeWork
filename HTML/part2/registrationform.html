@@ -17,13 +17,13 @@
             <legend>Personal Information</legend>
 
             <label for="fname">First Name:</label>
-            <input id="fname" type="text"> <br>
+            <input minlength="3" id="fname" name="fname" type="text"> <br>
             <label for="lname">Last Name:</label>
-            <input id="lname" type="text"> <br>
+            <input  minlength="3" id="lname" name="lname" type="text"> <br>
             <label for="age">Age:</label>
-            <input id="age" type="number"> <br>
+            <input required min="0" max="100" id="age" name="age" type="number"> <br>
             <label for="gender">Gender:</label>
-            <select name="" id="gender">
+            <select name="gender" id="gender">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
@@ -33,11 +33,11 @@
         <fieldset>
             <legend>Contact Information</legend>
             <label for="email">Email address:</label>
-            <input id="email" type="text"> <br>
+            <input id="email" name="email" type="text"> <br>
             <label for="pass">Password:</label>
-            <input id="pass" type="text"> <br>
+            <input id="pass" name="pass" type="password"> <br>
             <label for="country">Country</label>
-            <select name="" id="country">
+            <select name="country" id="country">
                 <optgroup label="Europe">
                     <option value="">France</option>
                     <option value="">Germany</option>
@@ -65,19 +65,19 @@
             <legend>Address Information</legend>
 
             <label for="address">Address:</label>
-            <input id="address" type="text"> <br>
+            <input id="address" name="address" type="text"> <br>
             <label for="city">City:</label>
-            <input id="city" type="text"> <br>
+            <input id="city" name="city" type="text"> <br>
             <label for="postalcode">Postal Code:</label>
-            <input id="postalcode" type="text"> <br>
+            <input id="postalcode" name="postalcode" type="text"> <br>
             <label for="phonenumber">Phone Number:</label>
-            <input id="phonenumber" type="text">
+            <input id="phonenumber" name="phonenumber" type="text">
 
         </fieldset>
 
         <label for="comments">Additional Comments:</label> <br>
-        <textarea name="" id="comments" cols="30" rows="10"></textarea> <br>
-        <input id="subscribe" type="checkbox">
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea> <br>
+        <input id="subscribe" name="subscribe" type="checkbox">
         <label for="subscribe">Subscribe to our newsletter</label> <br>
         <input type="submit" value="Register">
 
