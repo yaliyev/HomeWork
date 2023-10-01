@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main-box>div{
+    display: inline-block;
+}
+.main-box{
+    width: 65vw; 
+    height: 10vh;
+    border: 3px solid;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.box-1{
+    width: 3.5vw;
+    height: 6vh;
+    background-color: yellow;
+    margin: 15px 0 0 30px;
+}
+
+.box-2{
+    width: 34vw;
+    height: 6vh;
+    background-color: yellow;
+    margin-left: 150px;
+}
+
+.box-2>div{
+    display: block;
+    float: left;
+}
+
+.box-2-1{
+    margin-top: 1.5vh;
+    margin-left: 2vw;
+    width: 8vw;
+    height: 4.5vh;
+    background-color: rgb(19, 160, 231);
+}
+.box-2-1-1{
+    width: 2vw;
+    height: 3.5vh;
+    margin-left: 6vw;
+    background-color: red;
+}
+
+.box-2-2{
+    margin-top: 2vh;
+    margin-left: 4vw;
+    width: 8vw;
+    height: 4vh;
+    background-color: rgb(19, 160, 231);
+}
+
+.box-2-3{
+    margin-top: 2vh;
+    margin-left: 8vw;
+    width: 3vw;
+    height: 4vh;
+    background-color: rgb(19, 160, 231);
+}
+.box-3{
+    margin-left: 10vw;
+    width: 4vw;
+    height: 6vh;
+    background-color: yellow;
+}
+.box-3-1{
+    width: 2vw;
+    height: 4vh;
+    margin-left: 1vw;
+    margin-top: 0.5vh;
+    border: 3px solid rgb(55, 183, 55);
+}
