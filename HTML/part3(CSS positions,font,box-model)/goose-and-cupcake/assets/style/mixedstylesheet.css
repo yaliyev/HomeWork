@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+@font-face{
+    font-family: 'Lora Italic';
+    src: url("../fonts/Lora-Italic-VariableFont_wght.ttf");
+}
+
+@font-face{
+    font-family: 'Patua One-Regular';
+    src: url("../fonts/PatuaOne-Regular.ttf");
+}
+
+.page{
+    width: 100vw;
+    height: 100vh;
+}
+
+.page.goose{
+    background-color: rgba(241, 216, 103, 0.352);
+}
+
+.goose .box{
+    width: 60vw;
+    height: 80vh;
+    margin: auto;
+}
+.goose .box .logo{
+  width: 10vw;
+  margin: auto;
+}
+.goose .box .logo img{
+    width: 100%;
+    height: 100%;
+}
+.goose .box>.title{
+    
+    font-size: 30px;
+    font-family: 'Lora Italic';
+    text-align: center;
+    font-weight: bold;
+}
+.goose .box .line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(44, 240, 217);
+}
+.heading *{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 1vh;
+}
+.heading>.title{
+    color: rgb(235, 121, 15);
+    font-weight: 600;
+}
+
+/* Page Cupcake */
+
+.page.cupcake>.header{
+  height: 8vh;
+  background-color: rgb(6, 187, 242);
+  padding-top: 3vh;
+  padding-left: 3vh;
+}
+.page.cupcake>.header>.title{
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Patua One-Regular';
+}
+.page.cupcake>.header>.description{
+    color: white;
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.page.cupcake .first-component{
+    height: 45vh;
+    background-color: azure;
+}
+
+.page.cupcake .first-component .first-box{
+    width: 30vw;
+    height: 17vh;
+    background-color: rgb(21, 232, 35,0.7);
+    margin: 3vh auto;
+    border: 3px solid green;
+    padding: 20px;
+}
+
+.page.cupcake .first-component .first-box .author{
+   margin: 50px 0 0 50px;
+    text-align: right;
+}
+
+.page.cupcake .first-component .second-box{
+    width: 20vw;
+    margin: auto;
+    background-color: rgb(226, 58, 7);
+    border-radius: 20px;
+    padding: 45px 60px;
+    text-align: center;
+    color: white;
+}
+.page.cupcake .first-component .second-box .box-link>a{
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: underline white 3px;
+}
+.page.cupcake .second-component{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 25vh;
+    background-color: rgba(12, 6, 32, 0.892);
+    padding: 3vh 10vw 10vh 5vh;
+
+}
+
+.page.cupcake .second-component .title{
+    font-size: 1.5em;
+}
+
+.page.cupcake .second-component .title,.page.cupcake .second-component .text{
+    
+    margin-top: 2vh;
+}
+.footer{
+    box-sizing: border-box;
+    height: 6vh;
+    background-color: black;
+}
+.footer .sweeties-list{
+    width: fit-content;
+    margin: 0 auto;
+}
+.footer .sweeties-list>li{
+    list-style-type: none;
+    display: inline-block;
+    color: rgb(59, 116, 135);
+    padding-top: 2vh;
+    
+}
+.footer .sweeties-list>.elements::after{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    content: '/';
+}
+
+
