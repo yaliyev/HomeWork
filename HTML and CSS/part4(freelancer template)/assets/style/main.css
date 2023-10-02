@@ -163,6 +163,48 @@ header{
     margin-top: 30px;
 }
 
+.about{
+    padding: 80px 0 0 0;
+    background-color: #1ABC9C;
+}
+.aboutrow{
+    justify-content: center;
+}
+.about-title{
+    text-align: center;
+    font-size: 3em;
+}
+
+.about-text{
+    font-size: 1.25em;
+    color: white;
+    font-family:  LatoLight300;
+    font-weight: bold;
+}
+
+.download-row{
+    justify-content: center;
+}
+
+.download-box{
+    
+    padding: 15px 40px;
+    color: white;
+    margin: 5vh 0;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-family:  LatoLight300;
+    font-weight: bold;
+    font-size: 1.12em;
+    white-space: nowrap;
+}
+
+.download-box:hover{
+    background-color: white;
+    transition: 0.2s;
+    color: black;
+}
+
 @media only screen and (max-width:768px){
     .hyperlinks{
         display: none;
