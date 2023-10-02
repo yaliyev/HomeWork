@@ -11,6 +11,7 @@ header{
 }
 
 .title-link,[class|="link"]{
+    cursor: pointer;
     color: white;
     font-size: 1.5em;
     font-family: MontserratBold700;
@@ -25,9 +26,72 @@ header{
     border-radius: 8px;
     font-size: 1em;
 }
-#selected-menu{  /*  heleki js kecmemisik deyene #selected-menu sadece hansisa link-de default saxlanilir  */
+[class|="link"]:hover{
+    color: #1ABC9C;
+    transition: 0.3s;
+}
+#selected-menu{  /*  heleki js kecmemisik deyene #selected-menu sadece hansisa link-de default saxlanilir.Bu layihede hec bir linke salinmayib.JS-den sonra salinacaq  */
     background-color: #1ABC9C;
 }
+
+.hero{
+    background-color: #1ABC9C;
+    padding: 70px 0 50px 0;
+}
+
+#avatar-row{
+    justify-content: center;
+}
+
+.authorphoto{
+    width: 240px;
+    height: 254px;
+    margin: 0 auto;
+}
+.authorphoto img{
+    width: 100%;
+    height: 100%;
+}
+.hero-title{
+    font-size: 64px;
+   text-align: center;
+    
+}
+
+.star-components{
+    width: fit-content;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+
+.star{
+    width: 33px;
+    height: 32px;
+    display: inline-block;
+    margin: 0 16px;
+}
+
+
+.star .star-icon path{
+    fill: white;
+}
+.line{
+    width: 112px;
+    height: 4px;
+    background-color: white;
+    display: inline-block;
+    margin-bottom: 1.5vh;
+    border-radius: 10px;
+}
+
+.authorinfo{
+    margin: 4vh 0;
+    font-family: LatoRegular400;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
 
 @media only screen and (max-width:768px){
     .hyperlinks{
