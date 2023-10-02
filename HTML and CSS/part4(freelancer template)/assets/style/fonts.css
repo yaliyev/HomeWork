@@ -1,0 +1,12 @@
+@font-face {
+    font-family: MontserratBold700;
+    src: url(../fonts/Montserrat/static/Montserrat-Bold.ttf);
+}
+@font-face{
+    font-family: LatoLight300;
+    src: url(../fonts/Lato/Lato-Light.ttf);
+}
+@font-face{
+    font-family: LatoRegular400;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
