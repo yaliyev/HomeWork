@@ -31,3 +31,119 @@ header .header-row .text{
     text-align: justify;
     text-align-last: center;
 }
+
+.tours{
+    height: 60vh;
+    background-color: #F2F8FB;
+}
+.tours-row{
+    column-gap: 20px;
+    padding: 0 100px;
+    flex-wrap: nowrap;
+}
+.tour-card{
+    position: relative;
+    background-color: white;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: 0.3s;
+}
+
+
+
+.tour-card-image-component{
+    width: 100%;
+    height: 240px;
+}
+.tour-card-image{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+    
+}
+
+.tour-card .book-button{
+    position: absolute;
+    left: calc(50% - 62.5px);
+    padding: 10px 25px;
+    margin: auto;
+    background-color: rgb(237, 74, 40);
+    color: white;
+    border: none;
+    border-radius:5px;
+    font-size: 0.9375em;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.tours .tour-card .black-overlay{
+    width: 100%;
+    height: 240px;
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 0;
+    border-radius: 8px;
+    position: absolute;
+    transition: 0.3s;
+}
+
+.tour-card:hover .black-overlay{
+    
+    opacity: 0.45;
+} 
+.tour-card:hover .book-button{
+    transform: translate(0%,250%);
+    opacity: 1;
+}
+
+
+.tours .tour-card-title,.tours .tour-card-text,.tours .tour-card-details{
+    margin: 8px 20px;
+}
+.tours .tour-card-title{
+   font-family: K2D;
+   font-size: 24px;
+   font-weight: 700;
+}
+.tours .tour-card-text{
+  font-family: Poppins;
+  font-size: 0.875em;
+  color: #646464;
+  font-weight: 300;
+  text-align: left;
+}
+.tours .tour-card-details{
+    border-top: 1px solid #AAAAAA;
+    padding-top: 10px;
+}
+.tours .detail-row{
+    display: flex;
+    justify-content: space-between;
+}
+.tours .tour-card-details-price{
+    color: #ff7a58;
+    font-family: K2D;
+    font-size: 1.5em;
+}
+.tours .tour-card-details .stars{
+    width: fit-content;
+    margin-top: 5px;
+}
+.tours .tour-card-details .stars .star{
+    color: rgb(238, 206, 24);
+}
+.tours .tour-card-details .detail-row .duration{
+    font-family: K2D;
+    font-size: 0.9375em;
+    color: #808080;
+}
+.tours .tour-card-details .detail-row .rating{
+    display: block;
+    width: 108px;
+    text-align: center;
+    font-family: K2D;
+    font-size: 0.9375em;
+    color: #808080;
+}
