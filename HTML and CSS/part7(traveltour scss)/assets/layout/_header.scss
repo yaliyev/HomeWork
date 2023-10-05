@@ -1,0 +1,51 @@
+$header-bg-color: #F2F8FB;
+$header-ordinary-text-color: #888;
+$header-heading-font: K2D;
+$header-text-font: Poppins;
+
+@mixin full-height{
+    height: 100%;
+}
+
+header{
+    height: 30vh;
+    background-color: $header-bg-color;
+
+    .header-container{
+        @include full-height;
+    }
+
+    .header-row{
+        @include full-height;
+        justify-content: center;
+
+        & .title{
+            text-align: center;
+            font-family: $header-heading-font;
+            font-weight: 700;
+            font-size: 2em;
+            color: #292B2C;
+        }
+
+        &  .header-text-row{
+            @include full-height;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & .text{
+            margin-top: 20px;
+            font-family: $header-text-font;
+            font-size: 0.875em;
+            color: $header-ordinary-text-color;
+            padding: 0 30px;
+            text-align: justify;
+            text-align-last: center;
+        }
+    }
+
+    
+}
+
+
+
