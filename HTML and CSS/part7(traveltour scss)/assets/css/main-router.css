@@ -574,4 +574,258 @@ header .header-row .text {
   padding: 0 30px;
   text-align: justify;
   text-align-last: center;
-}/*# sourceMappingURL=main.css.map */
+}
+
+.tours {
+  height: 110vh;
+  background-color: #F2F8FB;
+}
+.tours .tours-row {
+  column-gap: 20px;
+  padding: 0 100px;
+  flex-wrap: nowrap;
+}
+.tours .tours-row:not(.tours-row:first-of-type) {
+  margin-top: 20px;
+}
+.tours .tour-card {
+  position: relative;
+  background-color: white;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 0px 20px 90px rgb(191, 176, 176);
+}
+.tours .tour-card .book-button {
+  position: absolute;
+  left: calc(50% - 62.5px);
+  padding: 10px 25px;
+  margin: auto;
+  background-color: rgb(237, 74, 40);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9375em;
+  opacity: 0;
+  transition: 0.7s;
+}
+.tours .tour-card .black-overlay {
+  width: 100%;
+  height: 240px;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  border-radius: 8px;
+  position: absolute;
+  transition: 0.3s;
+}
+.tours .tour-card:hover .black-overlay {
+  opacity: 0.45;
+}
+.tours .tour-card:hover .book-button {
+  transform: translate(0%, 250%);
+  opacity: 1;
+}
+.tours .tour-card .tour-card-image-component {
+  width: 100%;
+  height: 240px;
+}
+.tours .tour-card .tour-card-image {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+}
+.tours .tour-card .tour-card-title, .tours .tour-card .tour-card-text, .tours .tour-card .tour-card-details {
+  margin: 8px 20px;
+}
+.tours .tour-card .tour-card-title, .tours .tour-card .tour-card-text {
+  font-family: K2D;
+  font-size: 24px;
+  font-weight: 700;
+}
+.tours .tour-card .tour-card-text {
+  font-family: Poppins;
+  font-size: 0.875em;
+  color: #646464;
+  font-weight: 300;
+  text-align: left;
+}
+.tours .tour-card .tour-card-details {
+  border-top: 1px solid #AAAAAA;
+  padding-top: 10px;
+}
+.tours .tour-card .detail-row {
+  display: flex;
+  justify-content: space-between;
+}
+.tours .tour-card .tour-card-details-price {
+  color: #ff7a58;
+  font-family: K2D;
+  font-size: 1.5em;
+}
+.tours .tour-card .tour-card-details .stars {
+  width: fit-content;
+  margin-top: 5px;
+}
+.tours .tour-card .tour-card-details .stars .star {
+  color: rgb(238, 206, 24);
+}
+.tours .tour-card .tour-card-details .detail-row .duration {
+  font-family: K2D;
+  font-size: 0.9375em;
+  color: #808080;
+}
+.tours .tour-card .tour-card-details .detail-row .rating {
+  display: block;
+  width: 108px;
+  text-align: center;
+  font-family: K2D;
+  font-size: 0.9375em;
+  color: #808080;
+}
+.tours .row.tours-row.laptop {
+  display: none;
+}
+.tours .row.tours-row.mobile {
+  display: none;
+}
+.tours .row.view-tours-button-row {
+  justify-content: center;
+}
+.tours .row.view-tours-button-row button {
+  margin-top: 5vh;
+  margin-left: 7vw;
+  background-color: rgb(237, 74, 40);
+  font-size: 1em;
+  font-weight: 400;
+  font-family: Poppins;
+  color: white;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.tours .row.view-tours-button-row button:hover {
+  transform: scale(0.94, 0.94);
+  background-color: rgba(185, 44, 16, 0.849);
+}
+@media only screen and (max-width: 992px) {
+  .tours .row.tours-row.desktop {
+    display: none;
+  }
+  .tours .row.tours-row.laptop {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  .tours {
+    height: fit-content;
+  }
+  .tours .laptop-version {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .tours .row.booking-services {
+    display: none;
+  }
+  .tours .row.booking-services.laptop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .tours .row.booking-services .booking-service .info-text {
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .tours .row.tours-row.desktop {
+    display: none;
+  }
+  .tours .row.tours-row.laptop {
+    display: none;
+  }
+  .tours .row.tours-row.mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+  }
+}
+
+.services {
+  height: 70vh;
+}
+.services .services-container {
+  height: 100%;
+}
+.services .services-row {
+  justify-content: center;
+  padding-top: 5vh;
+}
+.services .services-title {
+  text-align: center;
+  font-family: K2D;
+  font-weight: 700;
+  font-size: 2em;
+  color: #292B2C;
+}
+.services .services-description {
+  margin-top: 20px;
+  font-family: "Poppins";
+  font-size: 0.875em;
+  color: #888;
+  padding: 0 30px;
+  text-align: justify;
+  text-align-last: center;
+}
+.services .booking-services .booking-service .logo {
+  margin-left: 9vw;
+  margin-top: 10px;
+}
+.services .booking-services .booking-service .logo:hover .hotel {
+  z-index: 3;
+}
+.services .booking-services .booking-service .logo .hidden-circle {
+  transition: 0.7s;
+  transition-timing-function: ease-out;
+  border-radius: 50%;
+}
+.services .booking-services .booking-service .logo:hover .hotel {
+  color: white;
+}
+.services .booking-services .booking-service .logo:hover .hidden-circle {
+  display: inline-block;
+  position: absolute;
+  left: calc(50% - 5px);
+  top: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  background-color: #FD5A38;
+  transform: scale(7.2, 7.2);
+}
+.services .booking-services .booking-service .circle {
+  color: #FD5A38;
+}
+.services .booking-services .booking-service .hotel {
+  color: #FD5A38;
+}
+.services .booking-services .booking-service .logo-title {
+  text-align: center;
+  font-family: K2D;
+  font-size: 1.4375em;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.services .booking-services .booking-service .info-text {
+  font-family: K2D;
+  font-size: 1em;
+  color: #888;
+  text-align: center;
+  padding: 20px 20px;
+}
+.services .row.booking-services.laptop {
+  display: none;
+}/*# sourceMappingURL=main-router.css.map */
