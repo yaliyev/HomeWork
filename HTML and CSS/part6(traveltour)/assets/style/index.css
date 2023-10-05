@@ -184,6 +184,98 @@ header .header-row .text{
     background-color: rgba(185, 44, 16, 0.849)
 }
 
+.services{
+    height: 70vh;
+}
+
+.services-container{
+    height: 100%;
+}
+
+
+
+.services-row{
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+.services .services-title{
+    text-align: center;
+    font-family: K2D;
+    font-weight: 700;
+    font-size: 2em;
+    color: #292B2C;
+}
+
+.services .services-description{
+    margin-top: 20px;
+    font-family: 'Poppins';
+    font-size: 0.875em;
+    color: #888;
+    padding: 0 30px;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.services .booking-services .booking-service .logo{
+    margin-left: 9vw;
+    margin-top: 10px;
+}
+.services .booking-services .booking-service .logo:hover .hotel{
+    z-index: 3;
+}
+.services .booking-services .booking-service .logo .hidden-circle{
+    transition: 0.7s;
+    transition-timing-function: ease-out;
+    border-radius: 50%;
+}
+
+.services .booking-services .booking-service .logo:hover .hotel {
+   color: white;
+
+}
+.services .booking-services .booking-service .logo:hover .hidden-circle{
+    display: inline-block;
+    position: absolute;
+    left: calc(50% - 5px);
+    top: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    background-color: #FD5A38;
+    transform: scale(7.2,7.2);
+}
+
+
+.services .booking-services .booking-service .circle{
+    color: #FD5A38;
+
+}
+.services .booking-services .booking-service .hotel{
+    color: #FD5A38;
+
+}
+
+.services .booking-services .booking-service .logo-title{
+    text-align: center;
+    font-family: K2D;
+    font-size: 1.4375em;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.services .booking-services .booking-service .info-text{
+    font-family: K2D;
+    font-size: 1em;
+    color: #888;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.row.booking-services.laptop{
+    display: none;
+}
+
+
+
 @media only screen and (max-width: 992px) {
     .row.tours-row.desktop{
         display: none;
@@ -193,14 +285,31 @@ header .header-row .text{
         padding: 0;
         margin: 0;
     }
+    .tours{
+        height: fit-content;
+    }
     
     .laptop-version{
         display: flex;
         flex-direction: column;
         row-gap: 10px;
     }
+
+    .row.booking-services{
+        display: none;
+    } 
+    .row.booking-services.laptop{
+        display: flex;
+        justify-content: space-between;
+    }
     
     
+}
+
+@media only screen and (max-width: 768px){
+    .row.booking-services .booking-service .info-text{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 576px) {
