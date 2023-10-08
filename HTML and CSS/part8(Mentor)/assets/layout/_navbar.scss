@@ -1,0 +1,115 @@
+nav{
+
+    .nav-main-row{
+        width: 100%;
+    }
+
+    .nav-row{
+        
+        margin: 8px 0 0 0;
+
+        .menu-button{
+            position: relative;
+            display:none;
+
+            .menu-icon{
+                position: absolute;
+                top: -20px;
+            }
+        }
+
+        .site-title{
+
+            padding-top: 10px;
+
+            a{
+                text-decoration: none;
+            font-family: 'Poppins';
+            font-weight:600;
+            color: rgb(95, 207, 128);
+            font-size: 30px;
+           
+            }
+        }
+    
+        .site-menu{
+    
+            padding: 8px 0 0 0;
+    
+            li{
+                list-style-type: none;
+                padding: 10px 0px 10px 30px;
+                font-size: 15px;
+                font-family: 'Poppins';
+                font-weight: 500;
+                
+            }
+
+            .get-started-btn{
+                background-color: #5FCF80;
+                margin: 0px 0px 0px 22px;
+                padding: 8px 25px;
+                border-radius: 50px;
+                border-color: transparent;
+                color: #fff;
+            }
+    
+        }
+
+    }
+    
+}
+
+@media screen and (max-width: 1015px){
+    nav{
+
+        .nav-row{
+            
+           
+    
+            .menu-button{
+                display:inline-block;
+
+                
+
+            }
+    
+            
+        
+            .site-menu{
+
+               
+        
+               
+        
+                li:not(.get-started-btn-item){
+                   display: none;
+                    
+                }
+
+                .get-started-btn-item{
+                    padding-left: 0px;
+
+                    .get-started-btn{
+                        margin-left: 0px;
+                    }
+                }
+    
+                
+        
+            }
+    
+        }
+        
+    }
+    
+}
+@media screen and (max-width: 576px){
+    nav{
+        .nav-main-row{
+            .nav-row{
+                width: 95% !important;
+            }
+        }
+    }
+}
