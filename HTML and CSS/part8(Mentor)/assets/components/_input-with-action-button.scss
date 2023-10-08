@@ -1,0 +1,27 @@
+.input-with-action-button {
+    margin-top: 30px;
+    position: relative;
+    
+
+    .main-input {
+        width: 95%;
+        padding: 6px 8px;
+        border-radius: 20px;
+        border: 1px solid #E8EDEA;
+    }
+
+    .action-button {
+        position: absolute;
+        right: 5%;
+        padding: 8px 15px;
+        background-color: $light-green-color;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        transition: $footer-transition;
+    }
+    .action-button:hover{
+        background-color: #309c50;
+    }
+
+}

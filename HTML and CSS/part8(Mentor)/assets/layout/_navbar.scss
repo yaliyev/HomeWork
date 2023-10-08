@@ -26,7 +26,7 @@ nav{
                 text-decoration: none;
             font-family: 'Poppins';
             font-weight:600;
-            color: rgb(95, 207, 128);
+            color: $light-green-color;
             font-size: 30px;
            
             }
@@ -42,11 +42,15 @@ nav{
                 font-size: 15px;
                 font-family: 'Poppins';
                 font-weight: 500;
-                
+                transition: $header-transition;
+                cursor: pointer;
+            }
+            li:hover{
+                color: $light-green-color;
             }
 
             .get-started-btn{
-                background-color: #5FCF80;
+                background-color: $light-green-color;
                 margin: 0px 0px 0px 22px;
                 padding: 8px 25px;
                 border-radius: 50px;

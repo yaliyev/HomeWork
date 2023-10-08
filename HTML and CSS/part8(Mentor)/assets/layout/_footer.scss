@@ -1,0 +1,129 @@
+footer {
+    background-color: $footer-bg-color;
+
+    .general-info-row {
+        padding: 20px 0 70px 0;
+    }
+
+    
+
+    .company-title {
+        font-family: 'Raleway';
+        font-size: 28px;
+        font-weight: 500;
+        color: #37423B;
+    }
+
+    .company-location,
+    .company-number,
+    .company-email {
+        @extend %general-info-font-properties;
+    }
+
+    .company-number,
+    .company-email {
+        @extend %general-info-special-font-properties;
+        margin-bottom: 5px;
+    }
+
+    .info-column-name {
+        font-family: 'Raleway';
+        font-weight: 700;
+        font-size: 16px;
+        color: #444;
+    }
+
+    .info-column-list {
+        padding-left: 5px;
+        list-style-type: none;
+    }
+
+    .info-column-list li {
+        padding: 0 0 10px 0;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 400;
+        color: #777;
+        transition: $footer-transition;
+        cursor: pointer;
+
+        i {
+            margin-right: 8px;
+            color: $light-green-color;
+        }
+
+    }
+
+    .info-column-list li:hover {
+        color: $light-green-color;
+    }
+
+    .info-column-text {
+        font-family: "Open Sans";
+        font-size: 15px;
+        color: #37423B;
+    }
+
+    .footer-end {
+        background-color: $footer-end-bg-color;
+        padding: 15px 0;
+
+        .copyright-text {
+            font-size: 14px;
+            display: block;
+        }
+
+        .author-final-info {
+            font-size: 13px;
+            display: block;
+
+            .author-company-link {
+                color: $light-green-color;
+                text-decoration: none;
+                transition: $footer-transition;
+            }
+            .author-company-link:hover{
+                color: rgb(148, 210, 167);
+
+            }
+        }
+
+
+
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+
+            a {
+                .circle-icon {
+                    color: $light-green-color;
+                    transition: $footer-transition;
+                }
+                
+
+                .icon {
+                    color: white;
+                }
+            }
+            a:hover .circle-icon{
+                color: #309c50;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .author{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+    .author{
+        margin: 10px 0;
+    }
+  }
