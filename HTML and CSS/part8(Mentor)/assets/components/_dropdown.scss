@@ -1,0 +1,40 @@
+.dropdown{
+    opacity: 0;
+    position: absolute !important;
+    background-color: white;
+    z-index: 3;
+    transition: $dropdown-transition;
+    transform: translateY(30%);
+    border-radius: 10px;
+    border: 2px solid white;
+  li{
+    padding: 20px 0 0 15px !important;
+    width: 180px;
+  }
+
+}
+.dropdown-vertical{
+    position: absolute !important;
+    background-color: white;
+    z-index: 3;
+  li{
+    padding: 20px 0 10px 15px !important;
+    width: 180px;
+  }
+    
+}
+
+.dropdown-horizontal{
+    top: -100%;
+     right: -90%;
+}
+
+.hover-dropdown:hover>.dropdown{
+     opacity: 1;
+}
+.hover-dropdown:hover>.dropdown-vertical{
+    transform: translateY(0%);
+}
+.hover-dropdown:hover>.dropdown-horizontal{
+    transform: translate(10%,30%);
+}
