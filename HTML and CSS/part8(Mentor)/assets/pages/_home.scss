@@ -1,0 +1,113 @@
+.home {
+
+    height: fit-content;
+
+
+    #image-box {
+        position: relative;
+        height: 80vh;
+        background-image: url(../images/hero-bg.jpg);
+        transition: 0.3s height;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-size: cover;
+
+        .black-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(11, 10, 10, 0.35);
+        }
+
+        .hero-info {
+            margin-left: 250px;
+            z-index: 2;
+
+            .hero-info-text-bold {
+                font-family: "Poppins";
+                font-size: 3em;
+                font-weight: 700;
+                color: #fff;
+
+            }
+
+            .hero-info-text-ordinary {
+                font-family: "Raleway";
+                color: #eee;
+                font-size: 1.5em;
+                font-weight: 500;
+            }
+
+            .hero-button {
+                font-family: "Raleway";
+                font-weight: 500;
+                margin-top: 30px;
+                padding: 12px 40px;
+                border: 2px solid white;
+                color: white;
+                border-radius: 50px;
+                background-color: transparent;
+                transition-property: background-color, border-color;
+                transition-duration: $hero-transition;
+            }
+
+            .hero-button:hover {
+                background-color: $light-green-color;
+                border-color: $light-green-color;
+            }
+        }
+
+    }
+
+    .advantages {
+        padding: 40px 0 80px 0;
+
+        .advantages-title {
+            font-family: "Raleway";
+            font-size: 26px;
+            font-weight: 600;
+            color: $home-advantages-text-color;
+        }
+
+        .advantages-sub-text {
+            font-family: "Open Sans";
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 400;
+            color: $home-advantages-text-color;
+        }
+
+        .advantages-list ul {
+            list-style-type: none;
+
+            li {
+                margin: 20px 0;
+
+                i {
+                    margin: 0 10px 0 0;
+                    color: $light-green-color;
+                }
+            }
+
+        }
+
+        .about-image{
+            img{
+                max-width: 100%;
+            }
+        }
+
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 992px) {
+    .advantages-row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+  }

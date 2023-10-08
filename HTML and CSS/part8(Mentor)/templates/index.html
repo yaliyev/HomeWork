@@ -41,8 +41,9 @@
 
                                 <ul class="d-flex flex-column  site-menu dropdown dropdown-vertical">
                                     <li class="dropdown-item">Drop Down 1</li>
-                                    <li class="dropdown-item hover-dropdown">Deep Drop Down <i class="fa-solid fa-angle-right"></i>
-        
+                                    <li class="dropdown-item hover-dropdown">Deep Drop Down <i
+                                            class="fa-solid fa-angle-right"></i>
+
                                         <ul class="d-flex flex-column  site-menu dropdown dropdown-horizontal">
                                             <li class="dropdown-item">Deep Drop Down 1</li>
                                             <li class="dropdown-item">Deep Drop Down 2
@@ -51,7 +52,7 @@
                                             <li class="dropdown-item">Deep Drop Down 4</li>
                                             <li class="dropdown-item">Deep Drop Down 5</li>
                                         </ul>
-        
+
                                     </li>
                                     <li class="dropdown-item">Drop Down 2</li>
                                     <li class="dropdown-item">Drop Down 3</li>
@@ -85,6 +86,96 @@
 
         </nav>
     </header>
+
+    <main>
+        <section class="home">
+
+            <div id="image-box">
+
+
+
+                <div class="black-overlay">
+
+                </div>
+
+                <div class="hero-info">
+
+                    <div class="hero-info-text-bold">
+                        Learning Today,
+                    </div>
+                    <div class="hero-info-text-bold">
+                        Leading Tomorrow
+                    </div>
+
+                    <div class="hero-info-text-ordinary">
+                        We are team of talented designers making websites with Bootstrap
+                    </div>
+
+                    <button class="hero-button">
+                        Get Started
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="advantages">
+
+                <div class="container">
+                    <div class="row advantages-row">
+
+
+                        <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+
+                            <div class="advantages-title">
+                                Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.
+
+                            </div>
+                            <div class="advantages-sub-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </div>
+
+                            <div class="advantages-list">
+                                <ul>
+                                    <li> <i class="fa-regular fa-circle-check"></i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, amet.</li>
+                                    <li> <i class="fa-regular fa-circle-check"></i>Ad minus tenetur quas porro, sed possimus itaque nemo quidem.</li>
+                                    <li> <i class="fa-regular fa-circle-check"></i>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                        in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat
+                                        nulla pariatur.</li>
+                                </ul>
+                            </div>
+
+                            <div class="advantages-ending-text">
+                                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+
+                            <div class="about-image">
+
+                                <img src="../assets/images/about.jpg" alt="">
+
+                            </div>
+
+                            
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </section>
+    </main>
+
 
     <footer>
 
@@ -190,6 +281,29 @@
 
     </footer>
 
+
+    <!--  scroll edende kicilmesine gore cox calisdim,cox da vaxt itirdim :-(    -->
+    <!-- <script>
+
+        let imageBox = document.querySelector("#image-box");
+        imageBox.style.height = "80vh";
+
+        let height = imageBox.style.height;
+
+        window.addEventListener('scroll', () => {
+            console.log(window.scrollY);
+            if(Number(window.scrollY) % 100 == 0){
+                
+                 imageBox.style.height = (height.slice(0,height.indexOf("v")) - 10) +"vh";
+                 height = height.slice(0,height.indexOf("v")) +"vh";
+                 console.log(height);
+            }
+            
+
+        });
+    </script> -->
 </body>
+
+
 
 </html>
