@@ -12,6 +12,7 @@
         flex-direction: column;
         justify-content: center;
         background-size: cover;
+        z-index: 3;
 
         .black-overlay {
             position: absolute;
@@ -92,11 +93,125 @@
 
         }
 
-        .about-image{
-            img{
+        .about-image {
+            img {
                 max-width: 100%;
             }
         }
+
+    }
+
+    .statistics {
+        background-color: $home-statistics-bg-color;
+        padding: 50px 0;
+
+        .statistic-data {
+            .number {
+                color: $light-green-color;
+                font-size: 48px;
+                font-family: "Open Sans";
+                font-weight: 700;
+                text-align: center;
+
+            }
+
+            .statistic-data-title {
+                color: $home-statistic-data-text-color;
+                font-size: 15px;
+                font-family: "Raleway";
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+    }
+
+    .big-logo-cards {
+
+        padding: 50px 0;
+
+        .why-mentor {
+            width: 100%;
+            height: 100%;
+            background-color: $light-green-color;
+            padding: 30px;
+            color: white;
+            border-radius: 5px;
+
+            .why-mentor-title {
+                font-family: "Raleway";
+                font-weight: 700;
+                font-size: 34px;
+
+            }
+
+            .why-mentor-text {
+                margin-top: 20px;
+                font-family: "Open Sans", sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+
+            }
+
+            .why-mentor-button {
+                display: block;
+                width: 180px;
+                padding: 6px 30px 8px;
+                color: white;
+                background-color: #7FD999;
+                border: none;
+                border-radius: 50px;
+                margin: 30px auto 10px;
+                transition: 0.5s;
+            }
+
+            .why-mentor-button:hover {
+                background-color: white;
+                color: #7FD999;
+            }
+        }
+
+
+
+        .big-logo-card {
+            height: 380px;
+            margin: 10px 0;
+            padding: 20px 0 40px 0;
+            border: 1px solid #EEF0EF;
+
+            .logo-sector {
+                .full-icon {
+
+                    margin: 20px 0 20px 35%;
+
+
+
+                }
+
+                .circle {
+                    color: #ECF9F0;
+                }
+
+                .icon {
+                    color: #5FCF80;
+                }
+            }
+
+            .card-title {
+                font-family: "Raleway";
+                font-size: 20px;
+                color: #444;
+                font-weight: 700;
+                text-align: center;
+                padding: 10px 25px 20px 25px;
+            }
+
+            .card-text {
+                padding: 10px 25px;
+                color: #848484;
+                text-align: center;
+            }
+        }
+
 
     }
 
@@ -105,9 +220,17 @@
 
 }
 
+@media screen and (max-width: 1199px) {
+    .logo-sector {
+        .full-icon {
+            margin-left: 45% !important;
+        }
+    }
+}
+
 @media screen and (max-width: 992px) {
-    .advantages-row{
+    .advantages-row {
         display: flex;
         flex-direction: column-reverse;
     }
-  }
+}
