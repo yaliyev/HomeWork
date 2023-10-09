@@ -610,6 +610,7 @@ nav .nav-row .site-menu .get-started-btn:hover {
   }
 }
 footer {
+  padding-top: 100px;
   background-color: #F9FAF9;
 }
 footer .general-info-row {
