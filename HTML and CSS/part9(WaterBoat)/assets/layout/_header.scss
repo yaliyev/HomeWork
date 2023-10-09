@@ -1,0 +1,47 @@
+header{
+    height: 32vh;
+    background-color: $header-bg-white-color;
+
+    .site-header{
+        height: 20vh;
+        margin: 0 300px;
+        padding: 3vh 0;
+        display: flex;
+        justify-content: center;
+
+        .site-info-bar{
+
+            display: flex;
+            flex-direction: row;
+            column-gap: 15px;
+            .full-icon{
+                height: 100px;
+                
+            }
+
+            .circle{
+                color: #1089FF;
+            }
+
+            .icon{
+                color: white;
+            }
+
+            .site-info-content{
+                .site-info-title{
+                    font-family: "Oswald";
+                    font-size: 19.2px;
+                    font-weight: 500;
+                }
+                .site-info-text{
+                    font-family: "Mulish";
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+
+        }
+        
+
+    }
+}

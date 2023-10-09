@@ -1,0 +1,27 @@
+.navbar{
+   height:12vh;
+   background-color: #1089FF;
+
+   
+
+   .navbar-menu{
+    display: flex;
+    padding: 5vh 0;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+
+    li{
+
+        color: white;
+        font-family: "Oswald";
+        font-size: 16px;
+        font-weight: 700;
+    }
+    #underline{
+       border-bottom: 2px solid white;
+    }
+   }
+
+}
