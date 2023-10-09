@@ -139,3 +139,28 @@
     }
 
 }
+.advantages{
+    .advantages-row{
+        padding: 0px 450px 100px;
+
+        .advantage{
+            .advantage-logo{
+                i{
+                    color: $sky-color;
+                }
+            }
+            .advantage-title{
+                margin-top: 2vh;
+                font-family: "Oswald";
+                font-size: 20px;
+                font-weight: 400;
+            }
+            .advantage-text{
+                font-family: "Mulish";
+                font-size: 17.6px;
+                font-weight: 300;
+                color: gray;
+            }
+        }
+    }
+}
