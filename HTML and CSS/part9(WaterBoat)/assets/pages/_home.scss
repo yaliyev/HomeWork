@@ -204,3 +204,39 @@
         
      }
  }
+
+ .destinations{
+    background-color: #F8F9FA;
+
+    .destinations-title{
+        padding: 40px 450px 0 450px;
+
+        .destinations-title-pretext{
+            @extend %hand-writing-style;
+
+            text-align: center;
+        }
+        .destinations-title-heading{
+            text-align: center;
+            font-size: 28px;
+            font-family: "Oswald";
+        }
+        .destinations-title-line{
+            width: 60px;
+            height: 2px;
+            background-color: $sky-color;
+            margin: 20px auto;
+        }
+        
+    }
+   
+
+    .destinations-row{
+        padding: 150px 250px;
+        display: flex;
+        justify-content: center;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+ }

@@ -16,7 +16,7 @@ a, li {
   background-color: black;
 }
 
-.welcome .welcome-content .welcome-pretext {
+.destinations .destinations-title .destinations-title-pretext, .welcome .welcome-content .welcome-pretext {
   font-family: "Dancing Script", cursive;
   color: #1089FF;
 }
@@ -570,4 +570,79 @@ header .site-header .site-info-bar .site-info-content .site-info-text {
   font-family: "Mulish";
   font-weight: 300;
   color: white;
+}
+
+.destinations {
+  background-color: #F8F9FA;
+}
+.destinations .destinations-title {
+  padding: 40px 450px 0 450px;
+}
+.destinations .destinations-title .destinations-title-pretext {
+  text-align: center;
+}
+.destinations .destinations-title .destinations-title-heading {
+  text-align: center;
+  font-size: 28px;
+  font-family: "Oswald";
+}
+.destinations .destinations-title .destinations-title-line {
+  width: 60px;
+  height: 2px;
+  background-color: #1089FF;
+  margin: 20px auto;
+}
+.destinations .destinations-row {
+  padding: 150px 250px;
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.card {
+  box-shadow: 0px 0px 10px rgb(192, 187, 187);
+}
+.card .card-image {
+  height: 30vh;
+}
+.card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .card-info {
+  padding: 20px 30px;
+  position: relative;
+}
+.card .card-info a {
+  text-decoration: none;
+  margin-right: 5px;
+}
+.card .card-info .location i {
+  color: #1089FF;
+}
+.card .card-info .location .text {
+  font-family: "Oswald";
+  font-size: 18px;
+}
+.card .card-info .date i {
+  color: gray;
+}
+.card .card-info .date .text {
+  font-family: "Mulish";
+  font-size: 18px;
+  color: gray;
+}
+.card .card-info .price {
+  padding: 8px 14px;
+  background-color: #1089FF;
+  color: white;
+  font-family: "Mulish";
+  font-size: 17.6px;
+  border: none;
+  border-radius: 4px;
+  position: absolute;
+  top: 30px;
+  left: 270px;
 }/*# sourceMappingURL=main.css.map */
