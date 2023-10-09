@@ -215,6 +215,31 @@
 
     }
 
+    .categories {
+
+
+       
+
+        .category-item {
+            @include home_page_text_padding_font;
+            border: 1px solid #EEF0EF;
+            margin: 10px 0px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .category-item:hover {
+            border-color: #5FCF80;
+            color: #5FCF80;
+        }
+
+
+        .category-item i {
+            margin-right: 5px;
+        }
+    }
+
 
 
 

@@ -867,6 +867,22 @@ footer .footer-end .footer-links a:hover .circle-icon {
   color: #848484;
   text-align: center;
 }
+.home .categories .category-item {
+  padding: 20px 15px;
+  font-family: "Open Sans";
+  border: 1px solid #EEF0EF;
+  margin: 10px 0px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: 0.2s;
+}
+.home .categories .category-item:hover {
+  border-color: #5FCF80;
+  color: #5FCF80;
+}
+.home .categories .category-item i {
+  margin-right: 5px;
+}
 
 @media screen and (max-width: 1199px) {
   .logo-sector .full-icon {
