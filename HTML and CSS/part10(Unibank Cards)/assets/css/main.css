@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  font-family: "CocoSharp Trial";
+}
+
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url("../fonts/CocoSharpTrial-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url("../fonts/CocoSharpTrial-ExtraboldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url("../fonts/CocoSharpTrial-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url("../fonts/CocoSharpTrial-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url("../fonts/CocoSharpTrial-Extrabold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url("../fonts/CocoSharpTrial-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url("../fonts/CocoSharpTrial-HeavyItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url("../fonts/CocoSharpTrial-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url("../fonts/CocoSharpTrial-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url("../fonts/CocoSharpTrial-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url("../fonts/CocoSharpTrial-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url("../fonts/CocoSharpTrial-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+header {
+  position: fixed;
+  width: 100%;
+}
+
+.navigation-bar {
+  padding: 10px 20vw;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation-bar .navigation-bar-left {
+  display: flex;
+  padding-top: 10px;
+}
+.navigation-bar .logo {
+  width: 24.3px;
+  height: 25.2px;
+}
+.navigation-bar .logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.navigation-bar .navigation-bar-medium-responsive {
+  display: none;
+}
+
+.navigation-bar-horizontal {
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 1697px) {
+  .navigation-bar {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .navigation-bar .menu li a {
+    font-size: 9px !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .navigation-bar {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .navigation-bar .navigation-bar-medium-responsive {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .navigation-bar .navigation-bar-medium-responsive .logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .navigation-bar .navigation-bar-left {
+    display: none;
+  }
+  .navigation-bar .option-buttons {
+    display: none;
+  }
+  .navigation-bar:nth-child(2) {
+    display: none;
+  }
+}
+.menu {
+  display: flex;
+  list-style-type: none;
+  column-gap: 15px;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+#lefted-menu {
+  padding-left: 0px;
+}
+#lefted-menu li {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.option-buttons {
+  display: flex;
+}
+
+.switch-option-button-orange {
+  margin: 5px 0;
+  padding: 0px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #FF7A00;
+  border-radius: 5px;
+}
+
+.switch-option-button-orange.active {
+  color: #FF7A00;
+}
+
+.option-button {
+  margin: 5px 6px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0px 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 7px;
+}
+
+.option-button-white {
+  background-color: white;
+}
+.option-button-white i {
+  color: black;
+  background-color: white;
+}
+
+.option-button.call-button {
+  margin-top: 0;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.61);
+}
+.option-button.call-button .phone {
+  color: #FF7A00;
+  background-color: #1A1A1A;
+}
+.option-button.call-button span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  background-color: #1A1A1A;
+}/*# sourceMappingURL=main.css.map */

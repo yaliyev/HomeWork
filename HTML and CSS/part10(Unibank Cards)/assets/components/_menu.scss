@@ -1,0 +1,19 @@
+.menu{
+    display: flex;
+    list-style-type: none;
+    column-gap: 15px;
+
+    a{
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+    }
+}
+#lefted-menu{
+    padding-left: 0px;
+
+    li{
+        font-size: 18px;
+        font-weight: 600;
+    }
+}

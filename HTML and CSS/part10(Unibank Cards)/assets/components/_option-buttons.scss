@@ -1,0 +1,52 @@
+.option-buttons{
+    display: flex;
+}
+.switch-option-button-orange{
+    margin: 5px 0;
+    padding: 0px 20px;
+    
+    font-size: 12px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid $unusual-orange-color;
+    border-radius: 5px;
+
+    
+    
+}
+.switch-option-button-orange.active{
+    color: $unusual-orange-color;
+}
+
+.option-button{
+    margin: 5px 6px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0px 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 7px;
+}
+.option-button-white{
+    background-color: white;
+    i{
+        color: black;
+        background-color: white;
+    }
+}
+.option-button.call-button{
+    margin-top: 0;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.61);
+    .phone{
+        color: $unusual-orange-color;
+       
+        background-color: #1A1A1A;
+    }
+    span{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        background-color: #1A1A1A;
+    }
+}
