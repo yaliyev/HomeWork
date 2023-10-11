@@ -93,6 +93,7 @@
 }
 header {
   position: fixed;
+  top: 0;
   width: 100%;
 }
 
@@ -128,7 +129,7 @@ header {
     padding-right: 5vw;
   }
   .navigation-bar .menu li a {
-    font-size: 9px !important;
+    font-size: 9px;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -153,6 +154,119 @@ header {
   }
   .navigation-bar:nth-child(2) {
     display: none;
+  }
+}
+main {
+  margin-top: 143px;
+}
+main .custom-cards {
+  padding: 10px 20vw;
+}
+main .custom-cards .custom-cards-category {
+  display: flex;
+  flex-direction: column;
+}
+main .custom-cards .custom-cards-category .custom-card-category-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+main .custom-cards .custom-cards-category .custom-card {
+  padding: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+main .custom-cards .custom-cards-category .custom-card .custom-card-image {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 100%;
+}
+main .custom-cards .custom-cards-category .custom-card .custom-card-title {
+  background-color: #1A1A1A;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+main .custom-cards .custom-cards-category .custom-card .custom-card-description {
+  font-size: 12px;
+  margin-bottom: 20px;
+  background-color: #1A1A1A;
+}
+main .custom-cards .custom-cards-category .custom-card-details-button {
+  padding: 12px 20px;
+  background-color: #FF7A00;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+main .custom-cards .custom-cards-category .custom-card-details-button i {
+  background-color: #FF7A00;
+}
+main .custom-cards .custom-cards-category .custom-card-fluid {
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 !important;
+}
+main .custom-cards .custom-cards-category .custom-card-fluid .custom-card-image {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 200px;
+}
+main .custom-cards .custom-cards-category .custom-card-fluid .custom-card-title {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 24px;
+  font-weight: 600;
+}
+main .custom-cards .custom-cards-category .custom-card-fluid .custom-card-description {
+  background-color: #1A1A1A;
+  margin-top: 15px;
+}
+main .custom-cards .custom-cards-category .custom-card-fluid .custom-card-advantages {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #1A1A1A;
+}
+main .custom-cards .custom-cards-category .custom-card-fluid .custom-card-advantages .custom-card-advantage {
+  display: flex;
+  background-color: #1A1A1A;
+}
+main .custom-cards .custom-cards-category .custom-card-fluid .custom-card-advantages .custom-card-advantage .custom-card-advantage-logo {
+  margin: 10px;
+  background-color: #1A1A1A;
+}
+main .custom-cards .custom-cards-category .custom-card-fluid .custom-card-advantages .custom-card-advantage .custom-card-advantage-logo i {
+  color: #FF7A00;
+  background-color: #1A1A1A;
+}
+main .custom-cards .custom-cards-category .custom-card-fluid .custom-card-advantages .custom-card-advantage .custom-card-advantage-logo-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  background-color: #1A1A1A;
+}
+main .custom-cards .custom-cards-category .custom-card-fluid .helper {
+  display: none;
+  background-color: #1A1A1A;
+  transition: 1s transform;
+}
+main .custom-cards .custom-cards-category .custom-card-fluid .large {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  main .custom-cards .custom-cards-category .custom-card-fluid .helper {
+    display: block;
+  }
+  main .custom-cards .custom-cards-category .custom-card-fluid .large-plus {
+    display: none;
+  }
+  main .custom-cards .custom-cards-category .custom-card-fluid .large {
+    display: block;
+  }
+  main .custom-cards .custom-cards-category .custom-card-fluid .custom-card-header .custom-card-title {
+    text-align: center;
   }
 }
 .menu {

@@ -1,0 +1,152 @@
+main {
+    margin-top: 143px;
+
+    .custom-cards {
+        padding: 10px 20vw;
+
+        .custom-cards-category {
+            display: flex;
+            flex-direction: column;
+            // background-color: $gray-color;
+            // padding: 50px;
+
+            .custom-card-category-title {
+                font-size: 32px;
+                font-weight: 800;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .custom-card{
+                
+                padding: 60px;
+                 background-color: $gray-color;
+
+                .custom-card-image {
+                    background-color: $gray-color;
+                    width: 100%;
+                    height: 100%;
+                }
+                .custom-card-title{
+                    background-color: #1A1A1A;
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                   }
+                   .custom-card-description{
+                    font-size: 12px;
+                    margin-bottom: 20px;
+                    background-color: #1A1A1A;
+                   }
+            }
+            .custom-card-details-button{
+                padding: 12px 20px;
+                background-color: $unusual-orange-color;
+                color: white;
+                border-radius: 10px;
+                text-align: center;
+
+                i{
+                    background-color: $unusual-orange-color;
+                }
+            }
+
+            .custom-card-fluid {
+                padding: 50px;
+                background-color: $gray-color;
+                margin: 0 !important;
+
+
+                .custom-card-image {
+                    background-color: $gray-color;
+                    width: 100%;
+                    height: 200px;
+                }
+
+                .custom-card-header{
+                  
+                }
+                .custom-card-title{
+                    background-color: $gray-color;
+                    font-size: 24px;
+                    font-weight: 600;
+                   }
+                .custom-card-description{
+                    background-color: #1A1A1A;
+                    margin-top: 15px;
+                }
+                
+                .custom-card-advantages{
+
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                    background-color: #1A1A1A;
+
+                    .custom-card-advantage{
+                        display: flex;
+                        background-color: #1A1A1A;
+                        .custom-card-advantage-logo{
+                            margin: 10px;
+                            background-color: #1A1A1A;
+                            i{
+                                color: $unusual-orange-color;
+                                background-color: #1A1A1A;
+                                
+                            }
+                        }
+                        .custom-card-advantage-logo-title{
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            font-weight: 600;
+                            font-size: 12px;
+                            background-color: #1A1A1A;
+                        }
+                    }
+
+                    
+
+                }
+
+                .helper{
+                    display: none;
+                    background-color: #1A1A1A;
+                    transition: 1s transform;
+                }
+                .large{
+                    display: none;
+                }
+
+            }
+         
+
+        }
+    }
+   
+}
+@media only screen and (max-width: 1200px) {
+    main{
+        .custom-cards{
+            .custom-cards-category{
+                .custom-card-fluid{
+                    .helper{
+                         display: block;
+                        
+                    }
+                    .large-plus{
+                        display: none;
+                    }
+                    .large{
+                        display: block;
+                    }
+                     .custom-card-header{
+                        .custom-card-title{
+                            text-align: center;
+                        }
+                     }
+                    
+                }
+            }
+        }
+    }
+}
