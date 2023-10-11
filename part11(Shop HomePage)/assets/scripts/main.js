@@ -1,4 +1,4 @@
-
+// task 1
 let eded = Number(prompt("Eded daxil edin:"));
 
 if (eded > 0) {
@@ -10,7 +10,7 @@ if (eded > 0) {
 } else {
     alert("negative number");
 }
-
+// task 2
 let ayEdedi = Number(prompt("Ayin reqemini daxil edin:"));
 
 switch (ayEdedi) {
@@ -56,7 +56,7 @@ switch (ayEdedi) {
     default:
         alert("invalid input");
 }
-
+//  task 3
 let ayEdedi2 = Number(prompt("Ayin reqemini daxil edin:"));
 
 switch (ayEdedi2) {
@@ -102,7 +102,7 @@ switch (ayEdedi2) {
     default:
         alert("invalid input");
 }
-
+//  task 4
 let num1 = Number(prompt("1-ci reqemi daxil edin:"));
 let num2 = Number(prompt("2-ci reqemi daxil edin:"));
 let num3 = Number(prompt("3-cu reqemi daxil edin:"));
