@@ -12,6 +12,7 @@
         color: white;
         transition: $transitionGrayBackgroundColorHoverDuration;
         border-radius: 2px;
+        cursor: pointer;
     }
     .menu-title:hover{
         @include hoverGrayBackgroundColorEffect;
@@ -20,8 +21,12 @@
     .menu-small-devices{
         display: none;
     }
+    #porsche-name-logo{
+        cursor: pointer;
+    }
     #porsche-image-logo{
         display: none;
+        
     }
     .icons-small-devices{
         display: none;

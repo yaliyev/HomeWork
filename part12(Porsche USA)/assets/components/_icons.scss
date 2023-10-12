@@ -4,12 +4,14 @@ i{
     color: white;
     transition: $transitionGrayBackgroundColorHoverDuration background-color;
     border-radius: 2px;
+    cursor: pointer;
 }
 i:hover{
     @include hoverGrayBackgroundColorEffect;
 }
 #menu-icon{
     font-size: 25px;
+    
 }
 #search-icon{
     font-size: 25px;

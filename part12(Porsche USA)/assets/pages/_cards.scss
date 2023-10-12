@@ -1,31 +1,33 @@
-
-
-.cards-horizontal{
+.cards-horizontal {
     padding-top: 100px;
     padding-bottom: 100px;
-    .card-horizontal{
+
+    .card-horizontal {
         position: relative;
         overflow: hidden;
         border-radius: 10px;
-        
-        .card-horizontal-image{
+
+        .card-horizontal-image {
             width: 100%;
             border-radius: 10px;
             transition: 0.3s transform;
             object-fit: cover;
             overflow: hidden;
         }
-        &:hover .card-horizontal-image{
-            transform: scale(1.05,1.05);
+
+        &:hover .card-horizontal-image {
+            transform: scale(1.05, 1.05);
         }
-        .card-horizontal-title{
+
+        .card-horizontal-title {
             position: absolute;
             left: 30px;
             bottom: 30px;
             color: white;
             font-size: 15px;
         }
-        .card-horizontal-open-it-button{
+
+        .card-horizontal-open-it-button {
             position: absolute;
             right: 10px;
             bottom: 35px;
@@ -34,12 +36,120 @@
             border-radius: 10px;
             transition: $transitionGrayBackgroundColorHoverDuration;
         }
-        .card-horizontal-open-it-button:hover{
+
+        .card-horizontal-open-it-button:hover {
             background-color: rgba(24, 23, 23, 0.731);
 
-            i:hover{
-                background-color: transparent;    
+            i:hover {
+                background-color: transparent;
             }
         }
     }
+}
+
+.cards-vertical {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .cards-vertical-section-title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .card-vertical-col {
+        height: 750px;
+    }
+
+    .card-vertical {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 20px;
+
+        .card-vertical-image {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: 0.3s transform;
+        }
+
+        &:hover .card-vertical-image {
+            transform: scale(1.05, 1.05);
+        }
+
+        .card-vertical-title {
+            position: absolute;
+            left: 30px;
+            bottom: 130px;
+            color: white;
+            font-size: 30px;
+        }
+
+        .card-vertical-price {
+            position: absolute;
+            left: 30px;
+            bottom: 90px;
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .card-vertical-buttons {
+            position: absolute;
+            left: 30px;
+            bottom: 35px;
+
+            .card-vertical-button {
+                position: relative;
+                padding: 10px 20px;
+                background-color: transparent;
+                border: 1px solid black;
+                border-radius: 5px;
+                margin-right: 10px;
+                color: white;
+                border-color: white;
+            }
+
+            .card-vertical-button:hover span{
+                z-index: 2;
+                
+            }
+
+            .card-vertical-button::after{
+                opacity: 0;
+                transition: 0.3s opacity;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                background-color: rgba(10, 9, 9, 0.233);
+            }
+
+            
+
+            .card-vertical-button:hover::after {
+               opacity: 1;
+            }
+
+            
+            .card-vertical-button.white {
+                color: black;
+                background-color: white;
+                border-color: white;
+            }
+            .card-vertical-button.white:hover{
+                border-color: rgba(10, 9, 9, 0.233);
+            }
+            
+        }
+
+
+
+    }
+
+
 }

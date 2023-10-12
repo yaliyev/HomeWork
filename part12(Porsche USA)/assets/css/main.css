@@ -50,12 +50,16 @@
   color: white;
   transition: 0.3s;
   border-radius: 2px;
+  cursor: pointer;
 }
 .navigation-bar .menu-title:hover {
   background-color: rgba(150, 144, 144, 0.731);
 }
 .navigation-bar .menu-small-devices {
   display: none;
+}
+.navigation-bar #porsche-name-logo {
+  cursor: pointer;
 }
 .navigation-bar #porsche-image-logo {
   display: none;
@@ -196,12 +200,96 @@
   background-color: transparent;
 }
 
+.cards-vertical {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.cards-vertical .cards-vertical-section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.cards-vertical .card-vertical-col {
+  height: 750px;
+}
+.cards-vertical .card-vertical {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.cards-vertical .card-vertical .card-vertical-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.3s transform;
+}
+.cards-vertical .card-vertical:hover .card-vertical-image {
+  transform: scale(1.05, 1.05);
+}
+.cards-vertical .card-vertical .card-vertical-title {
+  position: absolute;
+  left: 30px;
+  bottom: 130px;
+  color: white;
+  font-size: 30px;
+}
+.cards-vertical .card-vertical .card-vertical-price {
+  position: absolute;
+  left: 30px;
+  bottom: 90px;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+.cards-vertical .card-vertical .card-vertical-buttons {
+  position: absolute;
+  left: 30px;
+  bottom: 35px;
+}
+.cards-vertical .card-vertical .card-vertical-buttons .card-vertical-button {
+  position: relative;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: white;
+  border-color: white;
+}
+.cards-vertical .card-vertical .card-vertical-buttons .card-vertical-button:hover span {
+  z-index: 2;
+}
+.cards-vertical .card-vertical .card-vertical-buttons .card-vertical-button::after {
+  opacity: 0;
+  transition: 0.3s opacity;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: rgba(10, 9, 9, 0.233);
+}
+.cards-vertical .card-vertical .card-vertical-buttons .card-vertical-button:hover::after {
+  opacity: 1;
+}
+.cards-vertical .card-vertical .card-vertical-buttons .card-vertical-button.white {
+  color: black;
+  background-color: white;
+  border-color: white;
+}
+.cards-vertical .card-vertical .card-vertical-buttons .card-vertical-button.white:hover {
+  border-color: rgba(10, 9, 9, 0.233);
+}
+
 i {
   margin-left: 10px;
   margin-right: 10px;
   color: white;
   transition: 0.3s background-color;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 i:hover {
