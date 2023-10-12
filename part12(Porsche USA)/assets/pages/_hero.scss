@@ -1,0 +1,70 @@
+.hero {
+    height: 840px;
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    width: 40%;
+    top: 15%;
+    left: calc(10%);
+
+    .hero-content-title {
+
+        font-size: 6vw;
+        font-weight: 400;
+        color: white;
+    }
+
+    .hero-content-button {
+        @include hero-content-button;
+        transition: $transitionGrayBackgroundColorHoverDuration;
+    }
+
+    .hero-content-button:hover {
+        @include hoverGrayBackgroundColorEffect;
+        border-color: rgba(150, 144, 144, 0.731);
+    }
+
+}
+
+.pause-button {
+    @include hero-content-button;
+
+    position: absolute;
+    right: 20px;
+    bottom: 200px;
+    transition: $transitionGrayBackgroundColorHoverDuration;
+}
+
+.pause-button:hover {
+    @include hoverGrayBackgroundColorEffect;
+    border-color: rgba(150, 144, 144, 0.731);
+
+}
+
+@media screen and (max-width: 1200px) {
+    .hero-content {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-content {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content {
+        width: 85%;
+
+        .hero-content-title {
+            font-size: 8vw;
+        }
+
+        .hero-content-button {
+            width: 90%;
+        }
+    }
+}

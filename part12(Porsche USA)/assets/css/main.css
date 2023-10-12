@@ -42,8 +42,16 @@
 .navigation-bar {
   height: 50px;
 }
+.navigation-bar .menu {
+  display: flex;
+}
 .navigation-bar .menu-title {
   font-size: 1.2em;
+  color: white;
+  transition: 0.3s;
+}
+.navigation-bar .menu-title:hover {
+  background-color: rgba(150, 144, 144, 0.731);
 }
 .navigation-bar .menu-small-devices {
   display: none;
@@ -55,7 +63,7 @@
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 830px) {
   .navigation-bar .menu {
     display: none;
   }
@@ -78,9 +86,82 @@
     display: block;
   }
 }
+.hero {
+  height: 840px;
+  position: relative;
+}
+
+.hero-content {
+  position: absolute;
+  width: 40%;
+  top: 15%;
+  left: 10%;
+}
+.hero-content .hero-content-title {
+  font-size: 6vw;
+  font-weight: 400;
+  color: white;
+}
+.hero-content .hero-content-button {
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.hero-content .hero-content-button:hover {
+  background-color: rgba(150, 144, 144, 0.731);
+  border-color: rgba(150, 144, 144, 0.731);
+}
+
+.pause-button {
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 4px;
+  position: absolute;
+  right: 20px;
+  bottom: 200px;
+  transition: 0.3s;
+}
+
+.pause-button:hover {
+  background-color: rgba(150, 144, 144, 0.731);
+  border-color: rgba(150, 144, 144, 0.731);
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-content {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .hero-content {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-content {
+    width: 85%;
+  }
+  .hero-content .hero-content-title {
+    font-size: 8vw;
+  }
+  .hero-content .hero-content-button {
+    width: 90%;
+  }
+}
 i {
   margin-left: 10px;
   margin-right: 10px;
+  color: white;
+  transition: 0.3s background-color;
+}
+
+i:hover {
+  background-color: rgba(150, 144, 144, 0.731);
 }
 
 #menu-icon {
@@ -99,4 +180,9 @@ i {
   #menu-icon, #search-icon, #user-icon {
     font-size: 10px;
   }
+}
+.background {
+  background-image: url(../images/porsche-normal.jpg);
+  background-size: cover;
+  background-position: 30%;
 }/*# sourceMappingURL=main.css.map */

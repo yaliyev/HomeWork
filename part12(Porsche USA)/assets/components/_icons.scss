@@ -1,6 +1,11 @@
 i{
     margin-left: 10px;
     margin-right: 10px;
+    color: white;
+    transition: $transitionGrayBackgroundColorHoverDuration background-color;
+}
+i:hover{
+    @include hoverGrayBackgroundColorEffect;
 }
 #menu-icon{
     font-size: 25px;

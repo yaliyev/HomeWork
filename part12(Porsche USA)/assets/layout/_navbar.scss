@@ -1,8 +1,19 @@
 .navigation-bar{
     height: 50px;
 
+    .menu{
+        display: flex;
+    }
+
+    
+
     .menu-title{
         font-size: 1.2em;
+        color: white;
+        transition: $transitionGrayBackgroundColorHoverDuration;
+    }
+    .menu-title:hover{
+        @include hoverGrayBackgroundColorEffect;
     }
     .menu-small-devices{
         display: none;
@@ -14,7 +25,7 @@
         display: none;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 830px) {
     .navigation-bar{
         .menu{
             display: none;

@@ -1,6 +1,19 @@
 @import "base/reset";
 @import "base/typography";
 @import "utils/variables";
+@import "utils/mixins";
 @import "layout/header";
 @import "layout/navbar";
+@import "pages/hero";
 @import "components/icons";
+
+
+.background{
+    background-image: url(../images/porsche-normal.jpg);
+    background-size: cover;
+    background-position: 30%;
+}
+
+
+
+

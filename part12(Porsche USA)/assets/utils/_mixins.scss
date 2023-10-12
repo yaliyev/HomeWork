@@ -1,0 +1,12 @@
+@mixin hero-content-button{
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 4px;
+    
+}
+
+@mixin hoverGrayBackgroundColorEffect{
+    background-color: rgba(150, 144, 144, 0.731);
+}
