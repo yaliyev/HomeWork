@@ -1,0 +1,44 @@
+.navigation-bar{
+    height: 50px;
+
+    .menu-title{
+        font-size: 1.2em;
+    }
+    .menu-small-devices{
+        display: none;
+    }
+    #porsche-image-logo{
+        display: none;
+    }
+    .icons-small-devices{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navigation-bar{
+        .menu{
+            display: none;
+        }
+        .menu-small-devices{
+            display: block;
+        }
+        #porsche-name-logo{
+            display: none;
+        }
+        #porsche-image-logo{
+            display: block;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+        .icons{
+            display: none;
+        }
+        .icons-small-devices{
+            display: block;
+        }
+
+    }
+    
+}
+
