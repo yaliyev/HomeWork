@@ -49,6 +49,7 @@
   font-size: 1.2em;
   color: white;
   transition: 0.3s;
+  border-radius: 2px;
 }
 .navigation-bar .menu-title:hover {
   background-color: rgba(150, 144, 144, 0.731);
@@ -153,11 +154,54 @@
     width: 90%;
   }
 }
+.cards-horizontal {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.cards-horizontal .card-horizontal {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.cards-horizontal .card-horizontal .card-horizontal-image {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s transform;
+  object-fit: cover;
+  overflow: hidden;
+}
+.cards-horizontal .card-horizontal:hover .card-horizontal-image {
+  transform: scale(1.05, 1.05);
+}
+.cards-horizontal .card-horizontal .card-horizontal-title {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  color: white;
+  font-size: 15px;
+}
+.cards-horizontal .card-horizontal .card-horizontal-open-it-button {
+  position: absolute;
+  right: 10px;
+  bottom: 35px;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.cards-horizontal .card-horizontal .card-horizontal-open-it-button:hover {
+  background-color: rgba(24, 23, 23, 0.731);
+}
+.cards-horizontal .card-horizontal .card-horizontal-open-it-button:hover i:hover {
+  background-color: transparent;
+}
+
 i {
   margin-left: 10px;
   margin-right: 10px;
   color: white;
   transition: 0.3s background-color;
+  border-radius: 2px;
 }
 
 i:hover {
@@ -185,4 +229,11 @@ i:hover {
   background-image: url(../images/porsche-normal.jpg);
   background-size: cover;
   background-position: 30%;
+}
+
+@media screen and (max-width: 991px) {
+  .background {
+    background-size: cover;
+    background-position: center bottom;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -3,6 +3,7 @@ i{
     margin-right: 10px;
     color: white;
     transition: $transitionGrayBackgroundColorHoverDuration background-color;
+    border-radius: 2px;
 }
 i:hover{
     @include hoverGrayBackgroundColorEffect;

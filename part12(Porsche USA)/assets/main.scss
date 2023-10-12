@@ -5,6 +5,7 @@
 @import "layout/header";
 @import "layout/navbar";
 @import "pages/hero";
+@import "pages/cards";
 @import "components/icons";
 
 
@@ -12,6 +13,13 @@
     background-image: url(../images/porsche-normal.jpg);
     background-size: cover;
     background-position: 30%;
+}
+@media screen and (max-width: 991px) {
+    .background{
+        background-size: cover;
+        background-position: center bottom;
+    }
+    
 }
 
 

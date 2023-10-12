@@ -1,0 +1,45 @@
+
+
+.cards-horizontal{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .card-horizontal{
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        
+        .card-horizontal-image{
+            width: 100%;
+            border-radius: 10px;
+            transition: 0.3s transform;
+            object-fit: cover;
+            overflow: hidden;
+        }
+        &:hover .card-horizontal-image{
+            transform: scale(1.05,1.05);
+        }
+        .card-horizontal-title{
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            color: white;
+            font-size: 15px;
+        }
+        .card-horizontal-open-it-button{
+            position: absolute;
+            right: 10px;
+            bottom: 35px;
+            background-color: transparent;
+            border: none;
+            border-radius: 10px;
+            transition: $transitionGrayBackgroundColorHoverDuration;
+        }
+        .card-horizontal-open-it-button:hover{
+            background-color: rgba(24, 23, 23, 0.731);
+
+            i:hover{
+                background-color: transparent;    
+            }
+        }
+    }
+}

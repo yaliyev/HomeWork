@@ -11,9 +11,11 @@
         font-size: 1.2em;
         color: white;
         transition: $transitionGrayBackgroundColorHoverDuration;
+        border-radius: 2px;
     }
     .menu-title:hover{
         @include hoverGrayBackgroundColorEffect;
+        
     }
     .menu-small-devices{
         display: none;
