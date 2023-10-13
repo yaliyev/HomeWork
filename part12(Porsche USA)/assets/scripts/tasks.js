@@ -52,7 +52,7 @@ for(let i =0;i<numbers.length;i++){
 alert(`TASK 3:En boyuk eded ${maxEded}`);
 
 // task 4
-let numbers2 = [1,4,2,6,8,2,1,7,7];
+let numbers2 = [1,4,2,6,8,2,1,7,7]; // shert output:2 olmalidir  Lakin Output 3 olmalidir.Eyniler 1 ,2 ve 7-dir
 
 let dovrEdedler = [];
 
@@ -70,7 +70,7 @@ for(let i = 0; i < numbers2.length;i++){
 
     dovrEdedler[i] = hazirkiEded;
 }
-alert(`TASK3: ${tekrarlananEdedSayi}`); 
+alert(`TASK4(tekrarlanan eded sayi): ${tekrarlananEdedSayi}`); 
 
 // task 5
 
