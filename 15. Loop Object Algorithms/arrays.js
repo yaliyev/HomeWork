@@ -71,7 +71,7 @@ console.log("task6");
 //  }
 
 
- console.log("task7");
+console.log("task7");
 // let ededTask7 = Number(prompt("TASK 7: Eded daxil edin"));
 
 // let bolenSayi = 0;
@@ -116,7 +116,112 @@ console.log("task10");
 // }
 // console.log(maxTask10);
 
-console.log();
+console.log("task11");
+
+// let arrayTask11 = [4,5,11,6,7];
+
+// let maxTask11 = arrayTask11[0];
+
+// for(let i = 0;i<arrayTask11.length;i++){
+
+//     if(arrayTask11[i] % 2 == 0){
+//         if(arrayTask11[i]> maxTask11){
+//             maxTask11 = arrayTask11[i];
+//         }
+//     }
+// }
+// console.log(maxTask11);
+
+console.log("task12");
+
+// let arrayTask12 = [4,5,11,2,7];
+// let minTask12 = arrayTask12[0];
+// let minIndexTask12 = 0;
+// for(let i = 0; i < arrayTask12.length;i++){
+//   if(arrayTask12[i] < minTask12){
+//          minTask12 = arrayTask12[i];
+//          minIndexTask12 = i;
+//   }
+// }
+// console.log(minIndexTask12);
+
+console.log("task13");
+// let arrayTask13 = [1,2,3,4,5];
+
+// let maxTask13 = arrayTask13[0];
+// let maxIndexTask13 = 0;
+
+// let minTask13 = arrayTask13[0];
+// let minIndexTask13 = 0;
+
+// for(let i = 0; i < arrayTask13.length;i++){
+//     if(arrayTask13[i] > maxTask13){
+//         maxTask13 = arrayTask13[i];
+//         maxIndexTask13 = i;
+//     }
+//     if(arrayTask13[i] < minTask13){
+//         minTask13 = arrayTask13[i];
+//         minIndexTask13 = i;
+//     }
+// }
+// console.log(`Kohne massiv ${arrayTask13}`);
+// arrayTask13[minIndexTask13] = maxTask13;
+// arrayTask13[maxIndexTask13] = minTask13;
+// console.log(`Yeni massiv ${arrayTask13}`);
+
+console.log("task14");
+
+let arrayTask14 = [1, 2, 3, 4, 5, 6];
+
+let maxTask14 = 0;
+let maxIndexTask14 = 0;
+
+let minTask14 = Number.MAX_VALUE; // burda qesdle js de en boyuk eded qeyd olunubki en azindan bir defe olsa bele for daxilinde ilk if ishlesin(min hal)
+let minIndexTask14 = 0;
+
+for (let i = 0; i < arrayTask14.length; i++) {
+    if (arrayTask14[i] % 2 == 0) {
+        if (arrayTask14[i] < minTask14) {
+            minTask14 = arrayTask14[i];
+            minIndexTask14 = i;
+        }   
+    }else{
+        if(arrayTask14[i] > maxTask14){
+            maxTask14 = arrayTask14[i];
+            maxIndexTask14 = i;
+        }
+    }
+}
+console.log(`Kohne massiv ${arrayTask14}`);
+arrayTask14[minIndexTask14] = maxTask14;
+arrayTask14[maxIndexTask14] = minTask14;
+console.log(`Yeni massiv ${arrayTask14}`);
+
+console.log("task15 usul1");
+let daxilOlunanEdedTask15 = Number(prompt("Ededi daxil edin:"));
+
+let arrayTask15 = [1,2,3,4,5];
+
+let movcuddur = false;
+
+for(let i = 0;i < arrayTask15.length;i++){
+    if(daxilOlunanEdedTask15 === arrayTask15[i]){
+        movcuddur = true;
+    }
+}
+console.log(`Ededin movcudlugu ${movcuddur}`);
+
+console.log("task15 usul2");
+let daxilOlunanEdedTask15Part2 = Number(prompt("Ededi daxil edin:"));
+
+let arrayTask15Part2 = [1,2,3,4,5];
+
+let movcuddur2 = false;
+
+if(arrayTask15Part2.indexOf(daxilOlunanEdedTask15Part2) > -1){
+    movcuddur2 = true;
+}
+console.log(`Ededin movcudlugu ${movcuddur2}`);
 
 
 
