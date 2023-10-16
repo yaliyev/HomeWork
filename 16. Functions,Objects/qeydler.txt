@@ -1,0 +1,13 @@
+pure functions - İşlətdiyimiz zaman daxil edilən dəyər ilə alınan cavab arasında korrelyasiya əmsalı eynidirsə yəni,input və output eynidirsə belə funksiyalar pure functions deyilir
+object.create -  Hər hansısa qurulmuş(mövcud olan) obyektin prototipi ilə eyni olan yeni obyekt qurur.Sonrada dəyər dəyişdirmək üçün istifadə edilir(overwriting)
+object.assign - Hər hansısa qurulmuş(mövcud olan) obyektin prototipini,digər obyektin prototipi ilə eyniləşdirmək üçün istifadə olunan funksiyalar
+   ilk parametr hədəf obyektini,ikinci isə prototip kimi istifadə olunacaq obyekti bildirir
+
+IIFE (immediately invoke function expression) - elan edilən kimi anında icra olunan funksiya tipi
+
+difference between reguler,anonym & arrow functions 
+   - Regular funksiyada arguments mövcuddur lakin anonym& arrow mövcud deyil
+   - Regular funksiyada this vasitəsilə hazırki istifadə olunan dəyəri qaytarmaq mümkündür,lakin anonym& arrow mövcud deyil
+   - anonym & arrow funksiyalar constructor kimi istifadə edilə bilinmir
+
+ Function constructors - constructor dəyərlər vasitəsilə obyekt yaradan və obyektin dəyərlərini bir başa təyin edən vasitədir(initialize)  
