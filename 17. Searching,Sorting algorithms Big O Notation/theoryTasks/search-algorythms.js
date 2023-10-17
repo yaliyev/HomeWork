@@ -1,4 +1,4 @@
-
+console.log('------SEARCH ALGORYTHMS----');
 let nums = [10, 50, 60, 40, 20, 80, 30];
 
 let sortedNums = Object.create(nums);
@@ -24,7 +24,7 @@ function customLinearSearch(num, arr) {
 //console.log(customLinearSearch(40,nums)); // 3 indeks qaytarilir
 
 
-// ozumden binary search qurmaq mohtesem idea idi.if lerle sonunda neticeye gedib cixmaq olur.Asagida qurulan funksiya staticdir.Saat yarim vaxtim getsede bu funksiyani beyinde fikirlesmek cox qabaga apardi meni.Tesekkurler
+// ozumden binary search qurmaq mohtesem idea idi.if lerle sonunda neticeye gedib cixmaq olur.Asagida qurulan funksiya staticdir.Saat yarim vaxtim getsede bu funksiyani beyinde fikirlesmek cox qabaga apardi meni.Tesekkurler muellim :)
 function customBinarySearchStatic(num, arr) {
     arr = arr.sort(); // binary Search mutleq siralamq lazimdi
 
@@ -66,3 +66,5 @@ customBinarySearchStatic(40,nums); // 3
 customBinarySearchStatic(50,nums); // 4
 customBinarySearchStatic(60,nums); // 5 
 customBinarySearchStatic(80,nums); // 6
+
+
