@@ -93,6 +93,26 @@ class Phone extends Device {
     }
 }
 
+class Laptop extends Device{
+    isRGBKeyboard;
+    OperatingSystem;
+
+    constructor(brand, model, screenSize, batteryLevel, price, salePrice, discountPercentage, saleCount = 0, stockCount,isRGBKeyboard,OperatingSystem) {
+        super(brand, model, screenSize, batteryLevel, price, salePrice, discountPercentage, saleCount, stockCount);
+        this.isRGBKeyboard = isRGBKeyboard;
+        this.OperatingSystem = OperatingSystem;
+    }
+
+    DisplayDetails() {
+        let deviceDetails = super.DisplayDetails(); 
+        deviceDetails.isRGBKeyboard = this.isRGBKeyboard;
+
+        return deviceDetails;
+    }
+
+
+}
+
 
 let device1 = new Device("brand1", "model1", "1920 * 1080", 92, 80, 100, 0, 10, 10);
 
@@ -102,9 +122,13 @@ device1.SellProduct(2);
 console.log(device1.DisplayDetails());
 
 let phone1 = new Phone("Apple", "Iphone 12", "394 * 844", 90, 1400, 1700, 0, 10, 10,true);
+phone1.Ring();
+let laptop1 = new Laptop("Acer", "Aspire", "1920 * 1080", 55, 1200, 1400, 0, 10, 10,true,"Windows 10");
 
 console.log(phone1.DisplayDetails());
-phone1.Ring();
+
+console.log(laptop1.DisplayDetails());
+
 
 
 
