@@ -58,7 +58,7 @@ class Device {
 
     }
 
-    DisplayDetails(){
+    DisplayDetails() {
         let deviceDetails = {};
 
         deviceDetails.brand = this.brand;
@@ -71,11 +71,41 @@ class Device {
 
 }
 
+class Phone extends Device {
+    isSmart;
+    ring;
+
+    constructor(brand, model, screenSize, batteryLevel, price, salePrice, discountPercentage, saleCount = 0, stockCount,isSmart = false, ring = "ring ring") {
+        super(brand, model, screenSize, batteryLevel, price, salePrice, discountPercentage, saleCount, stockCount);
+        this.isSmart = isSmart;
+        this.ring = ring;
+    }
+
+    DisplayDetails() {
+        let deviceDetails = super.DisplayDetails(); // miras aldigi classdaki displayDetails metodu ishlenilir ve asagidaki kod isleyecek
+        deviceDetails.isSmart = this.isSmart;
+
+        return deviceDetails;
+    }
+
+    Ring(){
+        console.log(this.ring);
+    }
+}
+
+
 let device1 = new Device("brand1", "model1", "1920 * 1080", 92, 80, 100, 0, 10, 10);
 
 console.log(device1.calculateProfit());
 console.log(device1.DisplayBatteryLevel());
 device1.SellProduct(2);
 console.log(device1.DisplayDetails());
+
+let phone1 = new Phone("Apple", "Iphone 12", "394 * 844", 90, 1400, 1700, 0, 10, 10,true);
+
+console.log(phone1.DisplayDetails());
+phone1.Ring();
+
+
 
 
