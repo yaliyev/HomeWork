@@ -101,29 +101,57 @@ Array.prototype.myFilter = function (min, max) {
 
 }
 
-Array.prototype.myIndexOf = function (value){
+Array.prototype.myIndexOf = function (value) {
     let index = -1;
 
-    for(let i = 0; i < this.length;i++){
-        if(this[i] === value ){
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] === value) {
             index = i;
             break; // niyede axra kimi davam elesin? Elnur muellim oyredib bu usulu(zamana gore tez bitir for dovru).Best Case prinsiplerinden biridir.
         }
     }
     return index;
-} 
+}
 
-Array.prototype.myLastIndexOf = function (value){
+Array.prototype.myLastIndexOf = function (value) {
     let index = -1;
 
-    for(let i = this.length - 1; i >= 0;i--){
-        if(this[i] === value ){
+    for (let i = this.length - 1; i >= 0; i--) {
+        if (this[i] === value) {
             index = i;
-            break; 
+            break;
         }
     }
     return index;
 }
+
+// myMap metodunu iki cur variantda yazacam.Hem shertde olan formatda,hem de ayrice heqiqi Array.map() icra etdiyi funksionalliq formasinda
+// Array.map() her hansisa array mueyyen emeliyyati icra etdirib,yeni array qaytarir.
+// Quracagim custom methodda bu cur ishleyecek
+
+Array.prototype.myMap = function () {
+    let newArr = new Array(); // yeni referans.Muqayise apararsaq false cixar,terkibin eyniliyi lazimdisa daxili deyer muqayisesi icra olunmalidir
+
+    for (let i = 0; i < this.length; i++) {
+        newArr[i] = this[i];
+    }
+
+    return newArr;
+}
+
+// Array.map()  Callback basa dusmek ucun en ideal numune
+Array.prototype.myMapRelatedWithItsCallBackFunctionality = function (executable) {
+
+    let newArr = new Array();
+
+    for (let i = 0; i < this.length; i++) {
+        newArr[i] = this[i]; // elementleri yeni array doldururuq
+        newArr[i] = executable(newArr[i]); // elave etmekle ish bitmez,emeliyyat icra etmeliyik
+    }
+
+    return newArr; // yeni massiv qaytaririq
+}
+
 
 
 // testing methods
@@ -152,6 +180,11 @@ console.log([5, 10, 20, 10].myFindAll(10));
 console.log('----task7----');
 console.log([10, 20, 30, 40, 50].myFilter(1, 3)); // burada 2 element qayidacaq,taskin shertlerinde arr.myFilter(3,8) -> 4 elementli massiv qaytarirdi.Bu sebebden min elementi daxildir,max daxil deyil(max qeder nezere alinir)
 console.log('----task8----');
-console.log([10,20,30,40].myIndexOf(20));
+console.log([10, 20, 30, 40].myIndexOf(20));
 console.log('----task9----');
-console.log([10,20,30,20,30,40].myLastIndexOf(20));
+console.log([10, 20, 30, 20, 30, 40].myLastIndexOf(20));
+console.log('----task10----');
+console.log([10, 20, 30].myMap());
+
+console.log('-----extra masterpiece-----');
+console.log([10, 20, 30].myMapRelatedWithItsCallBackFunctionality(function (element) { return element + 1 })); // her elementin uzerine 1 gelen ve massiv qaytaran emeliyyat
