@@ -1,6 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .image {
-  width: 50%;
-  height: 30vh;
+  width: 56.5%;
+  height: 40vh;
   display: flex;
   margin: 0 auto;
+  top: 20%;
 }
+.image-1{
+    width: 17%;
+    height: 20vh;
+}
+.div-image{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
