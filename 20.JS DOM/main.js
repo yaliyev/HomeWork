@@ -26,5 +26,77 @@ div.appendChild(image1);
 div.appendChild(image2);
 div.appendChild(image3);
 
-
 document.body.appendChild(div);
+
+
+let divWord = document.createElement('div');
+divWord.classList.add("div-words1");
+
+let words1 = document.createElement('p');
+words1.classList.add('words1')
+words1.textContent = "Indonectetus facilis";
+divWord.appendChild(words1);
+
+let words2 = document.createElement('p');
+words2.classList.add('words2')
+words2.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi";
+
+divWord.appendChild(words2);
+
+let read1 = document.createElement('a');
+read1.textContent = "Read More >";
+read1.classList.add('read')
+divWord.appendChild(read1);
+
+document.body.appendChild(divWord);
+
+let divWord2 = document.createElement('div');
+divWord2.classList.add("div-words2");
+
+let words3 = document.createElement('p');
+words3.classList.add('words1')
+words3.textContent = "Indonectetus facilis";
+divWord2.appendChild(words3);
+
+let words4 = document.createElement('p');
+words4.classList.add('words2')
+words4.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi";
+
+divWord2.appendChild(words4);
+
+let read2 = document.createElement('a');
+read2.textContent = "Read More >";
+read2.classList.add('read')
+divWord2.appendChild(read2);
+
+document.body.appendChild(divWord2);
+
+let divWord3 = document.createElement('div');
+divWord3.classList.add("div-words3");
+
+let words5 = document.createElement('p');
+words5.classList.add('words1')
+words5.textContent = "Indonectetus facilis";
+divWord3.appendChild(words5);
+
+let words6 = document.createElement('p');
+words6.classList.add('words2')
+words6.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi";
+
+divWord3.appendChild(words6);
+
+let read3 = document.createElement('a');
+read3.textContent = "Read More >";
+read3.classList.add('read')
+divWord3.appendChild(read3);
+
+document.body.appendChild(divWord3);
+
+let divWords = document.createElement('div')
+divWords.appendChild(divWord)
+divWords.appendChild(divWord2)
+divWords.appendChild(divWord3)
+
+divWords.classList.add("div-words");
+
+document.body.appendChild(divWords);
