@@ -15,9 +15,19 @@ addButton.addEventListener('click', function() {
     error.style.display = 'none';
     const li = document.createElement('li');
     li.innerHTML = `
-        <span>${text}</span>
+        <span class="text">${text}</span>
+        <button class="delete"><i id="deleteButton" class="bi bi-trash"></i></button>
     `;
     todoList.appendChild(li);
     todo.value = '';
+});
+
+todoList.addEventListener('click', function(event) {
+    if (event.target.id === 'deleteButton') {
+        const confirmDelete = confirm('Are you sure to delete?');
+        if (confirmDelete) {
+            event.target.parentElement.parentElement.remove();
+        }
+    }
 });
 
