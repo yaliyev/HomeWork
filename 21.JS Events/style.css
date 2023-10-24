@@ -48,7 +48,7 @@ li {
 }
 
 #add {
-  color: purple;
+  color: rgb(208, 27, 240);
   font-size: 36px;
   cursor: pointer;
 }
@@ -66,4 +66,13 @@ li {
   display: none;
   color: red;
   font-size: 14px;
+}
+.allClear {
+    background: red;
+    padding: 12px 24px;
+    background-color: rgb(208, 27, 240);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }

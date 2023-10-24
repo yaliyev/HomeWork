@@ -31,3 +31,17 @@ todoList.addEventListener('click', function(event) {
     }
 });
 
+clearAll.addEventListener('click', function() {
+    const todoItems = todoList.getElementsByTagName('li');
+    if (todoItems.length === 0) {
+        alert('No ToDo items.');
+        return;
+    }
+
+    const confirmDelete = confirm('Are You Sure To Delete All Your Lists?');
+    if (confirmDelete) {
+        while (todoList.firstChild) {
+            todoList.removeChild(todoList.firstChild);
+        }
+    }
+});
