@@ -20,6 +20,8 @@ addButton.addEventListener('click', function() {
     `;
     todoList.appendChild(li);
     todo.value = '';
+    const todoItems = todoList.getElementsByTagName('li');
+    taskCount(todoItems.length);
 });
 
 todoList.addEventListener('click', function(event) {
@@ -43,5 +45,11 @@ clearAll.addEventListener('click', function() {
         while (todoList.firstChild) {
             todoList.removeChild(todoList.firstChild);
         }
+        taskCount(0);
     }
 });
+
+function taskCount(count) {
+    const taskCountElement = document.getElementById('listCount');
+    taskCountElement.textContent = `You have ${count} pending tasks`;
+}

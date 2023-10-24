@@ -5,19 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300;1,400&family=Open+Sans:wght@300&family=Poppins:ital@1&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <h1>Todo App</h1>
       <div class="add-text">
-        <input type="text" id="todo" class="inp" placeholder="Add Your New To Do" />
-        <button id="addButton"><i id="add" class="bi bi-plus-square-fill"></i></button>
+        <input
+          type="text"
+          id="todo"
+          class="inp"
+          placeholder="Add Your New To Do"
+        />
+        <button id="addButton">
+          <i id="add" class="bi bi-plus-square-fill"></i>
+        </button>
       </div>
       <span class="err" id="error">Please Enter Text!</span>
       <ul id="todoList"></ul>
-      <button class="allClear" id="clearAll">Clear All</button>
+      <div class="count">
+        <span id="listCount">You have 0 pending tasks</span>
+        <button class="allClear" id="clearAll">Clear All</button>
+      </div>
       <script src="main.js"></script>
     </div>
   </body>
