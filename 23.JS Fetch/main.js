@@ -28,8 +28,9 @@ function fetchTable() {
     });
 }
 
-function showInfo(userId) {
-}
+function showInfo(userId , ) {
+    alert("UserId : "+userId)
+  }
 
 function updateTable() {
   let tableBody = document.getElementById("table-body");
@@ -73,11 +74,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function clearTable() {
-    userData = [];
-    let tableBody = document.getElementById("table-body");
-    tableBody.innerHTML = "";
-    getDataButton.disabled = false;
-  }
+    const confirmation = confirm("Are You Sure Delete Table?");
+    
+    if (confirmation) {
+        userData = [];
+        let tableBody = document.getElementById("table-body");
+        tableBody.innerHTML = "";
+        getDataButton.disabled = false;
+    }
+}
 
   sortByUsernameButton.addEventListener("click", function () {
     sortByUsername();
