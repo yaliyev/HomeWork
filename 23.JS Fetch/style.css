@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.div-word{
+   margin-bottom: 40px;
+   text-align: center;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
