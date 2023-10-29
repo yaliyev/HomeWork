@@ -1,0 +1,94 @@
+{
+    "books":[ 
+        {
+          "name": "The Silent Observer",
+          "genre": "Mystery",
+          "pageCount": 324,
+          "coverImage": "https://example.com/book_covers/silent_observer.jpg",
+          "author": "Eleanor Thompson",
+          "year": 2021,
+          "description": "A gripping mystery novel that follows Detective Sarah Adams as she unravels a complex case of a series of unexplained disappearances in a small, quiet town. As the secrets of the town's residents are uncovered, Sarah races against time to solve the mystery before it's too late."
+        },
+        {
+          "name": "The Art of War",
+          "genre": "Philosophy",
+          "pageCount": 112,
+          "coverImage": "https://example.com/book_covers/art_of_war.jpg",
+          "author": "Sun Tzu",
+          "year": -512,
+          "description": "An ancient Chinese treatise on strategy and tactics, written by Sun Tzu. This classic work on warfare and strategy has been influential in both military and business contexts."
+        },
+        {
+          "name": "To Kill a Mockingbird",
+          "genre": "Fiction",
+          "pageCount": 281,
+          "coverImage": "https://example.com/book_covers/to_kill_a_mockingbird.jpg",
+          "author": "Harper Lee",
+          "year": 1960,
+          "description": "A timeless classic that explores themes of racism, injustice, and moral growth in the American South. It is narrated by Scout Finch, a young girl, as she comes of age and witnesses her father, Atticus Finch, defend a black man wrongly accused of rape."
+        },
+        {
+          "name": "1984",
+          "genre": "Dystopian",
+          "pageCount": 328,
+          "coverImage": "https://example.com/book_covers/1984.jpg",
+          "author": "George Orwell",
+          "year": 1949,
+          "description": "A dystopian novel that envisions a totalitarian regime led by the Party and its leader Big Brother. It explores themes of surveillance, propaganda, and the loss of individual freedom."
+        },
+        {
+          "name": "Pride and Prejudice",
+          "genre": "Classic",
+          "pageCount": 279,
+          "coverImage": "https://example.com/book_covers/pride_and_prejudice.jpg",
+          "author": "Jane Austen",
+          "year": 1813,
+          "description": "A classic novel that revolves around the life and romantic relationships of Elizabeth Bennet and Mr. Darcy. It explores themes of class, reputation, and love."
+        },
+        {
+          "name": "The Hitchhiker's Guide to the Galaxy",
+          "genre": "Science Fiction",
+          "pageCount": 216,
+          "coverImage": "https://example.com/book_covers/hitchhikers_guide.jpg",
+          "author": "Douglas Adams",
+          "year": 1979,
+          "description": "A humorous science fiction series that follows the adventures of Arthur Dent, an unwitting human traveler through space. It's known for its witty humor and satirical take on the sci-fi genre."
+        },
+        {
+          "name": "The Catcher in the Rye",
+          "genre": "Coming of Age",
+          "pageCount": 277,
+          "coverImage": "https://example.com/book_covers/catcher_in_the_rye.jpg",
+          "author": "J.D. Salinger",
+          "year": 1951,
+          "description": "A novel that tells the story of Holden Caulfield, a teenager struggling with alienation and the phoniness of the adult world. It has become a classic in the genre of coming-of-age literature."
+        },
+        {
+          "name": "The Hobbit",
+          "genre": "Fantasy",
+          "pageCount": 310,
+          "coverImage": "https://example.com/book_covers/the_hobbit.jpg",
+          "author": "J.R.R. Tolkien",
+          "year": 1937,
+          "description": "A fantasy novel that follows the journey of Bilbo Baggins, a hobbit, as he accompanies a group of dwarves on a quest to reclaim their homeland from the dragon Smaug."
+        },
+        {
+          "name": "The Great Gatsby",
+          "genre": "Classic",
+          "pageCount": 180,
+          "coverImage": "https://example.com/book_covers/great_gatsby.jpg",
+          "author": "F. Scott Fitzgerald",
+          "year": 1925,
+          "description": "A novel set in the Roaring Twenties, exploring themes of wealth, excess, and the American Dream through the life of Jay Gatsby and his obsession with Daisy Buchanan."
+        },
+        {
+          "name": "The Alchemist",
+          "genre": "Fiction",
+          "pageCount": 197,
+          "coverImage": "https://example.com/book_covers/alchemist.jpg",
+          "author": "Paulo Coelho",
+          "year": 1988,
+          "description": "A philosophical and inspirational novel that tells the story of Santiago, a shepherd, who embarks on a journey to discover his Personal Legend and fulfill his dreams."
+        }
+      ]
+}
