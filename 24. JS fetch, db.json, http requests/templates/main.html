@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetch Weekend Task</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/style/menu.css">
+    <link rel="stylesheet" href="../assets/style/layout/menu.css">
+    <link rel="stylesheet" href="../assets/style/pages/home.css">
 </head>
 
 <body>
@@ -31,6 +32,27 @@
         </nav>
     </header>
 
+    <main>
+        <section class="home">
+
+            <h1 class="home-description">
+                I did it for me. I liked it. I was good at it. And I was really — I was alive.(Walter White)
+            </h1>
+
+            <div id="slider" class="slider">
+                <button id="slider-control-button-left" class="slider-control-button left">
+                    <i class="fa-solid fa-arrow-left fa-2x"></i>
+                </button>
+                <img id="slider-image" class="slider-image" src="../assets/images/breaking-bad-1.jpg" alt="slider-image">
+                <button id="slider-control-button-right" class="slider-control-button right">
+                    <i class="fa-solid fa-arrow-right fa-2x"></i>
+                </button>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="../assets/scripts/slider.js"></script>
 </body>
 
 </html>
