@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetch Weekend Task/Books</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/style/base/grid.css">
     <link rel="stylesheet" href="../assets/style/layout/menu.css">
     <link rel="stylesheet" href="../assets/style/pages/books.css">
@@ -37,17 +39,22 @@
 
     <main>
 
-       
+
 
         <section class="books">
 
             <div id="spinner-loading" class="spinner-loading">
-            
+
             </div>
 
-            <div class="search-box">
-                <input placeholder="Search:" id="search-box-input" class="search-box-input" type="text">
+            <div class="particular-features">
+                <div class="search-box">
+                    <input placeholder="Search:" id="search-box-input" class="search-box-input" type="text">
+                </div>
+                <button id="sort-by-year" class="sort-by-year">Sort by Year</button>
+
             </div>
+
 
             <div id="book-cards" class="row">
                 <!-- <div class="col-3">
@@ -76,17 +83,17 @@
                         <button class="card-button card-delete-button">Delete Button</button>
                     </div>
                 </div> -->
-                
+
             </div>
 
         </section>
-        
+
     </main>
 
-  
+
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="../assets/scripts/books.js"></script>
+    <script src="../assets/scripts/books.js"></script>
 </body>
 
 </html>

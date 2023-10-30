@@ -4,10 +4,29 @@
     padding: 150px 20px 20px 20px;
 }
 
-.books .search-box{
+
+.books .particular-features{
+    display: flex;
+    column-gap: 20px;
+}
+.books .particular-features .search-box{
     margin-left: 10px;
     width: 150px;
 }
-.books .search-box .search-box-input{
-    padding: 5px;
+.books .particular-features  .search-box input{
+    margin-top: 2px;
+    width: 100%;
 }
+.books .particular-features .sort-by-year{
+   background-color: purple;
+   color: white;
+   border: none;
+   border-radius: 10px;
+   padding: 5px 10px;
+   transition: 0.5s background-color;
+}
+.books .particular-features .sort-by-year:hover{
+    background-color: rgb(164, 27, 164);
+}
+
+

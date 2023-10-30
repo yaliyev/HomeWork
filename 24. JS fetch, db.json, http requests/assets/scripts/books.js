@@ -4,6 +4,8 @@ let bookCards = document.getElementById('book-cards');
 
 let search = document.getElementById('search-box-input');
 
+let sortByYearButton = document.getElementById('sort-by-year');
+
 async function getData() {
     let spinner = document.getElementById('spinner-loading');
     spinner.style.animationName = 'spin';
@@ -214,6 +216,18 @@ search.addEventListener('keyup',function(){
         }
     })
    createBookCards(resultBooks);
+
+});
+
+sortByYearButton.addEventListener('click',function(){
+
+    let sortedBooks = books.map((book)=>book);
+
+    sortedBooks.sort((a,b)=>{
+        return b.year - a.year;
+    })
+    console.log(sortedBooks);
+    createBookCards(sortedBooks);
 
 });
 
