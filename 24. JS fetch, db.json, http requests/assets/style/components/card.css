@@ -42,4 +42,8 @@
 .card .card-delete-button{
     background-color: red;
     color: white;   
-  }
+}
+.card .card-add-to-basket-button{
+    background-color: rgb(31, 153, 194);
+    color: white;
+}

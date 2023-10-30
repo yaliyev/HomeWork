@@ -1,3 +1,12 @@
+let basketStr = localStorage.getItem("basket-books");
+
+let basket = [];
+
+if(basketStr != null){
+   basket = JSON.parse(basketStr);
+//    console.log(basket);
+}
+
 let books = [];
 
 let bookCards = document.getElementById('book-cards');
@@ -72,6 +81,8 @@ function createBookCards(parametrBooks = books) {
 
 
 
+        let cardAddToBasketButton = '<button type="button" class="card-button card-add-to-basket-button">Add to Basket</button>'; 
+
 
 
         cardImageBox.appendChild(cardImage);
@@ -88,26 +99,27 @@ function createBookCards(parametrBooks = books) {
 
         card.innerHTML += cardDeleteButton;
 
+        card.innerHTML += cardAddToBasketButton;
+
 
         colThree.appendChild(card);
 
         bookCards.appendChild(colThree);
-
-
-
-        document.querySelectorAll(".card .card-title").forEach((element, index) => {
-            element.addEventListener('click', function () {
-                Swal.fire({
-
-                    title: this.innerText,
-                    html: `<b>Genre</b>: ${parametrBooks[index].genre} <br> <b>PageCount</b>: ${books[index].pageCount} <br> `
-                        + `<b>Author</b>: ${parametrBooks[index].author} <br>`
-                        + `<b>Year</b>: ${parametrBooks[index].year} <br>`
-                        + `<b>Description</b>: ${parametrBooks[index].description}`
-                })
-            })
-        });
     }
+
+    document.querySelectorAll(".card .card-title").forEach((element, index) => {
+        
+        element.addEventListener('click', function () {
+            Swal.fire({
+
+                title: this.innerText,
+                html: `<b>Genre</b>: ${parametrBooks[index].genre} <br> <b>PageCount</b>: ${books[index].pageCount} <br> `
+                    + `<b>Author</b>: ${parametrBooks[index].author} <br>`
+                    + `<b>Year</b>: ${parametrBooks[index].year} <br>`
+                    + `<b>Description</b>: ${parametrBooks[index].description}`
+            })
+        })
+    });
 
     let editButtons = document.querySelectorAll('.card-button.card-edit-button');
 
@@ -193,7 +205,52 @@ function createBookCards(parametrBooks = books) {
     });
 
 
+    let addToBasketButtons = document.querySelectorAll('.card-button.card-add-to-basket-button');
 
+    addToBasketButtons.forEach((element,index)=>{
+        element.addEventListener('click',function(){
+            
+            let basketItemId = null;
+            
+
+            let findingElement = basket.find((book,idx)=>{
+                // console.log(book.itemId);
+                // console.log(books[index].id);
+                if(book.itemId === books[index].id){
+                    basketItemId = idx;
+                    return book;
+                }
+            });
+            // console.log(findingElement);
+
+            if(findingElement == undefined){
+                console.log(books[index]);
+                let basketItem = {
+                    itemId: books[index].id,
+                    book: books[index],
+                    quantity: 1,
+                    totalPrice: books[index].price
+                }
+
+                
+
+                basket.push(basketItem);
+
+                localStorage.setItem("basket-books",JSON.stringify(basket));
+            }else{
+                 basket[basketItemId].quantity = basket[basketItemId].quantity + 1; 
+                 basket[basketItemId].totalPrice = basket[basketItemId].quantity * basket[basketItemId].book.price;
+
+                //  console.log(basket);
+                 
+                 localStorage.setItem("basket-books",JSON.stringify(basket));
+            }
+            
+
+            
+
+        })
+    })
 
 
 }
