@@ -3,3 +3,11 @@
     margin: 0 auto;
     padding: 150px 20px 20px 20px;
 }
+
+.books .search-box{
+    margin-left: 10px;
+    width: 150px;
+}
+.books .search-box .search-box-input{
+    padding: 5px;
+}

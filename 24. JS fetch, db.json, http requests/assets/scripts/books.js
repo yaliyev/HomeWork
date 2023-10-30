@@ -2,6 +2,8 @@ let books = [];
 
 let bookCards = document.getElementById('book-cards');
 
+let search = document.getElementById('search-box-input');
+
 async function getData() {
     let spinner = document.getElementById('spinner-loading');
     spinner.style.animationName = 'spin';
@@ -20,9 +22,11 @@ async function getData() {
         })
 }
 
-function createBookCards() {
+function createBookCards(parametrBooks = books) {
 
-    for (let i = 0; i < books.length; i++) {
+    bookCards.innerHTML = "";
+
+    for (let i = 0; i < parametrBooks.length; i++) {
 
         let colThree = document.createElement('div');
         colThree.setAttribute('class', 'col-3');
@@ -40,14 +44,14 @@ function createBookCards() {
 
         cardImage.setAttribute('class', 'card-image');
 
-        cardImage.src = books[i].coverImage;
+        cardImage.src = parametrBooks[i].coverImage;
 
         let cardTitle = document.createElement('h3');
 
 
 
 
-        cardTitle.innerText = books[i].name;
+        cardTitle.innerText = parametrBooks[i].name;
 
         cardTitle.setAttribute('class', 'card-title');
 
@@ -92,10 +96,10 @@ function createBookCards() {
                 Swal.fire({
 
                     title: this.innerText,
-                    html: `<b>Genre</b>: ${books[index].genre} <br> <b>PageCount</b>: ${books[index].pageCount} <br> `
-                        + `<b>Author</b>: ${books[index].author} <br>`
-                        + `<b>Year</b>: ${books[index].year} <br>`
-                        + `<b>Description</b>: ${books[index].description}`
+                    html: `<b>Genre</b>: ${parametrBooks[index].genre} <br> <b>PageCount</b>: ${books[index].pageCount} <br> `
+                        + `<b>Author</b>: ${parametrBooks[index].author} <br>`
+                        + `<b>Year</b>: ${parametrBooks[index].year} <br>`
+                        + `<b>Description</b>: ${parametrBooks[index].description}`
                 })
             })
         });
@@ -109,13 +113,13 @@ function createBookCards() {
             Swal.fire({
                 title: '<strong>Edit</strong>',
                 html:
-                 `<input id='editname' style='margin:10px;' value='${books[index].name}'>  <br> `+
-                 `<input id='editgenre' style='margin:10px;' value='${books[index].genre}'>  <br> `+
-                 `<input id='editpagecount' style='margin:10px;' value='${books[index].pageCount}'>  <br> `+
-                 `<input id='editcoverimage' style='margin:10px;' value='${books[index].coverImage}'>  <br> `+
-                 `<input id='editauthor' style='margin:10px;' value='${books[index].author}'>  <br> `+
-                 `<input id='edityear' style='margin:10px;' value='${books[index].year}'>  <br> `+
-                 `<input id='editdescription' style='margin:10px;' value='${books[index].description}'>  <br> `
+                 `<input id='editname' style='margin:10px;' value='${parametrBooks[index].name}'>  <br> `+
+                 `<input id='editgenre' style='margin:10px;' value='${parametrBooks[index].genre}'>  <br> `+
+                 `<input id='editpagecount' style='margin:10px;' value='${parametrBooks[index].pageCount}'>  <br> `+
+                 `<input id='editcoverimage' style='margin:10px;' value='${parametrBooks[index].coverImage}'>  <br> `+
+                 `<input id='editauthor' style='margin:10px;' value='${parametrBooks[index].author}'>  <br> `+
+                 `<input id='edityear' style='margin:10px;' value='${parametrBooks[index].year}'>  <br> `+
+                 `<input id='editdescription' style='margin:10px;' value='${parametrBooks[index].description}'>  <br> `
                  ,
                 showCloseButton: true,
                 focusConfirm: false,
@@ -126,7 +130,7 @@ function createBookCards() {
                if(result.isConfirmed === true){
 
                 let book = {
-                    id: books[index].id,
+                    id: parametrBooks[index].id,
                     name: document.getElementById('editname').value,
                     genre: document.getElementById('editgenre').value,
                     pageCount: document.getElementById('editpagecount').value,
@@ -136,7 +140,7 @@ function createBookCards() {
                     description: document.getElementById('editdescription').value
                 }
                 
-               let response = fetch('http://localhost:3000/books/' + books[index].id, {
+               let response = fetch('http://localhost:3000/books/' + parametrBooks[index].id, {
                     method: 'PATCH',
                     headers: {
                         "Content-Type": "application/json",
@@ -169,7 +173,7 @@ function createBookCards() {
                 if (result.isConfirmed) {
                     event.preventDefault();
 
-                    fetch('http://localhost:3000/books/' + books[index].id, {
+                    fetch('http://localhost:3000/books/' + parametrBooks[index].id, {
                         method: 'DELETE'
                     });
                     Swal.fire('Deleted!', '', 'success')
@@ -191,7 +195,27 @@ function createBookCards() {
 }
 
 
+search.addEventListener('keyup',function(){
 
+    
+
+    let resultBooks = books.filter((book)=>{
+        let searchTxt = search.value.toLowerCase(); 
+         
+        if(book.name.toLowerCase().indexOf(searchTxt) > -1
+        || book.genre.toLowerCase().indexOf(searchTxt) > -1 
+        ||book.pageCount.toString().toLowerCase().indexOf(searchTxt) > -1 
+        ||book.author.toLowerCase().indexOf(searchTxt) > -1 
+        ||book.year.toString().toLowerCase().indexOf(searchTxt) > -1 
+        ||book.description.toLowerCase().indexOf(searchTxt) > -1     
+        
+        ){
+            return book;
+        }
+    })
+   createBookCards(resultBooks);
+
+});
 
 
 
