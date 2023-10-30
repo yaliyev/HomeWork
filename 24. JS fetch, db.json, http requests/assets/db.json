@@ -14,14 +14,14 @@
       "id": 2,
       "name": "The Art of War",
       "genre": "Philosophy",
-      "pageCount": 112,
+      "pageCount": "113",
       "coverImage": "https://m.media-amazon.com/images/I/61BvkqoxLxL._AC_UF894,1000_QL80_.jpg",
       "author": "Sun Tzu",
-      "year": -512,
+      "year": "-512",
       "description": "An ancient Chinese treatise on strategy and tactics, written by Sun Tzu. This classic work on warfare and strategy has been influential in both military and business contexts."
     },
     {
-      "id":3,
+      "id": 3,
       "name": "To Kill a Mockingbird",
       "genre": "Fiction",
       "pageCount": 281,

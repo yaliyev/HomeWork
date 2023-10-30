@@ -7,7 +7,7 @@ async function getData() {
     spinner.style.animationName = 'spin';
     spinner.style.display = 'block';
 
-    let data = await fetch('../assets/test.json')
+    let data = await fetch('../assets/db.json')
         .then(response => {
             return response.json()
         })
@@ -100,6 +100,59 @@ function createBookCards() {
             })
         });
     }
+
+    let editButtons = document.querySelectorAll('.card-button.card-edit-button');
+
+    editButtons.forEach((element,index)=>{
+
+        element.addEventListener('click',function(){
+            Swal.fire({
+                title: '<strong>Edit</strong>',
+                html:
+                 `<input id='editname' style='margin:10px;' value='${books[index].name}'>  <br> `+
+                 `<input id='editgenre' style='margin:10px;' value='${books[index].genre}'>  <br> `+
+                 `<input id='editpagecount' style='margin:10px;' value='${books[index].pageCount}'>  <br> `+
+                 `<input id='editcoverimage' style='margin:10px;' value='${books[index].coverImage}'>  <br> `+
+                 `<input id='editauthor' style='margin:10px;' value='${books[index].author}'>  <br> `+
+                 `<input id='edityear' style='margin:10px;' value='${books[index].year}'>  <br> `+
+                 `<input id='editdescription' style='margin:10px;' value='${books[index].description}'>  <br> `
+                 ,
+                showCloseButton: true,
+                focusConfirm: false,
+                confirmButtonText:
+                'Edit',
+                confirmButtonAriaLabel: 'Edited',
+              }).then(result=>{
+               if(result.isConfirmed === true){
+
+                let book = {
+                    id: books[index].id,
+                    name: document.getElementById('editname').value,
+                    genre: document.getElementById('editgenre').value,
+                    pageCount: document.getElementById('editpagecount').value,
+                    coverImage: document.getElementById('editcoverimage').value,
+                    author: document.getElementById('editauthor').value,
+                    year: document.getElementById('edityear').value,
+                    description: document.getElementById('editdescription').value
+                }
+                
+               let response = fetch('http://localhost:3000/books/' + books[index].id, {
+                    method: 'PATCH',
+                    headers: {
+                        "Content-Type": "application/json",
+                        // 'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: JSON.stringify(book)
+                }).then((result)=>{
+                });
+                
+
+               }
+              })
+
+        });
+
+    });
 
     let deleteButtons = document.querySelectorAll('.card-button.card-delete-button');
 
