@@ -1,0 +1,44 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "The Silent Observer",
+      "genre": "Mystery",
+      "pageCount": 324,
+      "coverImage": "https://m.media-amazon.com/images/I/51rNUQZumQL._AC_UF1000,1000_QL80_.jpg",
+      "author": "Eleanor Thompson",
+      "year": 2021,
+      "description": "A gripping mystery novel that follows Detective Sarah Adams as she unravels a complex case of a series of unexplained disappearances in a small, quiet town. As the secrets of the town's residents are uncovered, Sarah races against time to solve the mystery before it's too late."
+    },
+    {
+      "id": 8,
+      "name": "The Hobbit",
+      "genre": "Fantasy",
+      "pageCount": 310,
+      "coverImage": "https://m.media-amazon.com/images/I/61BvkqoxLxL._AC_UF894,1000_QL80_.jpg",
+      "author": "J.R.R. Tolkien",
+      "year": 1937,
+      "description": "A fantasy novel that follows the journey of Bilbo Baggins, a hobbit, as he accompanies a group of dwarves on a quest to reclaim their homeland from the dragon Smaug."
+    },
+    {
+      "id": 9,
+      "name": "The Great Gatsby",
+      "genre": "Classic",
+      "pageCount": 180,
+      "coverImage": "https://m.media-amazon.com/images/I/51rNUQZumQL._AC_UF1000,1000_QL80_.jpg",
+      "author": "F. Scott Fitzgerald",
+      "year": 1925,
+      "description": "A novel set in the Roaring Twenties, exploring themes of wealth, excess, and the American Dream through the life of Jay Gatsby and his obsession with Daisy Buchanan."
+    },
+    {
+      "id": 10,
+      "name": "The Alchemist",
+      "genre": "Fiction",
+      "pageCount": 197,
+      "coverImage": "https://m.media-amazon.com/images/I/61BvkqoxLxL._AC_UF894,1000_QL80_.jpg",
+      "author": "Paulo Coelho",
+      "year": 1988,
+      "description": "A philosophical and inspirational novel that tells the story of Santiago, a shepherd, who embarks on a journey to discover his Personal Legend and fulfill his dreams."
+    }
+  ]
+}
