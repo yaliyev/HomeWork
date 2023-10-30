@@ -1,6 +1,6 @@
 let images = ["../assets/images/breaking-bad-1.jpg","../assets/images/breaking-bad-2.jpg","../assets/images/breaking-bad-3.jpg","../assets/images/breaking-bad-4.jpeg"];
 
-let currentImage = 0;
+let currentImage = 1;
 
 let sliderImage = document.getElementById('slider-image');
 

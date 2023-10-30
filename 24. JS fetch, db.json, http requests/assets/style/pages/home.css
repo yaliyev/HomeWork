@@ -4,6 +4,7 @@ body{
 .home{
     width: 65%;
     margin: 0 auto;
+    padding-top: 50px;
 }
 .home .home-description{
     text-align: center;

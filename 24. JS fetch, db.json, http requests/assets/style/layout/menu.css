@@ -1,9 +1,11 @@
 .navbar{
+    margin-top: -10px;
+    margin-left: -10px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     background-image: linear-gradient(to right,#919B69,#1A4A7B);
-    
+    position: fixed;
 }
 .navbar *:not(i){
     color: white;
