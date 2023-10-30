@@ -6,6 +6,8 @@ let search = document.getElementById('search-box-input');
 
 let sortByYearButton = document.getElementById('sort-by-year');
 
+let filterByGenreSelect  = document.getElementById('filter-by-genre');
+
 async function getData() {
     let spinner = document.getElementById('spinner-loading');
     spinner.style.animationName = 'spin';
@@ -198,7 +200,7 @@ function createBookCards(parametrBooks = books) {
 
 
 search.addEventListener('keyup',function(){
-
+    document.getElementById('alert').innerText = "";
     
 
     let resultBooks = books.filter((book)=>{
@@ -215,6 +217,9 @@ search.addEventListener('keyup',function(){
             return book;
         }
     })
+    if(resultBooks.length == 0){
+        document.getElementById('alert').innerText = "No such data";
+    }
    createBookCards(resultBooks);
 
 });
@@ -230,6 +235,16 @@ sortByYearButton.addEventListener('click',function(){
     createBookCards(sortedBooks);
 
 });
+
+filterByGenreSelect.addEventListener('change',function(){
+    if(this.value != ""){
+        let resultBooks = books.filter(book=>book.genre === this.value);
+        createBookCards(resultBooks);
+    }else{
+        createBookCards();
+    }
+    
+})
 
 
 

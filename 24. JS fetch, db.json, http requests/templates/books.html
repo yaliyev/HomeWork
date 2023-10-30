@@ -47,13 +47,29 @@
 
             </div>
 
-            <div class="particular-features">
-                <div class="search-box">
-                    <input placeholder="Search:" id="search-box-input" class="search-box-input" type="text">
+            <div class="operations">
+                <div class="particular-features">
+
+                    <div class="search-box">
+                        <input placeholder="Search:" id="search-box-input" class="search-box-input" type="text">
+                    </div>
+                    <button id="sort-by-year" class="sort-by-year">Sort by Year</button>
+                    <span id="alert"></span>
                 </div>
-                <button id="sort-by-year" class="sort-by-year">Sort by Year</button>
+
+                <div class="filterByGenre">
+                    <select id="filter-by-genre">
+                        <option value="" selected>All</option>
+                        <option value="Classic">Classic</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Philosophy">Philosophy</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Dystopian">Dystopian</option>
+                    </select>
+                </div>
 
             </div>
+
 
 
             <div id="book-cards" class="row">
