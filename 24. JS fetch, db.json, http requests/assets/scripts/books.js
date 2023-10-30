@@ -6,7 +6,7 @@ async function getData() {
     let spinner = document.getElementById('spinner-loading');
     spinner.style.animationName = 'spin';
     spinner.style.display = 'block';
-    setTimeout(async () => {
+    
         let data = await fetch('../assets/db.json')
             .then(response => {
                 return response.json()
@@ -18,8 +18,6 @@ async function getData() {
 
                 createBookCards();
             })
-    }, 1000); // qesden gecikdirmisem datanin yuklenmesini,loading islesin
-
 }
 
 function createBookCards() {
