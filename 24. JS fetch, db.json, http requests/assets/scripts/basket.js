@@ -1,9 +1,18 @@
 let basketStr = localStorage.getItem("basket-books");
 
+let balance = localStorage.getItem("basket-books-balance");
+
+if(balance == null){
+    balance = Number(prompt('Balansı daxil edin'));
+    localStorage.setItem("basket-books-balance",balance);
+    document.getElementById('balance').innerText = balance;
+}
+
 let basket = [];
 
 if (basketStr != null) {
     basket = JSON.parse(basketStr);
+    // console.log(balance);
     basket.sort((a, b) => {
         return a.itemId - b.itemId;
     })
@@ -78,6 +87,11 @@ function initiate() {
     let plusButtons = document.querySelectorAll('.plus-button');
     let deleteButtons = document.querySelectorAll('.delete-button');
 
+    let balanceElement = document.getElementById('balance');
+
+    balanceElement.innerText = balance;
+    
+
     minusButtons.forEach((element) => {
 
         element.addEventListener('click', function () {
@@ -150,24 +164,37 @@ function initiate() {
     submitOrderButton.addEventListener('click', function () {
 
         if(basket.length > 0){
-            Swal.fire({
-                title: 'Əminsiniz?',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                cancelButtonText: 'Xeyr',
-                confirmButtonText: 'Bəli!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    basket = [];
-                    localStorage.removeItem('basket-books');
-                    initiate();
-                    Swal.fire(
-                        'Order Confirmed',
-                    )
-                }
-            })
+            let totalAmount = calculateTotalAmount();
+            if(balance >= totalAmount){
+
+                balance -= totalAmount;
+
+                localStorage.setItem("basket-books-balance",balance);
+
+                Swal.fire({
+                    title: 'Əminsiniz?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    cancelButtonText: 'Xeyr',
+                    confirmButtonText: 'Bəli!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        basket = [];
+                        localStorage.removeItem('basket-books');
+                        initiate();
+                        Swal.fire(
+                            'Order Confirmed',
+                        )
+                    }
+                })
+                
+            }else{
+                Swal.fire('Balansda kifayət qədər məbləğ yoxdur.')
+
+            }
+            
         }
 
     });
@@ -183,6 +210,8 @@ function calculateTotalAmount() {
         totalAmount += element.totalPrice;
     })
     document.getElementById('total-amount').innerText = totalAmount;
+
+    return totalAmount;
 }
 
 initiate();
