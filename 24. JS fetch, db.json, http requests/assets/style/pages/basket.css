@@ -69,3 +69,28 @@ body {
     background-color: red;
     border: none;
 }
+.basket .additional-information{
+    width: 45%;
+    margin: 50px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.basket .additional-information .total-amount-info{
+    color: white;
+    font-size: 20px;
+}
+.basket .additional-information .total-amount{
+    color: red;
+}
+.basket .additional-information .submit-order-button{
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: aquamarine;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: 0.4s transform;
+}
+.basket .additional-information .submit-order-button:hover{
+    transform: scale(1.05,1.05);
+}

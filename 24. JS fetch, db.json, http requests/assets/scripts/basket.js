@@ -76,51 +76,113 @@ function initiate() {
     insertBasketItems();
     let minusButtons = document.querySelectorAll('.minus-button');
     let plusButtons = document.querySelectorAll('.plus-button');
+    let deleteButtons = document.querySelectorAll('.delete-button');
 
-    minusButtons.forEach((element)=>{
+    minusButtons.forEach((element) => {
 
-        element.addEventListener('click',function(){
-                let elementID = this.parentElement.parentElement.querySelector('td:first-child').innerHTML;
-                let basketItemIndex = null;
-                let basketElement = basket.find((basketItem,idx)=>{
-                    if(basketItem.itemId == elementID){
-                        basketItemIndex = idx;
-                    }
-                })
+        element.addEventListener('click', function () {
+            let elementID = this.parentElement.parentElement.querySelector('td:first-child').innerHTML;
+            let basketItemIndex = null;
+            let basketElement = basket.find((basketItem, idx) => {
+                if (basketItem.itemId == elementID) {
+                    basketItemIndex = idx;
+                }
+            })
 
-                basket[basketItemIndex].quantity = basket[basketItemIndex].quantity - 1;
-                basket[basketItemIndex].totalPrice = basket[basketItemIndex].quantity * basket[basketItemIndex].book.price;
+            basket[basketItemIndex].quantity = basket[basketItemIndex].quantity - 1;
+            basket[basketItemIndex].totalPrice = basket[basketItemIndex].quantity * basket[basketItemIndex].book.price;
 
-                localStorage.setItem("basket-books",JSON.stringify(basket));
+            localStorage.setItem("basket-books", JSON.stringify(basket));
 
-                initiate();
-                
+            initiate();
+
         });
 
     });
 
-    plusButtons.forEach((element)=>{
+    plusButtons.forEach((element) => {
 
-        element.addEventListener('click',function(){
-                let elementID = this.parentElement.parentElement.querySelector('td:first-child').innerHTML;
-                let basketItemIndex = null;
-                let basketElement = basket.find((basketItem,idx)=>{
-                    if(basketItem.itemId == elementID){
-                        basketItemIndex = idx;
-                    }
-                })
+        element.addEventListener('click', function () {
+            let elementID = this.parentElement.parentElement.querySelector('td:first-child').innerHTML;
+            let basketItemIndex = null;
+            let basketElement = basket.find((basketItem, idx) => {
+                if (basketItem.itemId == elementID) {
+                    basketItemIndex = idx;
+                }
+            })
 
-                basket[basketItemIndex].quantity = basket[basketItemIndex].quantity + 1;
-                basket[basketItemIndex].totalPrice = basket[basketItemIndex].quantity * basket[basketItemIndex].book.price;
+            basket[basketItemIndex].quantity = basket[basketItemIndex].quantity + 1;
+            basket[basketItemIndex].totalPrice = basket[basketItemIndex].quantity * basket[basketItemIndex].book.price;
 
-                localStorage.setItem("basket-books",JSON.stringify(basket));
+            localStorage.setItem("basket-books", JSON.stringify(basket));
 
-                initiate();
-                
+            initiate();
+
         });
 
     });
-    
+
+
+    deleteButtons.forEach((element) => {
+
+        element.addEventListener('click', function () {
+            let elementID = this.parentElement.parentElement.querySelector('td:first-child').innerHTML;
+            let basketItemIndex = null;
+            let basketElement = basket.find((basketItem, idx) => {
+                if (basketItem.itemId == elementID) {
+                    basketItemIndex = idx;
+                }
+            })
+
+            basket.splice(basketItemIndex, 1);
+
+            localStorage.setItem("basket-books", JSON.stringify(basket));
+
+            initiate();
+
+
+
+        });
+    });
+
+    let submitOrderButton = document.getElementById('submit-order-button');
+
+    submitOrderButton.addEventListener('click', function () {
+
+        if(basket.length > 0){
+            Swal.fire({
+                title: 'Əminsiniz?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                cancelButtonText: 'Xeyr',
+                confirmButtonText: 'Bəli!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    basket = [];
+                    localStorage.removeItem('basket-books');
+                    initiate();
+                    Swal.fire(
+                        'Order Confirmed',
+                    )
+                }
+            })
+        }
+
+    });
+
+    calculateTotalAmount();
+
+}
+
+function calculateTotalAmount() {
+    let totalAmount = 0;
+
+    basket.forEach((element) => {
+        totalAmount += element.totalPrice;
+    })
+    document.getElementById('total-amount').innerText = totalAmount;
 }
 
 initiate();
