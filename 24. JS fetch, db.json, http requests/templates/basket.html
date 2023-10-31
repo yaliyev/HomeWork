@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Weekend/Basket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../assets/style/base/grid.css">
+<link rel="stylesheet" href="../assets/style/layout/menu.css">
+<link rel="stylesheet" href="../assets/style/pages/basket.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-part">
+                <i id="navbar-left-logo" class="fa-solid fa-bars"></i>
+                <h3>React App | routing.json-server</h3>
+            </div>
+
+            <div class="navbar-part">
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="">Admin Panel</a></li>
+                    <li><a href="">Basket</a></li>
+                    <li><a href="basket.html">Basket 2(Local Storage)</a></li>
+                </ul>
+
+            </div>
+
+
+        </nav>
+    </header>    
+
+    <main>
+
+        <section class="basket">
+
+            <table class="basket-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Image</th>
+                        <th>Name of Book</th>
+                        <th>Price</th>
+                        <th>Total Amount</th>
+                        <th>Count</th>
+                        <th>Increase/Decrease</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody id="basket-items-table">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>
+                            <img class="item-image" src="https://m.media-amazon.com/images/I/51rNUQZumQL._AC_UF1000,1000_QL80_.jpg">
+                        </td>
+                        <td>Spaghetti</td>
+                        <td>17 AZN</td>
+                        <td>17 AZN</td>
+                        <td>1</td>
+                        <td>
+                            <button class="plus-button">+</button>
+                            <button class="minus-button">-</button>
+                        </td>
+                        <td>
+                            <button class="delete-button">
+                               x
+                            </button>
+                        </td>
+                    </tr> -->
+                </tbody>
+
+            </table>
+            
+        </section>
+
+    </main>
+
+    <script src="../assets/scripts/basket.js"></script>
+</body>
+</html>

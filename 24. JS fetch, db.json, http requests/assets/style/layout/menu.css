@@ -6,6 +6,7 @@
     justify-content: space-between;
     background-image: linear-gradient(to right,#919B69,#1A4A7B);
     position: fixed;
+    z-index: 999;
 }
 .navbar *:not(i){
     color: white;

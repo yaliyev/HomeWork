@@ -224,7 +224,6 @@ function createBookCards(parametrBooks = books) {
             // console.log(findingElement);
 
             if(findingElement == undefined){
-                console.log(books[index]);
                 let basketItem = {
                     itemId: books[index].id,
                     book: books[index],
