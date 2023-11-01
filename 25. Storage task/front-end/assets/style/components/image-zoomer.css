@@ -1,0 +1,9 @@
+.zoom-box-hidden{
+    overflow: hidden;
+}
+.img-zoom{
+  transition: 0.3s transform;
+}
+.img-zoom:hover{
+transform: scale(1.1,1.1);
+}

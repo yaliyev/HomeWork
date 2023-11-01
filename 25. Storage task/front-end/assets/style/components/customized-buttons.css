@@ -1,0 +1,16 @@
+
+.detail-btn,.delete-btn,.favourite-btn{
+    transition: 0.3s;
+}
+.detail-btn:hover{
+    background-color: #596EFC !important;
+    color: white !important;
+}
+.delete-btn:hover{
+    background-color: #DC3545 !important;
+    color: white !important;
+}
+.favourite-btn:hover{
+    background-color: #DC3545 !important;
+    color: white !important;
+}
