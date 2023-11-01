@@ -9,7 +9,7 @@
       "author": "Eleanor Thompson",
       "year": 2021,
       "description": "A gripping mystery novel that follows Detective Sarah Adams as she unravels a complex case of a series of unexplained disappearances in a small, quiet town. As the secrets of the town's residents are uncovered, Sarah races against time to solve the mystery before it's too late.",
-      "price":10
+      "price": 10
     },
     {
       "id": 2,
@@ -19,8 +19,8 @@
       "coverImage": "https://m.media-amazon.com/images/I/61BvkqoxLxL._AC_UF894,1000_QL80_.jpg",
       "author": "Sun Tzu",
       "year": "-512",
-      "description": "An ancient Chinese treatise on strategy and tactics, written by Sun Tzu. This classic work on warfare and strategy has been influential in both military and business contexts."
-      ,"price":11
+      "description": "An ancient Chinese treatise on strategy and tactics, written by Sun Tzu. This classic work on warfare and strategy has been influential in both military and business contexts.",
+      "price": 11
     },
     {
       "id": 3,
@@ -30,8 +30,8 @@
       "coverImage": "https://upload.wikimedia.org/wikipedia/commons/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
       "author": "Harper Lee",
       "year": "1960",
-      "description": "A timeless classic that explores themes of racism, injustice, and moral growth in the American South. It is narrated by Scout Finch, a young girl, as she comes of age and witnesses her father, Atticus Finch, defend a black man wrongly accused of rape."
-      ,"price":12
+      "description": "A timeless classic that explores themes of racism, injustice, and moral growth in the American South. It is narrated by Scout Finch, a young girl, as she comes of age and witnesses her father, Atticus Finch, defend a black man wrongly accused of rape.",
+      "price": 12
     },
     {
       "id": 4,
@@ -41,8 +41,8 @@
       "coverImage": "https://m.media-amazon.com/images/I/61BvkqoxLxL._AC_UF894,1000_QL80_.jpg",
       "author": "George Orwell",
       "year": 1949,
-      "description": "A dystopian novel that envisions a totalitarian regime led by the Party and its leader Big Brother. It explores themes of surveillance, propaganda, and the loss of individual freedom."
-      ,"price":13
+      "description": "A dystopian novel that envisions a totalitarian regime led by the Party and its leader Big Brother. It explores themes of surveillance, propaganda, and the loss of individual freedom.",
+      "price": 13
     },
     {
       "id": 5,
@@ -52,8 +52,8 @@
       "coverImage": "https://m.media-amazon.com/images/I/51rNUQZumQL._AC_UF1000,1000_QL80_.jpg",
       "author": "Jane Austen",
       "year": 1813,
-      "description": "A classic novel that revolves around the life and romantic relationships of Elizabeth Bennet and Mr. Darcy. It explores themes of class, reputation, and love."
-      ,"price":14
+      "description": "A classic novel that revolves around the life and romantic relationships of Elizabeth Bennet and Mr. Darcy. It explores themes of class, reputation, and love.",
+      "price": 14
     },
     {
       "id": 6,
@@ -63,8 +63,8 @@
       "coverImage": "https://m.media-amazon.com/images/I/61BvkqoxLxL._AC_UF894,1000_QL80_.jpg",
       "author": "Douglas Adams",
       "year": 1979,
-      "description": "A humorous science fiction series that follows the adventures of Arthur Dent, an unwitting human traveler through space. It's known for its witty humor and satirical take on the sci-fi genre."
-      ,"price":15
+      "description": "A humorous science fiction series that follows the adventures of Arthur Dent, an unwitting human traveler through space. It's known for its witty humor and satirical take on the sci-fi genre.",
+      "price": 15
     },
     {
       "id": 7,
@@ -74,8 +74,8 @@
       "coverImage": "https://m.media-amazon.com/images/I/51rNUQZumQL._AC_UF1000,1000_QL80_.jpg",
       "author": "J.D. Salinger",
       "year": 1951,
-      "description": "A novel that tells the story of Holden Caulfield, a teenager struggling with alienation and the phoniness of the adult world. It has become a classic in the genre of coming-of-age literature."
-      ,"price":16
+      "description": "A novel that tells the story of Holden Caulfield, a teenager struggling with alienation and the phoniness of the adult world. It has become a classic in the genre of coming-of-age literature.",
+      "price": 16
     },
     {
       "id": 8,
@@ -85,8 +85,8 @@
       "coverImage": "https://m.media-amazon.com/images/I/61BvkqoxLxL._AC_UF894,1000_QL80_.jpg",
       "author": "J.R.R. Tolkien",
       "year": 1937,
-      "description": "A fantasy novel that follows the journey of Bilbo Baggins, a hobbit, as he accompanies a group of dwarves on a quest to reclaim their homeland from the dragon Smaug."
-      ,"price":17
+      "description": "A fantasy novel that follows the journey of Bilbo Baggins, a hobbit, as he accompanies a group of dwarves on a quest to reclaim their homeland from the dragon Smaug.",
+      "price": 17
     },
     {
       "id": 9,
@@ -96,19 +96,8 @@
       "coverImage": "https://m.media-amazon.com/images/I/51rNUQZumQL._AC_UF1000,1000_QL80_.jpg",
       "author": "F. Scott Fitzgerald",
       "year": 1925,
-      "description": "A novel set in the Roaring Twenties, exploring themes of wealth, excess, and the American Dream through the life of Jay Gatsby and his obsession with Daisy Buchanan."
-      ,"price":18
-    },
-    {
-      "id": 10,
-      "name": "The Alchemist",
-      "genre": "Fiction",
-      "pageCount": 197,
-      "coverImage": "https://m.media-amazon.com/images/I/61BvkqoxLxL._AC_UF894,1000_QL80_.jpg",
-      "author": "Paulo Coelho",
-      "year": 1988,
-      "description": "A philosophical and inspirational novel that tells the story of Santiago, a shepherd, who embarks on a journey to discover his Personal Legend and fulfill his dreams."
-      ,"price":19
+      "description": "A novel set in the Roaring Twenties, exploring themes of wealth, excess, and the American Dream through the life of Jay Gatsby and his obsession with Daisy Buchanan.",
+      "price": 18
     }
   ]
 }
