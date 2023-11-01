@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storage Task(Yagub Aliyev)</title>
     <link rel="stylesheet" href="../assets/style/layout/header.css">
-    <link rel="stylesheet" href="../assets/style/singers.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/style/pages/singers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+
 <body>
 
     <header>
@@ -26,10 +31,14 @@
                             <div class="row">
                                 <div class="col">
                                     <ul class="nav-menu">
-                                        <li class="nav-menu-item"><a href="" class="nav-menu-item-hyperlink">Singers</a></li>
-                                        <li class="nav-menu-item"><a href="" class="nav-menu-item-hyperlink">Meals</a></li>
-                                        <li class="nav-menu-item"><a href="" class="nav-menu-item-hyperlink">Basket</a></li>
-                                        <li class="nav-menu-item"><a href="" class="nav-menu-item-hyperlink">Wishlist</a></li>
+                                        <li class="nav-menu-item"><a href="" class="nav-menu-item-hyperlink">Singers</a>
+                                        </li>
+                                        <li class="nav-menu-item"><a href="" class="nav-menu-item-hyperlink">Meals</a>
+                                        </li>
+                                        <li class="nav-menu-item"><a href="" class="nav-menu-item-hyperlink">Basket</a>
+                                        </li>
+                                        <li class="nav-menu-item"><a href=""
+                                                class="nav-menu-item-hyperlink">Wishlist</a></li>
                                     </ul>
                                 </div>
                                 <div class="col">
@@ -37,26 +46,135 @@
                                         <button class="btn btn-light mx-2">Login</button>
                                         <button class="btn btn-dark mx-2">Register</button>
                                     </div>
-                                   
+
                                 </div>
-                                
-                                
+
+
                             </div>
-                            
+
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </nav>
     </header>
-    
 
 
-  
+    <main>
+        <section>
+            <div class="row justify-content-center py-3">
+                <div class="col-10">
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <input type="text" placeholder="search singer" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center my-4">
+                      <div class="col-3">
+                        <div class="row justify-content-center">
+                           <div class="col-5">
+                            <button class="btn btn-warning">sort by name</button>
+                           </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="card" style="width: 85%;">
+                                <div class="zoom-box-hidden">
+                                    <img class="card-img-top img-zoom"  src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQiCaRQ9mSsnuEU1Oe6sAmDnNC8f5MSsd3yEO3RUtIIauqr9YaW3w_FO1HeABfn" alt="Card image cap">
+                                </div>
+                                
+                               
+                                <div class="card-body">
+                                    <h5 class="card-title">Adele</h5>
+                                  <p class="card-text">Adele is <strong>British</strong></p>
+                                  <div class="d-flex">
+                                    <button class="border border-primary  rounded bg-light text-primary  px-3 py-1 detail-btn">Detail</button>
+                                    <button class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 delete-btn"><i  class="fa-solid fa-trash"></i></button>
+                                    <button class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 favourite-btn"><i class="fa-regular fa-heart"></i></button>
+
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 85%;">
+                                <div class="zoom-box-hidden">
+                                    <img class="card-img-top img-zoom"  src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQiCaRQ9mSsnuEU1Oe6sAmDnNC8f5MSsd3yEO3RUtIIauqr9YaW3w_FO1HeABfn" alt="Card image cap">
+                                </div>
+                                
+                               
+                                <div class="card-body">
+                                    <h5 class="card-title">Adele</h5>
+                                  <p class="card-text">Adele is <strong>British</strong></p>
+                                  <div class="d-flex">
+                                    <button class="border border-primary  rounded bg-light text-primary  px-3 py-1 detail-btn">Detail</button>
+                                    <button class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 delete-btn"><i  class="fa-solid fa-trash"></i></button>
+                                    <button class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 favourite-btn"><i class="fa-regular fa-heart"></i></button>
+
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 85%;">
+                                <div class="zoom-box-hidden">
+                                    <img class="card-img-top img-zoom"  src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQiCaRQ9mSsnuEU1Oe6sAmDnNC8f5MSsd3yEO3RUtIIauqr9YaW3w_FO1HeABfn" alt="Card image cap">
+                                </div>
+                                
+                               
+                                <div class="card-body">
+                                    <h5 class="card-title">Adele</h5>
+                                  <p class="card-text">Adele is <strong>British</strong></p>
+                                  <div class="d-flex">
+                                    <button class="border border-primary  rounded bg-light text-primary  px-3 py-1 detail-btn">Detail</button>
+                                    <button class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 delete-btn"><i  class="fa-solid fa-trash"></i></button>
+                                    <button class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 favourite-btn"><i class="fa-regular fa-heart"></i></button>
+
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 85%;">
+                                <div class="zoom-box-hidden">
+                                    <img class="card-img-top img-zoom"  src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQiCaRQ9mSsnuEU1Oe6sAmDnNC8f5MSsd3yEO3RUtIIauqr9YaW3w_FO1HeABfn" alt="Card image cap">
+                                </div>
+                                
+                               
+                                <div class="card-body">
+                                    <h5 class="card-title">Adele</h5>
+                                  <p class="card-text">Adele is <strong>British</strong></p>
+                                  <div class="d-flex">
+                                    <button class="border border-primary  rounded bg-light text-primary  px-3 py-1 detail-btn">Detail</button>
+                                    <button class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 delete-btn"><i  class="fa-solid fa-trash"></i></button>
+                                    <button class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 favourite-btn"><i class="fa-regular fa-heart"></i></button>
+
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        
+
+                        
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+
 
     <!-- Data is ready for retrieving :-) Elnur and Gurban Teacher get ready for magnificent show demonstrated by Yagub -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js" integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <script type="module" src="../assets/scripts/utils/test.js"></script> -->
 </body>
+
 </html>
