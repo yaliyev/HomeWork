@@ -6,10 +6,12 @@ let favouritesStr = localStorage.getItem("favorites");
 
 let singers = [];
 
+let currentShownSingers = [];
+
 let favourites = [];
 
-if(favouritesStr != null){
-  favourites = JSON.parse(favouritesStr); 
+if (favouritesStr != null) {
+  favourites = JSON.parse(favouritesStr);
 }
 
 let singerCards = document.getElementById('singer-cards');
@@ -34,7 +36,8 @@ function insertSingerCards(searchMode = false, searchArr) {
   }
 
 
-
+  
+  currentShownSingers = JSON.parse(JSON.stringify(searchArr));
 
   for (let i = 0; i < searchArr.length; i++) {
 
@@ -79,7 +82,7 @@ function insertSingerCards(searchMode = false, searchArr) {
       window.location.href = `detail.html?id=${singer.id}`;
     });
 
-    deleteButton.addEventListener('click',function(){
+    deleteButton.addEventListener('click', function () {
       Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
@@ -90,46 +93,47 @@ function insertSingerCards(searchMode = false, searchArr) {
         confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
         if (result.isConfirmed) {
-          deleteSinger(singer.id,i);     
+          console.log(searchArr);
+          deleteSinger(singer.id, i);
           Swal.fire(
             'Deleted!',
-            'Your file has been deleted.',
+            'Your singer has been deleted.',
             'success'
           )
         }
       })
-           
+
     });
 
-    favouriteButton.addEventListener('click',function(){
-         let elementInFavourites = favourites.find( (element)=>{
-           return element.id === singer.id;
-         });
+    favouriteButton.addEventListener('click', function () {
+      let elementInFavourites = favourites.find((element) => {
+        return element.id === singer.id;
+      });
 
-         if(elementInFavourites == undefined){
-            // allow to Add
+      if (elementInFavourites == undefined) {
+        // allow to Add
 
 
-            Swal.fire({
-              position: 'center',
-              icon: 'success',
-              title: `${singer.name} added to favourites`,
-              showConfirmButton: false,
-              timer: 1500
-            });
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: `${singer.name} added to favourites`,
+          showConfirmButton: false,
+          timer: 1500
+        });
 
-            favourites.push({id: singer.id});
-            localStorage.setItem("favorites",JSON.stringify(favourites));
-             this.children[0].classList.replace("fa-regular","fa-solid");
-         }else{
-          Swal.fire({
-            position: 'center',
-            icon: 'error',
-            title: `${singer.name} is already in favourites`,
-            showConfirmButton: false,
-            timer: 1500
-          });
-         }
+        favourites.push({ id: singer.id });
+        localStorage.setItem("favorites", JSON.stringify(favourites));
+        this.children[0].classList.replace("fa-regular", "fa-solid");
+      } else {
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: `${singer.name} is already in favourites`,
+          showConfirmButton: false,
+          timer: 1500
+        });
+      }
     });
 
     editButton.addEventListener('click', function () {
@@ -165,10 +169,10 @@ function insertSingerCards(searchMode = false, searchArr) {
           '<i class="fa fa-thumbs-down"></i>',
         cancelButtonAriaLabel: 'Thumbs down'
       }).then((result) => {
-        if(result.isConfirmed){
-          editSinger(singer.id,i);
+        if (result.isConfirmed) {
+          editSinger(singer.id, i);
         }
-       
+
       });
       showSingerValuesInEdit(i);
     });
@@ -180,12 +184,12 @@ function insertSingerCards(searchMode = false, searchArr) {
     editButton.innerHTML = `<i class="fa-regular fa-pen-to-square"></i>`;
 
 
-    let isInFavouritesElement = favourites.find((element)=>{
+    let isInFavouritesElement = favourites.find((element) => {
       return element.id === singer.id;
     });
 
-    if(isInFavouritesElement != undefined){
-      favouriteButton.children[0].classList.replace("fa-regular","fa-solid");
+    if (isInFavouritesElement != undefined) {
+      favouriteButton.children[0].classList.replace("fa-regular", "fa-solid");
     }
 
     cardTitle.innerText = `${singer.name}`;
@@ -218,12 +222,11 @@ function insertSingerCards(searchMode = false, searchArr) {
 }
 
 searchInput.addEventListener('keyup', function () {
+  let resultData = singers.filter((singer) => singer.name.toLowerCase().indexOf(this.value.toLowerCase()) > -1);
 
-  let resultData = singers.filter((singer) => singer.name.toLowerCase().indexOf(this.value) > -1);
-
-  if(resultData.length == 0){
+  if (resultData.length == 0) {
     singerCards.innerHTML = "<div class='col-12' style='text-align:center;color:red;font-size:40px;'>NOT FOUND ANY DATA</div>";
-  }else{
+  } else {
     insertSingerCards(true, resultData);
   }
 
@@ -263,16 +266,16 @@ addSingerButton.addEventListener('click', () => {
       '<i class="fa fa-thumbs-down"></i>',
     cancelButtonAriaLabel: 'Thumbs down'
   }).then((result) => {
-    if(result.isConfirmed){
+    if (result.isConfirmed) {
       addSinger();
     }
-   
+
   })
 });
 
 sortByNameButton.addEventListener('click', () => {
 
-  let resultData = singers.sort(function (a, b) {
+  let resultData = currentShownSingers.sort(function (a, b) {
     if (a.name < b.name) {
       return -1;
     }
@@ -299,7 +302,13 @@ async function addSinger() {
   let urlRegex = '(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?';
 
   if (name.trim().length > 0 && age > 0 && nationality.trim().length > 0 && genre.trim().length > 0 && imageLink.match(urlRegex) != null) {
+    let maxId = 0;
+    currentShownSingers.forEach((element) => {
+      if (element.id > maxId)
+        maxId = element.id;
+    });
     let singer = {
+      id: maxId + 1,
       name: name,
       age: age,
       nationality: nationality,
@@ -316,6 +325,8 @@ async function addSinger() {
     }).then(response => {
       if (response.ok) {
         singers.push(singer);
+        currentShownSingers.push(singer);
+        insertSingerCards(true, currentShownSingers);
       }
     })
   } else {
@@ -354,11 +365,30 @@ async function editSinger(id, index) {
       body: JSON.stringify(singer)
     }).then(response => {
       if (response.ok) {
-        singers[index].name = editName;
-        singers[index].age = editAge;
-        singers[index].nationality = editNationality;
-        singers[index].genre = editGenre;
-        singers[index].imageLink = editImageLink;
+
+        let globalArrayElementIndex = null;
+        singers.find((element, idx) => {
+          globalArrayElementIndex = idx;
+          return element.id === id;
+        });
+
+        singers[globalArrayElementIndex].name = editName;
+        singers[globalArrayElementIndex].age = editAge;
+        singers[globalArrayElementIndex].nationality = editNationality;
+        singers[globalArrayElementIndex].genre = editGenre;
+        singers[globalArrayElementIndex].imageLink = editImageLink;
+
+
+
+        currentShownSingers[index].name = editName;
+        currentShownSingers[index].age = editAge;
+        currentShownSingers[index].nationality = editNationality;
+        currentShownSingers[index].genre = editGenre;
+        currentShownSingers[index].imageLink = editImageLink;
+
+        insertSingerCards(true, currentShownSingers);
+        console.log(singers);
+
       }
     })
   } else {
@@ -369,18 +399,34 @@ async function editSinger(id, index) {
 
 }
 
-async function deleteSinger(id,index){
+async function deleteSinger(id, index) {
 
-  await fetch(`http://localhost:3000/singers/${id}`,{
-    method:'DELETE'
-  }).then((response)=>{
-     if(response.ok){
-        singers.splice(index,1);
-     }
+  await fetch(`http://localhost:3000/singers/${id}`, {
+    method: 'DELETE'
+  }).then((response) => {
+    if (response.ok) {
+      let singerIndex = null;
+      let singer = currentShownSingers.find((element, index) => {
+        singerIndex = index;
+        return element.id === id
+      });
+      console.log(singer);
+      let globalArrayElementIndex = null;
+      singers.find((element, idx) => {
+        globalArrayElementIndex = idx;
+        return element.id === id;
+      })
+      singers.splice(globalArrayElementIndex, 1);
+      currentShownSingers.splice(singerIndex, 1);
+      insertSingerCards(true, currentShownSingers);
+      if (currentShownSingers.length == 0) {
+        singerCards.innerHTML = "<div class='col-12' style='text-align:center;color:red;font-size:40px;'>NOT FOUND ANY DATA</div>";
+      }
+    }
   });
 
 
-   
+
 }
 
 function showSingerValuesInEdit(index) {
@@ -392,11 +438,11 @@ function showSingerValuesInEdit(index) {
 
 
 
-  editName.value = singers[index].name;
-  editAge.value = singers[index].age;
-  editNationality.value = singers[index].nationality;
-  editGenre.value = singers[index].genre;
-  editImageLink.value = singers[index].imageLink;
+  editName.value = currentShownSingers[index].name;
+  editAge.value = currentShownSingers[index].age;
+  editNationality.value = currentShownSingers[index].nationality;
+  editGenre.value = currentShownSingers[index].genre;
+  editImageLink.value = currentShownSingers[index].imageLink;
 
 
 }

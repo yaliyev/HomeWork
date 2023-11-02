@@ -42,7 +42,7 @@ async function insertFavouritesToTable(afterStart = false) {
             let deleteButton = document.createElement("button");
 
             imageTd.setAttribute("class", "col-2");
-            imageElement.style = "width:60%";
+            imageElement.style = "width:60%;max-height:120px;object-fit:cover;object-position:0% 20%;";
             imageElement.src = singer.imageLink;
             deleteButton.setAttribute("class", "border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 delete-btn");
 
@@ -89,6 +89,9 @@ async function insertFavouritesToTable(afterStart = false) {
 
 
             favouritesTableData.appendChild(tr);
+        }else{
+            favourites.splice(i,1);
+            localStorage.setItem("favorites", JSON.stringify(favourites));
         }
 
 

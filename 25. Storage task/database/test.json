@@ -1,467 +1,451 @@
 {
   "meals": [
-    {
-      "id": 1,
-      "name": "Sushi",
-      "price": "15.99",
-      "ingredients": [
-        "Rice",
-        "Fish",
-        "Seaweed",
-        "Soy Sauce",
-        "Wasabi",
-        "Pickled Ginger"
-      ],
-      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYV-4wzaDXV7IUPO5NFgFZgnE5-tlQG3h2fhhk26hTZa0q5_vzEOHfWLXB7_EH"
-    },
-    {
-      "id": 2,
-      "name": "Pizza",
-      "price": "12.99",
-      "ingredients": [
-        "Dough",
-        "Tomato Sauce",
-        "Cheese",
-        "Pepperoni",
-        "Mushrooms",
-        "Bell Peppers"
-      ],
-      "imageLink": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQU2s_1oArpclKYiCpBstG4blg2m0VAZuauUv2rUsp3yJuATpk3PwbEGV90i3Ey"
-    },
-    {
-      "id": 3,
-      "name": "Burger",
-      "price": "9.99",
-      "ingredients": [
-        "Beef Patty",
-        "Bun",
-        "Lettuce",
-        "Tomato",
-        "Onion",
-        "Ketchup"
-      ],
-      "imageLink": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT3e2OZ6CEobZs_qPDox5zQi3DPyZsDOcw0mZFdDmsIc7JmOSa1vZZy4g_0DWlO"
-    },
-    {
-      "id": 4,
-      "name": "Pasta",
-      "price": "11.99",
-      "ingredients": [
-        "Pasta",
-        "Tomato Sauce",
-        "Basil",
-        "Parmesan Cheese",
-        "Olive Oil"
-      ],
-      "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRn6PQmOD79riq-jdU1_clpRRRhaNHvFvweVqKia5PKTBwZiuaY1DYkwdtbDvLX"
-    },
-    {
-      "id": 5,
-      "name": "Sushi",
-      "price": "15.99",
-      "ingredients": [
-        "Rice",
-        "Fish",
-        "Seaweed",
-        "Soy Sauce",
-        "Wasabi",
-        "Pickled Ginger"
-      ],
-      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCyqMDA85W57nUzZDtcJQFwLfPXNfSXUuwatA1VF3SMF_0pz_hb_dQCF1QO9Co"
-    },
-    {
-      "id": 6,
-      "name": "Tacos",
-      "price": "8.99",
-      "ingredients": [
-        "Tortilla",
-        "Ground Beef",
-        "Lettuce",
-        "Tomato",
-        "Cheese",
-        "Salsa"
-      ],
-      "imageLink": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRtOckZ25xSzayFydLytPS0pKH8OoqZoVoohKm8ulV5wsvxWrOFeNWnKXLK28Mj"
-    },
-    {
-      "id": 7,
-      "name": "Steak",
-      "price": "19.99",
-      "ingredients": [
-        "Beef Steak",
-        "Potatoes",
-        "Asparagus",
-        "Garlic Butter",
-        "Rosemary"
-      ],
-      "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQzxYfjbSC8DwO0KTdjJkNrZZvtDqY6LL0TuD-lBW5gEGdOO-0jdXMeveOBNc-I"
-    },
-    {
-      "id": 8,
-      "name": "Sushi",
-      "price": "15.99",
-      "ingredients": [
-        "Rice",
-        "Fish",
-        "Seaweed",
-        "Soy Sauce",
-        "Wasabi",
-        "Pickled Ginger"
-      ],
-      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT8cOvIM9AJSKz93ES5-GrxlyVW9bl7Md5GQqmQLqzeSFCluE2FGyzJyyhKmyo"
-    },
-    {
-      "id": 9,
-      "name": "Salad",
-      "price": "7.99",
-      "ingredients": [
-        "Lettuce",
-        "Tomato",
-        "Cucumber",
-        "Olives",
-        "Feta Cheese",
-        "Balsamic Dressing"
-      ],
-      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5fLWfjwQ-67AlH9EF5MJ0bIb9AazI3eOJoPvVxOczICokl2pSQXzpcOlwMTs"
-    },
-    {
-      "id": 10,
-      "name": "Sushi",
-      "price": "15.99",
-      "ingredients": [
-        "Rice",
-        "Fish",
-        "Seaweed",
-        "Soy Sauce",
-        "Wasabi",
-        "Pickled Ginger"
-      ],
-      "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQR9rwLhqQYx08Q8BnaVTCGFIE92O11ywjnuhnMxXrheiGxefb7Gk7B6_xqqn1P"
-    },
-    {
-      "id": 11,
-      "name": "Chicken Stir-Fry",
-      "price": "13.99",
-      "ingredients": [
-        "Chicken",
-        "Broccoli",
-        "Carrots",
-        "Bell Peppers",
-        "Soy Sauce",
-        "Ginger"
-      ],
-      "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQJFMSs0mrnHYyHyAsosueBJV1asMPaUH-5JG440WLx37YGV0H1WbGLlcDbFaXw"
-    },
-    {
-      "id": 12,
-      "name": "Sushi",
-      "price": "15.99",
-      "ingredients": [
-        "Rice",
-        "Fish",
-        "Seaweed",
-        "Soy Sauce",
-        "Wasabi",
-        "Pickled Ginger"
-      ],
-      "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQRlb0P3dOnaSFCsk41Db-bvWbqgGT2WiJXJ3C5nyy3OQoomSHKWcgQ3jMFhZFB"
-    },
-    {
-      "id": 13,
-      "name": "Burrito",
-      "price": "10.99",
-      "ingredients": [
-        "Tortilla",
-        "Rice",
-        "Beans",
-        "Beef",
-        "Salsa",
-        "Guacamole"
-      ],
-      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRifkF92eoL-MyhLobLa3mJIkRJF3bN3KZ_IVA6V8PxJBiPw5ed8KG9zWB5qJqM"
-    },
-    {
-      "id": 14,
-      "name": "Sushi",
-      "price": "15.99",
-      "ingredients": [
-        "Rice",
-        "Fish",
-        "Seaweed",
-        "Soy Sauce",
-        "Wasabi",
-        "Pickled Ginger"
-      ],
-      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWkhLdja4aXSmS6G50MEBUDaTVrJe6aclNwFgOZ8Xg2ux-pl8nVXt_XsRlTj9U"
-    },
-    {
-      "id": 15,
-      "name": "Tacos",
-      "price": "8.99",
-      "ingredients": [
-        "Tortilla",
-        "Chicken",
-        "Lettuce",
-        "Tomato",
-        "Cheese",
-        "Salsa"
-      ],
-      "imageLink": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQsvpIX3A9MKtyMHG5LpALwF0UhxUYSe0nUK7RGnUDNq4Zbv1yeJdK7yO4lsCGK"
-    },
-    {
-      "id": 16,
-      "name": "Sushi",
-      "price": "15.99",
-      "ingredients": [
-        "Rice",
-        "Fish",
-        "Seaweed",
-        "Soy Sauce",
-        "Wasabi",
-        "Pickled Ginger"
-      ],
-      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkBRELbwlrkOpnQVG3BSmmdJ8CMD6gTE2FrcQapGeicWXf2tsESCdV_wu49ic9"
-    },
-    {
-      "id": 17,
-      "name": "Pho",
-      "price": "11.99",
-      "ingredients": [
-        "Rice Noodles",
-        "Beef Broth",
-        "Sliced Beef",
-        "Bean Sprouts",
-        "Lime",
-        "Cilantro"
-      ],
-      "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSvNaoLc65g98mRMTaSuYoxO4ga_Y-WZtzmr5m6VkIdTRSOXlTi1EpFUxe87Pdd"
-    },
-    {
-      "id": 18,
-      "name": "Pancakes",
-      "price": "7.99",
-      "ingredients": [
-        "Flour",
-        "Milk",
-        "Eggs",
-        "Butter",
-        "Maple Syrup",
-        "Blueberries"
-      ],
-      "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTNjyRX9QCAx2rU1GvtcdeI07Gq6XlMCK0VOwe2XHfL8KqK7yvuXSlzsjDlL9-z"
-    },
-    {
-      "id": 19,
-      "name": "Sushi",
-      "price": "15.99",
-      "ingredients": [
-        "Rice",
-        "Fish",
-        "Seaweed",
-        "Soy Sauce",
-        "Wasabi",
-        "Pickled Ginger"
-      ],
-      "imageLink": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS3cpv6C3v5P1qtdHm5lLEmSuGLWT_pzIDExg9geiq1qOnMqLJI13uHdIQAoTAX"
-    },
-    {
-      "id": 20,
-      "name": "Chicken Tenders",
-      "price": "10.99",
-      "ingredients": [
-        "Chicken Breast",
-        "Breadcrumbs",
-        "Eggs",
-        "Salt",
-        "Pepper",
-        "Honey Mustard Sauce"
-      ],
-      "imageLink": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQJg_f_7Alzt2jEePRCvfa1o9A3BrS4jqCS7Ycxk3nrvqV4BS89Ue0bDrGspQPf"
-    }
+      {
+          "id": 1,
+          "name": "Sushi",
+          "price": "15.99",
+          "ingredients": [
+              "Rice",
+              "Fish",
+              "Seaweed",
+              "Soy Sauce",
+              "Wasabi",
+              "Pickled Ginger"
+          ],
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYV-4wzaDXV7IUPO5NFgFZgnE5-tlQG3h2fhhk26hTZa0q5_vzEOHfWLXB7_EH"
+      },
+      {
+          "id": 2,
+          "name": "Pizza",
+          "price": "12.99",
+          "ingredients": [
+              "Dough",
+              "Tomato Sauce",
+              "Cheese",
+              "Pepperoni",
+              "Mushrooms",
+              "Bell Peppers"
+          ],
+          "imageLink": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQU2s_1oArpclKYiCpBstG4blg2m0VAZuauUv2rUsp3yJuATpk3PwbEGV90i3Ey"
+      },
+      {
+          "id": 3,
+          "name": "Burger",
+          "price": "9.99",
+          "ingredients": [
+              "Beef Patty",
+              "Bun",
+              "Lettuce",
+              "Tomato",
+              "Onion",
+              "Ketchup"
+          ],
+          "imageLink": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT3e2OZ6CEobZs_qPDox5zQi3DPyZsDOcw0mZFdDmsIc7JmOSa1vZZy4g_0DWlO"
+      },
+      {
+          "id": 4,
+          "name": "Pasta",
+          "price": "11.99",
+          "ingredients": [
+              "Pasta",
+              "Tomato Sauce",
+              "Basil",
+              "Parmesan Cheese",
+              "Olive Oil"
+          ],
+          "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRn6PQmOD79riq-jdU1_clpRRRhaNHvFvweVqKia5PKTBwZiuaY1DYkwdtbDvLX"
+      },
+      {
+          "id": 5,
+          "name": "Sushi",
+          "price": "15.99",
+          "ingredients": [
+              "Rice",
+              "Fish",
+              "Seaweed",
+              "Soy Sauce",
+              "Wasabi",
+              "Pickled Ginger"
+          ],
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCyqMDA85W57nUzZDtcJQFwLfPXNfSXUuwatA1VF3SMF_0pz_hb_dQCF1QO9Co"
+      },
+      {
+          "id": 6,
+          "name": "Tacos",
+          "price": "8.99",
+          "ingredients": [
+              "Tortilla",
+              "Ground Beef",
+              "Lettuce",
+              "Tomato",
+              "Cheese",
+              "Salsa"
+          ],
+          "imageLink": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRtOckZ25xSzayFydLytPS0pKH8OoqZoVoohKm8ulV5wsvxWrOFeNWnKXLK28Mj"
+      },
+      {
+          "id": 7,
+          "name": "Steak",
+          "price": "19.99",
+          "ingredients": [
+              "Beef Steak",
+              "Potatoes",
+              "Asparagus",
+              "Garlic Butter",
+              "Rosemary"
+          ],
+          "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQzxYfjbSC8DwO0KTdjJkNrZZvtDqY6LL0TuD-lBW5gEGdOO-0jdXMeveOBNc-I"
+      },
+      {
+          "id": 8,
+          "name": "Sushi",
+          "price": "15.99",
+          "ingredients": [
+              "Rice",
+              "Fish",
+              "Seaweed",
+              "Soy Sauce",
+              "Wasabi",
+              "Pickled Ginger"
+          ],
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT8cOvIM9AJSKz93ES5-GrxlyVW9bl7Md5GQqmQLqzeSFCluE2FGyzJyyhKmyo"
+      },
+      {
+          "id": 9,
+          "name": "Salad",
+          "price": "7.99",
+          "ingredients": [
+              "Lettuce",
+              "Tomato",
+              "Cucumber",
+              "Olives",
+              "Feta Cheese",
+              "Balsamic Dressing"
+          ],
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5fLWfjwQ-67AlH9EF5MJ0bIb9AazI3eOJoPvVxOczICokl2pSQXzpcOlwMTs"
+      },
+      {
+          "id": 10,
+          "name": "Sushi",
+          "price": "15.99",
+          "ingredients": [
+              "Rice",
+              "Fish",
+              "Seaweed",
+              "Soy Sauce",
+              "Wasabi",
+              "Pickled Ginger"
+          ],
+          "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQR9rwLhqQYx08Q8BnaVTCGFIE92O11ywjnuhnMxXrheiGxefb7Gk7B6_xqqn1P"
+      },
+      {
+          "id": 11,
+          "name": "Chicken Stir-Fry",
+          "price": "13.99",
+          "ingredients": [
+              "Chicken",
+              "Broccoli",
+              "Carrots",
+              "Bell Peppers",
+              "Soy Sauce",
+              "Ginger"
+          ],
+          "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQJFMSs0mrnHYyHyAsosueBJV1asMPaUH-5JG440WLx37YGV0H1WbGLlcDbFaXw"
+      },
+      {
+          "id": 12,
+          "name": "Sushi",
+          "price": "15.99",
+          "ingredients": [
+              "Rice",
+              "Fish",
+              "Seaweed",
+              "Soy Sauce",
+              "Wasabi",
+              "Pickled Ginger"
+          ],
+          "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQRlb0P3dOnaSFCsk41Db-bvWbqgGT2WiJXJ3C5nyy3OQoomSHKWcgQ3jMFhZFB"
+      },
+      {
+          "id": 13,
+          "name": "Burrito",
+          "price": "10.99",
+          "ingredients": [
+              "Tortilla",
+              "Rice",
+              "Beans",
+              "Beef",
+              "Salsa",
+              "Guacamole"
+          ],
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRifkF92eoL-MyhLobLa3mJIkRJF3bN3KZ_IVA6V8PxJBiPw5ed8KG9zWB5qJqM"
+      },
+      {
+          "id": 14,
+          "name": "Sushi",
+          "price": "15.99",
+          "ingredients": [
+              "Rice",
+              "Fish",
+              "Seaweed",
+              "Soy Sauce",
+              "Wasabi",
+              "Pickled Ginger"
+          ],
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWkhLdja4aXSmS6G50MEBUDaTVrJe6aclNwFgOZ8Xg2ux-pl8nVXt_XsRlTj9U"
+      },
+      {
+          "id": 15,
+          "name": "Tacos",
+          "price": "8.99",
+          "ingredients": [
+              "Tortilla",
+              "Chicken",
+              "Lettuce",
+              "Tomato",
+              "Cheese",
+              "Salsa"
+          ],
+          "imageLink": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQsvpIX3A9MKtyMHG5LpALwF0UhxUYSe0nUK7RGnUDNq4Zbv1yeJdK7yO4lsCGK"
+      },
+      {
+          "id": 16,
+          "name": "Sushi",
+          "price": "15.99",
+          "ingredients": [
+              "Rice",
+              "Fish",
+              "Seaweed",
+              "Soy Sauce",
+              "Wasabi",
+              "Pickled Ginger"
+          ],
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkBRELbwlrkOpnQVG3BSmmdJ8CMD6gTE2FrcQapGeicWXf2tsESCdV_wu49ic9"
+      },
+      {
+          "id": 17,
+          "name": "Pho",
+          "price": "11.99",
+          "ingredients": [
+              "Rice Noodles",
+              "Beef Broth",
+              "Sliced Beef",
+              "Bean Sprouts",
+              "Lime",
+              "Cilantro"
+          ],
+          "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSvNaoLc65g98mRMTaSuYoxO4ga_Y-WZtzmr5m6VkIdTRSOXlTi1EpFUxe87Pdd"
+      },
+      {
+          "id": 18,
+          "name": "Pancakes",
+          "price": "7.99",
+          "ingredients": [
+              "Flour",
+              "Milk",
+              "Eggs",
+              "Butter",
+              "Maple Syrup",
+              "Blueberries"
+          ],
+          "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTNjyRX9QCAx2rU1GvtcdeI07Gq6XlMCK0VOwe2XHfL8KqK7yvuXSlzsjDlL9-z"
+      },
+      {
+          "id": 19,
+          "name": "Sushi",
+          "price": "15.99",
+          "ingredients": [
+              "Rice",
+              "Fish",
+              "Seaweed",
+              "Soy Sauce",
+              "Wasabi",
+              "Pickled Ginger"
+          ],
+          "imageLink": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS3cpv6C3v5P1qtdHm5lLEmSuGLWT_pzIDExg9geiq1qOnMqLJI13uHdIQAoTAX"
+      },
+      {
+          "id": 20,
+          "name": "Chicken Tenders",
+          "price": "10.99",
+          "ingredients": [
+              "Chicken Breast",
+              "Breadcrumbs",
+              "Eggs",
+              "Salt",
+              "Pepper",
+              "Honey Mustard Sauce"
+          ],
+          "imageLink": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQJg_f_7Alzt2jEePRCvfa1o9A3BrS4jqCS7Ycxk3nrvqV4BS89Ue0bDrGspQPf"
+      }
   ],
   "users": [
-    {
-      "id": "1",
-      "username": "yaqub155",
-      "password": "123456",
-      "balance": 10,
-      "orders": [
-        {
-          "id": "355",
-          "totalPrice": "41.97",
-          "orderDate": "Nov 1st 2023, 02:24 am"
-        },
-        {
-          "id": "824",
-          "totalPrice": "68.95",
-          "orderDate": "Nov 1st 2023, 02:25 am"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "username": "john_doe",
-      "password": "password123",
-      "balance": 25,
-      "orders": [
-        {
-          "id": "123",
-          "totalPrice": "55.50",
-          "orderDate": "Nov 2nd 2023, 10:10 am"
-        },
-        {
-          "id": "456",
-          "totalPrice": "72.75",
-          "orderDate": "Nov 2nd 2023, 10:30 am"
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "username": "alice_smith",
-      "password": "p@ssw0rd",
-      "balance": 50,
-      "orders": [
-        {
-          "id": "789",
-          "totalPrice": "29.99",
-          "orderDate": "Nov 3rd 2023, 05:45 pm"
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "username": "user123",
-      "password": "userpass",
-      "balance": 15,
-      "orders": [
-        {
-          "id": "101",
-          "totalPrice": "12.75",
-          "orderDate": "Nov 4th 2023, 08:15 am"
-        },
-        {
-          "id": "202",
-          "totalPrice": "35.20",
-          "orderDate": "Nov 4th 2023, 02:45 pm"
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "username": "testuser",
-      "password": "test123",
-      "balance": 30,
-      "orders": [
-        {
-          "id": "303",
-          "totalPrice": "19.99",
-          "orderDate": "Nov 5th 2023, 11:30 am"
-        },
-        {
-          "id": "404",
-          "totalPrice": "27.50",
-          "orderDate": "Nov 5th 2023, 03:15 pm"
-        }
-      ]
-    }
+      {
+          "id": "1",
+          "username": "yaqub155",
+          "password": "123456",
+          "balance": 10,
+          "orders": [
+              {
+                  "id": "355",
+                  "totalPrice": "41.97",
+                  "orderDate": "Nov 1st 2023, 02:24 am"
+              },
+              {
+                  "id": "824",
+                  "totalPrice": "68.95",
+                  "orderDate": "Nov 1st 2023, 02:25 am"
+              }
+          ]
+      },
+      {
+          "id": "2",
+          "username": "john_doe",
+          "password": "password123",
+          "balance": 25,
+          "orders": [
+              {
+                  "id": "123",
+                  "totalPrice": "55.50",
+                  "orderDate": "Nov 2nd 2023, 10:10 am"
+              },
+              {
+                  "id": "456",
+                  "totalPrice": "72.75",
+                  "orderDate": "Nov 2nd 2023, 10:30 am"
+              }
+          ]
+      },
+      {
+          "id": "3",
+          "username": "alice_smith",
+          "password": "p@ssw0rd",
+          "balance": 50,
+          "orders": [
+              {
+                  "id": "789",
+                  "totalPrice": "29.99",
+                  "orderDate": "Nov 3rd 2023, 05:45 pm"
+              }
+          ]
+      },
+      {
+          "id": "4",
+          "username": "user123",
+          "password": "userpass",
+          "balance": 15,
+          "orders": [
+              {
+                  "id": "101",
+                  "totalPrice": "12.75",
+                  "orderDate": "Nov 4th 2023, 08:15 am"
+              },
+              {
+                  "id": "202",
+                  "totalPrice": "35.20",
+                  "orderDate": "Nov 4th 2023, 02:45 pm"
+              }
+          ]
+      },
+      {
+          "id": "5",
+          "username": "testuser",
+          "password": "test123",
+          "balance": 30,
+          "orders": [
+              {
+                  "id": "303",
+                  "totalPrice": "19.99",
+                  "orderDate": "Nov 5th 2023, 11:30 am"
+              },
+              {
+                  "id": "404",
+                  "totalPrice": "27.50",
+                  "orderDate": "Nov 5th 2023, 03:15 pm"
+              }
+          ]
+      }
   ],
   "singers": [
-    {
-      "id": 1,
-      "name": "Adele",
-      "imageLink": "https://img-9gag-fun.9cache.com/photo/avA0Nwd_460s.jpg",
-      "age": "33",
-      "nationality": "British",
-      "genre": "Pop"
-    },
-    {
-      "id": 2,
-      "name": "Ed Sheeran",
-      "imageLink": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg",
-      "age": 31,
-      "nationality": "British",
-      "genre": "Pop"
-    },
-    {
-      "id": 3,
-      "name": "Beyoncé",
-      "imageLink": "https://www.billboard.com/wp-content/uploads/2023/06/Beyonce-RENAISSANCE-WORLD-TOUR-Warsaw-billboard-pro-1260.jpg",
-      "age": 40,
-      "nationality": "American",
-      "genre": "R&B"
-    },
-    {
-      "id": 4,
-      "name": "Bruno Mars",
-      "imageLink": "https://assets.simpleviewcms.com/simpleview/image/upload/c_limit,q_75,w_1200/v1/crm/lasvegas/bruno_mars_30D1F154-0475-C2D6-E773603CE857E818_30d2dc7f-a6f7-d7de-a706d382f4f5e920.jpg",
-      "age": 36,
-      "nationality": "American",
-      "genre": "Pop"
-    },
-    {
-      "id": 5,
-      "name": "Taylor Swift",
-      "imageLink": "https://s.france24.com/media/display/4b4dfeae-2504-11ee-922b-005056bf30b7/w:1280/p:4x3/2023-07-17T121826Z_1633687733_RC2O20AIEA3Q_RTRMADP_3_MUSIC-TAYLORSWIFT.JPG",
-      "age": 32,
-      "nationality": "American",
-      "genre": "Pop"
-    },
-    {
-      "id": 6,
-      "name": "Kendrick Lamar",
-      "imageLink": "https://variety.com/wp-content/uploads/2022/04/Kendrick-Lamar.jpg?w=1000",
-      "age": 35,
-      "nationality": "American",
-      "genre": "Hip-Hop"
-    },
-    {
-      "id": 7,
-      "name": "Ariana Grande",
-      "imageLink": "https://cdn.britannica.com/92/211792-050-E764F875/American-singer-Ariana-Grande-2018.jpg",
-      "age": 29,
-      "nationality": "American",
-      "genre": "Pop"
-    },
-    {
-      "id": 8,
-      "name": "Justin Bieber",
-      "imageLink": "https://phantom-marca.unidadeditorial.es/dfb979964d5768e00f363dfabbf4d9b1/resize/828/f/jpg/assets/multimedia/imagenes/2022/12/23/16717752351785.jpg",
-      "age": "28",
-      "nationality": "Canadian",
-      "genre": "Pop"
-    },
-    {
-      "id": 9,
-      "name": "Shakira",
-      "imageLink": "https://s-cdn.sportbox.ru/images/styles/1200-auto/fp_fotos/a8/f5/7095802a254577904357b1e3b56fc5ec629b87d4e779f284159316.jpg",
-      "age": 45,
-      "nationality": "Colombian",
-      "genre": "Pop"
-    },
-    {
-      "id": 10,
-      "name": "Ferman Akgul",
-      "imageLink": "https://cdn.karar.com/news/1330422.jpg",
-      "age": 43,
-      "nationality": "Turkish",
-      "genre": "Rock/Alternative Rock"
-    },
-    {
-      "name": "Till Lindemann",
-      "age": "60",
-      "nationality": "German",
-      "genre": "Rock",
-      "imageLink": "https://www.ultimate-guitar.com/static/article/news/2/104542_0_wide_ver1585338866.jpg",
-      "id": 11
-    },
-    {
-      "name": "James Hetfield",
-      "age": "60",
-      "nationality": "American",
-      "genre": "Rock",
-      "imageLink": "https://www.wnct.com/wp-content/uploads/sites/99/2019/09/gettyimages-174053869.jpg?w=1280",
-      "id": 12
-    }
+      {
+          "id": 1,
+          "name": "Adele",
+          "imageLink": "https://img-9gag-fun.9cache.com/photo/avA0Nwd_460s.jpg",
+          "age": 33,
+          "nationality": "British",
+          "genre": "Pop"
+      },
+      {
+          "id": 2,
+          "name": "Ed Sheeran",
+          "imageLink": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg",
+          "age": 31,
+          "nationality": "British",
+          "genre": "Pop"
+      },
+      {
+          "id": 3,
+          "name": "Beyoncé",
+          "imageLink": "https://www.billboard.com/wp-content/uploads/2023/06/Beyonce-RENAISSANCE-WORLD-TOUR-Warsaw-billboard-pro-1260.jpg",
+          "age": 40,
+          "nationality": "American",
+          "genre": "R&B"
+      },
+      {
+          "id": 4,
+          "name": "Bruno Mars",
+          "imageLink": "https://assets.simpleviewcms.com/simpleview/image/upload/c_limit,q_75,w_1200/v1/crm/lasvegas/bruno_mars_30D1F154-0475-C2D6-E773603CE857E818_30d2dc7f-a6f7-d7de-a706d382f4f5e920.jpg",
+          "age": 36,
+          "nationality": "American",
+          "genre": "Pop"
+      },
+      {
+          "id": 5,
+          "name": "Taylor Swift",
+          "imageLink": "https://s.france24.com/media/display/4b4dfeae-2504-11ee-922b-005056bf30b7/w:1280/p:4x3/2023-07-17T121826Z_1633687733_RC2O20AIEA3Q_RTRMADP_3_MUSIC-TAYLORSWIFT.JPG",
+          "age": 32,
+          "nationality": "American",
+          "genre": "Pop"
+      },
+      {
+          "id": 6,
+          "name": "Kendrick Lamar",
+          "imageLink": "https://variety.com/wp-content/uploads/2022/04/Kendrick-Lamar.jpg?w=1000",
+          "age": 35,
+          "nationality": "American",
+          "genre": "Hip-Hop"
+      },
+      {
+          "id": 7,
+          "name": "Ariana Grande",
+          "imageLink": "https://cdn.britannica.com/92/211792-050-E764F875/American-singer-Ariana-Grande-2018.jpg",
+          "age": 29,
+          "nationality": "American",
+          "genre": "Pop"
+      },
+      {
+          "id": 8,
+          "name": "Justin Bieber",
+          "imageLink": "https://cdn.britannica.com/82/182082-050-C006C642/Justin-Bieber-2013.jpg",
+          "age": 28,
+          "nationality": "Canadian",
+          "genre": "Pop"
+      },
+      {
+          "id": 9,
+          "name": "Shakira",
+          "imageLink": "https://s-cdn.sportbox.ru/images/styles/1200-auto/fp_fotos/a8/f5/7095802a254577904357b1e3b56fc5ec629b87d4e779f284159316.jpg",
+          "age": 45,
+          "nationality": "Colombian",
+          "genre": "Pop"
+      },
+      {
+          "id": 10,
+          "name": "Ferman Akgul",
+          "imageLink": "https://cdn.karar.com/news/1330422.jpg",
+          "age": 43,
+          "nationality": "Turkish",
+          "genre": "Rock/Alternative Rock"
+      }
   ]
 }
