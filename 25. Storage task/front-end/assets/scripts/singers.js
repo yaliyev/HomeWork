@@ -222,7 +222,7 @@ searchInput.addEventListener('keyup', function () {
   let resultData = singers.filter((singer) => singer.name.toLowerCase().indexOf(this.value) > -1);
 
   if(resultData.length == 0){
-    singerCards.innerHTML = "<div class='col-12' style='text-align:center;'>NOT FOUND ANY DATA</div>";
+    singerCards.innerHTML = "<div class='col-12' style='text-align:center;color:red;font-size:40px;'>NOT FOUND ANY DATA</div>";
   }else{
     insertSingerCards(true, resultData);
   }
