@@ -14,3 +14,7 @@
     background-color: #DC3545 !important;
     color: white !important;
 }
+.edit-btn:hover{
+    background-color: #FFC185 !important;
+    color: white !important;
+}

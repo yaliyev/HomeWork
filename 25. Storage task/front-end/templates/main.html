@@ -66,10 +66,15 @@
     <main>
         <section>
             <div class="row justify-content-center py-3">
+                
                 <div class="col-10">
+                    
                     <div class="row justify-content-center">
                         <div class="col-6">
                             <input id="search-singer" type="text" placeholder="search singer" class="form-control">
+                        </div>
+                        <div class="col-1">
+                            <button id="add-singer" class="btn btn-success">Add singer</button>
                         </div>
                     </div>
                     <div class="row justify-content-center my-4">
@@ -98,7 +103,7 @@
                                     <button class="border border-primary  rounded bg-light text-primary  px-3 py-1 detail-btn">Detail</button>
                                     <button class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 delete-btn"><i  class="fa-solid fa-trash"></i></button>
                                     <button class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 favourite-btn"><i class="fa-regular fa-heart"></i></button>
-
+                                    <button class="border border-warning  rounded bg-light text-warning  px-3 py-1 mx-1 edit-btn"><i class="fa-regular fa-pen-to-square"></i></button>
                                   </div>
                                 </div>
                               </div>
@@ -176,6 +181,7 @@
 
     <!-- Data is ready for retrieving :-) Elnur and Gurban Teacher get ready for magnificent show demonstrated by Yagub -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js" integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    <!-- <script type="module" src="../assets/scripts/utils/test.js"></script> -->
    <script type="module" src="../assets/scripts/singers.js"></script>
 </body>
