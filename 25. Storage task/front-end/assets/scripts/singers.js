@@ -1,4 +1,5 @@
 import { getSingersData } from './requests/singersRequests.js';
+import { increaseWishListElementsCount,decreaseWishListElementsCount } from './header.js';
 
 let favouritesStr = localStorage.getItem("favorites");
 
@@ -21,6 +22,7 @@ let searchInput = document.getElementById('search-singer');
 let sortByNameButton = document.getElementById('sort-by-name');
 
 let addSingerButton = document.getElementById('add-singer');
+
 
 
 async function insertDataToArray() {
@@ -97,7 +99,7 @@ function insertSingerCards(searchMode = false, searchArr) {
           deleteSinger(singer.id, i);
           Swal.fire(
             'Deleted!',
-            'Your singer has been deleted.',
+            'Singer has been deleted.',
             'success'
           )
         }
@@ -125,6 +127,7 @@ function insertSingerCards(searchMode = false, searchArr) {
         favourites.push({ id: singer.id });
         localStorage.setItem("favorites", JSON.stringify(favourites));
         this.children[0].classList.replace("fa-regular", "fa-solid");
+        increaseWishListElementsCount();
       } else {
         Swal.fire({
           position: 'center',

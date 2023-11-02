@@ -1,4 +1,5 @@
 import { getSingersData } from './requests/singersRequests.js';
+import { increaseWishListElementsCount,decreaseWishListElementsCount } from './header.js';
 
 let favouritesStr = localStorage.getItem("favorites");
 
@@ -68,9 +69,15 @@ async function insertFavouritesToTable(afterStart = false) {
                     confirmButtonText: 'Yes, delete it!'
                   }).then((result)=>{
                     if(result.isConfirmed){
+                        Swal.fire(
+                            'Deleted!',
+                            'Singer has been deleted from adorable musicians list.',
+                            'success'
+                          )
                         favourites.splice(i,1);
                         localStorage.setItem("favorites",JSON.stringify(favourites));
                         insertFavouritesToTable(true);
+                        decreaseWishListElementsCount();
                     }
                   })
 
