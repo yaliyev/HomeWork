@@ -1,6 +1,16 @@
 import { getSingersData } from './requests/singersRequests.js';
 
+let favouritesStr = localStorage.getItem("favorites");
+
+
+
 let singers = [];
+
+let favourites = [];
+
+if(favouritesStr != null){
+  favourites = JSON.parse(favouritesStr); 
+}
 
 let singerCards = document.getElementById('singer-cards');
 
@@ -91,6 +101,37 @@ function insertSingerCards(searchMode = false, searchArr) {
            
     });
 
+    favouriteButton.addEventListener('click',function(){
+         let elementInFavourites = favourites.find( (element)=>{
+           return element.id === singer.id;
+         });
+
+         if(elementInFavourites == undefined){
+            // allow to Add
+
+
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: `${singer.name} added to favourites`,
+              showConfirmButton: false,
+              timer: 1500
+            });
+
+            favourites.push({id: singer.id});
+            localStorage.setItem("favorites",JSON.stringify(favourites));
+             this.children[0].classList.replace("fa-regular","fa-solid");
+         }else{
+          Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: `${singer.name} is already in favourites`,
+            showConfirmButton: false,
+            timer: 1500
+          });
+         }
+    });
+
     editButton.addEventListener('click', function () {
       Swal.fire({
         title: '<strong>Edit Singer</strong>',
@@ -123,8 +164,11 @@ function insertSingerCards(searchMode = false, searchArr) {
         cancelButtonText:
           '<i class="fa fa-thumbs-down"></i>',
         cancelButtonAriaLabel: 'Thumbs down'
-      }).then(() => {
-        editSinger(singer.id,i);
+      }).then((result) => {
+        if(result.isConfirmed){
+          editSinger(singer.id,i);
+        }
+       
       });
       showSingerValuesInEdit(i);
     });
@@ -134,6 +178,15 @@ function insertSingerCards(searchMode = false, searchArr) {
     deleteButton.innerHTML = `<i  class="fa-solid fa-trash"></i>`;
     favouriteButton.innerHTML = `<i class="fa-regular fa-heart"></i>`;
     editButton.innerHTML = `<i class="fa-regular fa-pen-to-square"></i>`;
+
+
+    let isInFavouritesElement = favourites.find((element)=>{
+      return element.id === singer.id;
+    });
+
+    if(isInFavouritesElement != undefined){
+      favouriteButton.children[0].classList.replace("fa-regular","fa-solid");
+    }
 
     cardTitle.innerText = `${singer.name}`;
     cardText.innerHTML = `${singer.name} is <strong>${singer.nationality}</strong>`;
@@ -205,8 +258,11 @@ addSingerButton.addEventListener('click', () => {
     cancelButtonText:
       '<i class="fa fa-thumbs-down"></i>',
     cancelButtonAriaLabel: 'Thumbs down'
-  }).then(() => {
-    addSinger();
+  }).then((result) => {
+    if(result.isConfirmed){
+      addSinger();
+    }
+   
   })
 });
 
