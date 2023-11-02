@@ -69,6 +69,28 @@ function insertSingerCards(searchMode = false, searchArr) {
       window.location.href = `detail.html?id=${singer.id}`;
     });
 
+    deleteButton.addEventListener('click',function(){
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          deleteSinger(singer.id,i);     
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          )
+        }
+      })
+           
+    });
+
     editButton.addEventListener('click', function () {
       Swal.fire({
         title: '<strong>Edit Singer</strong>',
@@ -285,6 +307,20 @@ async function editSinger(id, index) {
 
 
 
+}
+
+async function deleteSinger(id,index){
+
+  await fetch(`http://localhost:3000/singers/${id}`,{
+    method:'DELETE'
+  }).then((response)=>{
+     if(response.ok){
+        singers.splice(index,1);
+     }
+  });
+
+
+   
 }
 
 function showSingerValuesInEdit(index) {

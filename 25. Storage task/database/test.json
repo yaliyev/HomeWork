@@ -419,7 +419,7 @@
       "id": 7,
       "name": "Ariana Grande",
       "imageLink": "https://cdn.britannica.com/92/211792-050-E764F875/American-singer-Ariana-Grande-2018.jpg",
-      "age": 29,
+      "age": "29",
       "nationality": "American",
       "genre": "Pop"
     },
