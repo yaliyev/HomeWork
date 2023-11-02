@@ -69,7 +69,7 @@ function insertSingerCards(searchMode = false, searchArr) {
       window.location.href = `detail.html?id=${singer.id}`;
     });
 
-    editButton.addEventListener('click',function(){
+    editButton.addEventListener('click', function () {
       Swal.fire({
         title: '<strong>Edit Singer</strong>',
         html: `
@@ -79,7 +79,7 @@ function insertSingerCards(searchMode = false, searchArr) {
       </div>
       <div class="form-group">
       <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Age</b> </label>
-      <input type="text" class="form-control" id="" placeholder="Enter Age">
+      <input type="age" class="form-control" id="" placeholder="Enter Age">
     </div>
     <div class="form-group">
     <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Nationality</b> </label>
@@ -97,7 +97,7 @@ function insertSingerCards(searchMode = false, searchArr) {
         focusConfirm: false,
         confirmButtonText:
           'Submit',
-      
+
         cancelButtonText:
           '<i class="fa fa-thumbs-down"></i>',
         cancelButtonAriaLabel: 'Thumbs down'
@@ -151,35 +151,37 @@ searchInput.addEventListener('keyup', function () {
 addSingerButton.addEventListener('click', () => {
   Swal.fire({
     title: '<strong>Add Singer</strong>',
-    html: `
+    html: `    
     <div class="form-group">
     <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Name</b> </label>
-    <input type="text" class="form-control" id="" placeholder="Enter Name">
+    <input type="text" class="form-control" id="add-name" placeholder="Enter Name">
   </div>
   <div class="form-group">
   <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Age</b> </label>
-  <input type="text" class="form-control" id="" placeholder="Enter Age">
+  <input type="age" class="form-control" id="add-age" placeholder="Enter Age">
 </div>
 <div class="form-group">
 <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Nationality</b> </label>
-<input type="text" class="form-control" id="" placeholder="Enter nationality">
+<input type="text" class="form-control" id="add-nationality" placeholder="Enter nationality">
 </div>
 <div class="form-group">
 <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Genre</b> </label>
-<input type="text" class="form-control" id="" placeholder="Enter genre">
+<input type="text" class="form-control" id="add-genre" placeholder="Enter genre">
 </div>
 <div class="form-group">
 <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Image link</b> </label>
-<input type="text" class="form-control" id="" placeholder="Enter Image link">
+<input type="text" class="form-control" id="add-image-link" placeholder="Enter Image link">
 </div>
   `,
     focusConfirm: false,
     confirmButtonText:
       'Submit',
-  
+
     cancelButtonText:
       '<i class="fa fa-thumbs-down"></i>',
     cancelButtonAriaLabel: 'Thumbs down'
+  }).then(() => {
+    addSinger();
   })
 });
 
@@ -200,6 +202,44 @@ sortByNameButton.addEventListener('click', () => {
 })
 
 
+async function addSinger() {
+
+
+  let name = document.getElementById('add-name').value;
+  let age = document.getElementById('add-age').value;
+  let nationality = document.getElementById('add-nationality').value;
+  let genre = document.getElementById('add-genre').value;
+  let imageLink = document.getElementById('add-image-link').value;
+
+  let urlRegex = '(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?';
+
+  if (name.trim().length > 0 && age > 0 && nationality.trim().length > 0 && genre.trim().length > 0 && imageLink.match(urlRegex) != null) {
+    let singer = {
+      name: name,
+      age: age,
+      nationality: nationality,
+      genre: genre,
+      imageLink: imageLink
+    }
+
+    await fetch('http://localhost:3000/singers/', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(singer)
+    }).then(response => {
+      if (response.ok) {
+        singers.push(singer);
+      }
+    })
+  }else{
+    Swal.fire('Add Singer form input data is not valid');
+  }
+
+
+
+}
 
 
 
