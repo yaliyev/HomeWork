@@ -60,6 +60,11 @@ function insertSingerCards(searchMode = false,searchArr){
         favouriteButton.setAttribute("class","border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 favourite-btn");
 
 
+        // elements event listeners
+        detailButton.addEventListener('click',function(){
+           window.location.href = `detail.html?id=${singer.id}`;
+        });
+
         // elements' contents and  adding elements to their parents
         detailButton.innerText = "Detail";
         deleteButton.innerHTML = `<i  class="fa-solid fa-trash"></i>`;
@@ -121,4 +126,6 @@ sortByNameButton.addEventListener('click',()=>{
 
 
 insertDataToArray();
+
+
 
