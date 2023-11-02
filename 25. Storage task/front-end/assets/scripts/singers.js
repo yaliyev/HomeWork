@@ -4,14 +4,26 @@ let singers  = [];
 
 let singerCards = document.getElementById('singer-cards');
 
-async function insertSingerCards(){
+let searchInput = document.getElementById('search-singer');
+
+async function insertDataToArray(){
+    singers = await getSingersData();
+    insertSingerCards();
+}
+
+function insertSingerCards(searchMode = false,searchArr){
     singerCards.innerHTML = "";
 
-    singers = await getSingersData();
+      if(searchMode == false){
+        searchArr = singers;
+      }
+        
+    
+    
 
-    for(let i = 0;i<singers.length;i++){
+    for(let i = 0;i<searchArr.length;i++){
 
-        let singer = singers[i];
+        let singer = searchArr[i];
 
         // creating elements
         let colThree = document.createElement("div");
@@ -79,5 +91,16 @@ async function insertSingerCards(){
     
 }
 
-insertSingerCards();
+searchInput.addEventListener('keyup',function(){
+
+    let resultData = singers.filter( (singer)=>singer.name.toLowerCase().indexOf(this.value) > -1);
+
+    insertSingerCards(true,resultData);
+
+
+});
+
+
+
+insertDataToArray();
 
