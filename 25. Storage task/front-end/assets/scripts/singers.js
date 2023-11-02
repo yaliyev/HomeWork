@@ -6,6 +6,8 @@ let singerCards = document.getElementById('singer-cards');
 
 let searchInput = document.getElementById('search-singer');
 
+let sortByNameButton = document.getElementById('sort-by-name');
+
 async function insertDataToArray(){
     singers = await getSingersData();
     insertSingerCards();
@@ -99,6 +101,22 @@ searchInput.addEventListener('keyup',function(){
 
 
 });
+
+sortByNameButton.addEventListener('click',()=>{
+
+    let resultData = singers.sort(function (a, b) {
+        if (a.name < b.name) {
+          return -1;
+        }
+        if (a.name > b.name) {
+          return 1;
+        }
+        return 0;
+      });
+
+    insertSingerCards(true,resultData);
+
+})
 
 
 
