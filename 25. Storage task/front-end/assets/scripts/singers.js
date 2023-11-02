@@ -75,23 +75,23 @@ function insertSingerCards(searchMode = false, searchArr) {
         html: `
         <div class="form-group">
         <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Name</b> </label>
-        <input type="text" class="form-control" id="" placeholder="Enter Name">
+        <input type="text" class="form-control" id="edit-name" placeholder="Enter Name">
       </div>
       <div class="form-group">
       <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Age</b> </label>
-      <input type="age" class="form-control" id="" placeholder="Enter Age">
+      <input type="age" class="form-control" id="edit-age" placeholder="Enter Age">
     </div>
     <div class="form-group">
     <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Nationality</b> </label>
-    <input type="text" class="form-control" id="" placeholder="Enter nationality">
+    <input type="text" class="form-control" id="edit-nationality" placeholder="Enter nationality">
     </div>
     <div class="form-group">
     <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Genre</b> </label>
-    <input type="text" class="form-control" id="" placeholder="Enter genre">
+    <input type="text" class="form-control" id="edit-genre" placeholder="Enter genre">
     </div>
     <div class="form-group">
     <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Image link</b> </label>
-    <input type="text" class="form-control" id="" placeholder="Enter Image link">
+    <input type="text" class="form-control" id="edit-image-link" placeholder="Enter Image link">
     </div>
       `,
         focusConfirm: false,
@@ -101,7 +101,10 @@ function insertSingerCards(searchMode = false, searchArr) {
         cancelButtonText:
           '<i class="fa fa-thumbs-down"></i>',
         cancelButtonAriaLabel: 'Thumbs down'
-      })
+      }).then(() => {
+        editSinger(singer.id,i);
+      });
+      showSingerValuesInEdit(i);
     });
 
     // elements' contents and  adding elements to their parents
@@ -233,10 +236,71 @@ async function addSinger() {
         singers.push(singer);
       }
     })
-  }else{
+  } else {
     Swal.fire('Add Singer form input data is not valid');
   }
 
+
+
+}
+
+async function editSinger(id, index) {
+
+
+  let editName = document.getElementById('edit-name').value;
+  let editAge = document.getElementById('edit-age').value;
+  let editNationality = document.getElementById('edit-nationality').value;
+  let editGenre = document.getElementById('edit-genre').value;
+  let editImageLink = document.getElementById('edit-image-link').value;
+
+  let urlRegex = '(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?';
+
+  if (editName.trim().length > 0 && editAge > 0 && editNationality.trim().length > 0 && editGenre.trim().length > 0 && editImageLink.match(urlRegex) != null) {
+    let singer = {
+      name: editName,
+      age: editAge,
+      nationality: editNationality,
+      genre: editGenre,
+      imageLink: editImageLink
+    }
+
+    await fetch(`http://localhost:3000/singers/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(singer)
+    }).then(response => {
+      if (response.ok) {
+        singers[index].name = editName;
+        singers[index].age = editAge;
+        singers[index].nationality = editNationality;
+        singers[index].genre = editGenre;
+        singers[index].imageLink = editImageLink;
+      }
+    })
+  } else {
+    Swal.fire('Edit Singer form input data is not valid');
+  }
+
+
+
+}
+
+function showSingerValuesInEdit(index) {
+  let editName = document.getElementById('edit-name');
+  let editAge = document.getElementById('edit-age');
+  let editNationality = document.getElementById('edit-nationality');
+  let editGenre = document.getElementById('edit-genre');
+  let editImageLink = document.getElementById('edit-image-link');
+
+
+
+  editName.value = singers[index].name;
+  editAge.value = singers[index].age;
+  editNationality.value = singers[index].nationality;
+  editGenre.value = singers[index].genre;
+  editImageLink.value = singers[index].imageLink;
 
 
 }

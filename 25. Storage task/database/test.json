@@ -371,7 +371,7 @@
       "id": 1,
       "name": "Adele",
       "imageLink": "https://img-9gag-fun.9cache.com/photo/avA0Nwd_460s.jpg",
-      "age": 33,
+      "age": "33",
       "nationality": "British",
       "genre": "Pop"
     },
@@ -426,8 +426,8 @@
     {
       "id": 8,
       "name": "Justin Bieber",
-      "imageLink": "https://cdn.britannica.com/82/182082-050-C006C642/Justin-Bieber-2013.jpg",
-      "age": 28,
+      "imageLink": "https://phantom-marca.unidadeditorial.es/dfb979964d5768e00f363dfabbf4d9b1/resize/828/f/jpg/assets/multimedia/imagenes/2022/12/23/16717752351785.jpg",
+      "age": "28",
       "nationality": "Canadian",
       "genre": "Pop"
     },
