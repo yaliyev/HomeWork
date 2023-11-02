@@ -370,7 +370,7 @@
         {
             "id": 1,
             "name": "Adele",
-            "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQiCaRQ9mSsnuEU1Oe6sAmDnNC8f5MSsd3yEO3RUtIIauqr9YaW3w_FO1HeABfn",
+            "imageLink": "https://img-9gag-fun.9cache.com/photo/avA0Nwd_460s.jpg",
             "age": 33,
             "nationality": "British",
             "genre": "Pop"
@@ -378,7 +378,7 @@
         {
             "id": 2,
             "name": "Ed Sheeran",
-            "imageLink": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRB_EqNjnzmNNytCgADtDdSyyVrV__mx2XsJVPC0qROnN36NFi1y-567nWX3wkc",
+            "imageLink": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg",
             "age": 31,
             "nationality": "British",
             "genre": "Pop"
@@ -386,7 +386,7 @@
         {
             "id": 3,
             "name": "Beyoncé",
-            "imageLink": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT5d2IeHtJeYj1OjHJWLqx5I1b-Hp2rvmQwzZmN-uMpQo5Ot_OW8VapMzTP9SO5",
+            "imageLink": "https://www.billboard.com/wp-content/uploads/2023/06/Beyonce-RENAISSANCE-WORLD-TOUR-Warsaw-billboard-pro-1260.jpg",
             "age": 40,
             "nationality": "American",
             "genre": "R&B"
@@ -394,7 +394,7 @@
         {
             "id": 4,
             "name": "Bruno Mars",
-            "imageLink": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSXwAHn1QzAKWc473C2_huu4n5XIdcD0o4qZRhbjvNifPFrYe6Bw3L1T_jf4wg5",
+            "imageLink": "https://assets.simpleviewcms.com/simpleview/image/upload/c_limit,q_75,w_1200/v1/crm/lasvegas/bruno_mars_30D1F154-0475-C2D6-E773603CE857E818_30d2dc7f-a6f7-d7de-a706d382f4f5e920.jpg",
             "age": 36,
             "nationality": "American",
             "genre": "Pop"
@@ -402,7 +402,7 @@
         {
             "id": 5,
             "name": "Taylor Swift",
-            "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRRu8PJbNUmPSrVI543OYjUuw4YXD4HES6s1cb7RO26U36EQEevjwZsWCE44Cc",
+            "imageLink": "https://s.france24.com/media/display/4b4dfeae-2504-11ee-922b-005056bf30b7/w:1280/p:4x3/2023-07-17T121826Z_1633687733_RC2O20AIEA3Q_RTRMADP_3_MUSIC-TAYLORSWIFT.JPG",
             "age": 32,
             "nationality": "American",
             "genre": "Pop"
@@ -410,7 +410,7 @@
         {
             "id": 6,
             "name": "Kendrick Lamar",
-            "imageLink": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTYRYB6ADh2xIrlqtKQ0ZQwU99v9rP36t9ob3AIiMfToBngyWfBlUil3yhsKFcR",
+            "imageLink": "https://variety.com/wp-content/uploads/2022/04/Kendrick-Lamar.jpg?w=1000",
             "age": 35,
             "nationality": "American",
             "genre": "Hip-Hop"
@@ -418,7 +418,7 @@
         {
             "id": 7,
             "name": "Ariana Grande",
-            "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO7LCvd_09vajKIamNlkok5rovToQniqD7DIwqp6qMeS6BNMQ3vauguKsqIbcp",
+            "imageLink": "https://cdn.britannica.com/92/211792-050-E764F875/American-singer-Ariana-Grande-2018.jpg",
             "age": 29,
             "nationality": "American",
             "genre": "Pop"
@@ -426,7 +426,7 @@
         {
             "id": 8,
             "name": "Justin Bieber",
-            "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9nfuXa77a6iJX9BvzU_LzFAztuNZ2zK7Y_kWpFZWctbBhNoQHdLZLZKu5ooad",
+            "imageLink": "https://cdn.britannica.com/82/182082-050-C006C642/Justin-Bieber-2013.jpg",
             "age": 28,
             "nationality": "Canadian",
             "genre": "Pop"
@@ -434,7 +434,7 @@
         {
             "id": 9,
             "name": "Shakira",
-            "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSykW3YpW-FAKIy_OQqXF1_Grq6smeHT4YfF4qI6qlLXuzv8ttBdkPi8GnI0PTc",
+            "imageLink": "https://s-cdn.sportbox.ru/images/styles/1200-auto/fp_fotos/a8/f5/7095802a254577904357b1e3b56fc5ec629b87d4e779f284159316.jpg",
             "age": 45,
             "nationality": "Colombian",
             "genre": "Pop"
@@ -442,7 +442,7 @@
         {
             "id": 10,
             "name": "Ferman Akgul",
-            "imageLink": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTmyWxHbGUEaFyRQDx5vrDICwV-eEqgRYk7m_u3hVakor0vvPrXrvMezIQ4NDBc",
+            "imageLink": "https://cdn.karar.com/news/1330422.jpg",
             "age": 43,
             "nationality": "Turkish",
             "genre": "Rock/Alternative Rock"
