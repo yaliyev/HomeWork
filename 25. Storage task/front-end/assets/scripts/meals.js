@@ -10,6 +10,8 @@ let searchInput = document.getElementById("search-meal");
 
 let sortByPriceButton = document.getElementById("sort-by-price");
 
+let addMealButton = document.getElementById('add-meal');
+
 async function insertDataToArray() {
     meals = await getMealsData();
     insertMealCards();
@@ -63,7 +65,7 @@ function insertMealCards(searchMode = false, searchArr) {
         detailButton.setAttribute("class", "border border-primary  rounded bg-light text-primary  px-3 py-1 detail-btn");
         deleteButton.setAttribute("class", "border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 delete-btn");
         editButton.setAttribute("class", "border border-warning  rounded bg-light text-warning  px-3 py-1 mx-1 edit-btn");
-        shoppingButton.setAttribute("class","border border-primary  rounded bg-light text-primary  px-3 py-1 mx-1");
+        shoppingButton.setAttribute("class","border border-primary  rounded bg-light text-primary  px-3 py-1 mx-1 detail-btn");
 
 
         // elements event listeners
@@ -238,6 +240,53 @@ searchInput.addEventListener('keyup', function () {
   
   }
 
+  async function addMeal() {
+
+
+    let name = document.getElementById('add-name').value;
+    let price = document.getElementById('add-price').value;
+    let ingredients = document.getElementById('add-ingredients').value
+    let imageLink = document.getElementById('add-image-link').value;
+  
+    let urlRegex = '(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?';
+  
+    if (name.trim().length > 0 && price > 0 && ingredients.length > 0 && imageLink.match(urlRegex) != null) {
+      
+      let maxId = 0;
+      currentShownMeals.forEach((element) => {
+        if (element.id > maxId)
+          maxId = element.id;
+      });
+
+      let meal = {
+        id: maxId + 1,
+        name: name,
+        price: price,
+        ingredients: ingredients.split(','),
+        imageLink: imageLink
+      }
+  
+      await fetch('http://localhost:3000/meals/', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(meal)
+      }).then(response => {
+        if (response.ok) {
+          meals.push(meal);
+          currentShownMeals.push(meal);
+          insertMealCards(true, currentShownMeals);
+        }
+      })
+    } else {
+      Swal.fire('Add Meal form input data is not valid');
+    }
+  
+  
+  
+  }
+
   async function editMeal(id, index) {
 
 
@@ -294,6 +343,42 @@ searchInput.addEventListener('keyup', function () {
   
   
   }
+
+  addMealButton.addEventListener('click', () => {
+    Swal.fire({
+      title: '<strong>Add Meal</strong>',
+      html: `
+          <div class="form-group">
+          <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Name</b> </label>
+          <input type="text" class="form-control" id="add-name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+        <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Price</b> </label>
+        <input type="age" class="form-control" id="add-price" placeholder="Enter Price">
+      </div>
+      <div class="form-group">
+      <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Ingredients</b> </label>
+      <input type="text" class="form-control" id="add-ingredients" placeholder="Enter ingredients">
+      </div>
+      <div class="form-group">
+      <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Image link</b> </label>
+      <input type="text" class="form-control" id="add-image-link" placeholder="Enter Image link">
+      </div>
+        `,
+      focusConfirm: false,
+      confirmButtonText:
+        'Submit',
+  
+      cancelButtonText:
+        '<i class="fa fa-thumbs-down"></i>',
+      cancelButtonAriaLabel: 'Thumbs down'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        addMeal();
+      }
+  
+    })
+  });
   
 
 insertDataToArray();
