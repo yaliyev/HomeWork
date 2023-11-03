@@ -1,5 +1,5 @@
 
-.detail-btn,.delete-btn,.favourite-btn{
+.detail-btn,.delete-btn,.favourite-btn,.edit-btn{
     transition: 0.3s;
 }
 .detail-btn:hover{

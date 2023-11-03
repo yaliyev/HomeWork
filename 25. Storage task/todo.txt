@@ -6,5 +6,5 @@
 5)Test ucun istifade olunan console.log cixartmaq
 6)Basket page+
 7)Add to basket in meals+
-8)Basket Badge + elave edende 1 vahid artsin
-9)light box sonda sekillere elave etmek olar
+8)Basket Badge  elave edende 1 vahid artsin +
+9)light box sonda sekillere elave etmek olar 

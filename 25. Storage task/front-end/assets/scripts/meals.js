@@ -1,5 +1,5 @@
 import { getMealsData } from './requests/mealsRequests.js';
-import { increaseWishListElementsCount,decreaseWishListElementsCount,increaseBasketElementsCount,decreaseBasketElementsCount } from './header.js';
+import { increaseBasketElementsCount,decreaseBasketElementsCount } from './header.js';
 let basketStr = localStorage.getItem("basket");
 
 
@@ -124,7 +124,8 @@ function insertMealCards(searchMode = false, searchArr) {
     
             basket.push({ id: meal.id });
             localStorage.setItem("basket", JSON.stringify(basket));
-            this.children[0].classList.replace("fa-regular", "fa-solid");
+             this.classList.replace("bg-light","bg-primary");
+             this.children[0].style.color = "white";
              increaseBasketElementsCount();
           } else {
             Swal.fire({
@@ -182,6 +183,14 @@ function insertMealCards(searchMode = false, searchArr) {
         editButton.innerHTML = `<i class="fa-regular fa-pen-to-square"></i>`;
         shoppingButton.innerHTML = '<i class="fa-solid fa-basket-shopping"></i>';
 
+        let isInFavouritesElement = basket.find((element) => {
+          return element.id === meal.id;
+        });
+    
+        if (isInFavouritesElement != undefined) {
+          shoppingButton.classList.replace("bg-light","bg-primary");
+          shoppingButton.children[0].style.color = "white";
+        }
 
         cardTitle.innerText = `${meal.name}`;
         cardText.innerHTML = `Price:<strong> ${meal.price}$</strong> `;

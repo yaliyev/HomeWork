@@ -60,7 +60,7 @@ async function insertFavouritesToTable(afterStart = false) {
             deleteButton.addEventListener('click',function(){
 
                 Swal.fire({
-                    title: 'Are you sure to delete Beyonce from favorites?',
+                    title: `Are you sure to delete ${singer.name} from favorites?`,
                     text: "You won't be able to revert this!",
                     icon: 'warning',
                     showCancelButton: true,
