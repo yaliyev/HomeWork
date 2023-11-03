@@ -23,6 +23,7 @@ nav .nav-logo-box .nav-logo-title{
     color: green;
 }
 nav .nav-menu{
+    padding-left: 0px;
     display: flex;
     list-style-type: none;
     column-gap: 10px;

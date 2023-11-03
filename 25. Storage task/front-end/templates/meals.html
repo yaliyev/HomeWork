@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Page</title>
+    <title>Food page</title>
     <link rel="stylesheet" href="../assets/style/base/reset.css">
     <link rel="stylesheet" href="../assets/style/layout/header.css">
     <link rel="stylesheet" href="../assets/style/components/image-zoomer.css">
@@ -16,7 +17,7 @@
 </head>
 
 <body>
-    
+
     <header>
         <nav>
             <div class="row justify-content-center py-3">
@@ -61,38 +62,53 @@
         </nav>
     </header>
 
+
     <main>
         <section>
             <div class="row justify-content-center py-3">
-                <div class="col-10">
-                    <div id="detail-card-row" class="row justify-content-center">
-                        <!-- <div class="col-5">
-                            <div class="card">
-                                <div class="zoom-box-hidden">
-                                    <img class="card-img-top img-zoom" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQiCaRQ9mSsnuEU1Oe6sAmDnNC8f5MSsd3yEO3RUtIIauqr9YaW3w_FO1HeABfn" alt="Card image cap">
-                                </div>
-                               
-                                <div class="card-body">
-                                    <h5 class="card-title">Adele</h5>   
-                                    <p class="card-text">Adele is <strong>British</strong></p>
-                                    <p class="card-text">AGE: <span>33</span></p>
-                                    <p class="card-text">GENRE: <span>Pop</span></p>
-                                    <button class="border border-primary  rounded bg-light text-primary  px-3 py-1 detail-btn">Home</button>
-                                </div>
-                              </div>
-                        </div> -->
-                    </div>
-                    
 
-                    
+                <div class="col-10">
+
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <input id="search-meal" type="text" placeholder="search meal" class="form-control">
+                        </div>
+                        <div class="col-1">
+                            <button id="add-meal" class="btn btn-success">Add meal</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center my-4">
+                        <div class="col-3">
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    <button id="sort-by-price" class="btn btn-warning">sort by price</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="meal-cards" class="row">
+                        
+
+
+                    </div>
                 </div>
 
             </div>
+
         </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js" integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"
+        integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="../assets/scripts/header.js"></script>
-    <script type="module" src="../assets/scripts/detail.js"></script>
+    <script type="module" src="../assets/scripts/meals.js"></script>
 </body>
 
 </html>

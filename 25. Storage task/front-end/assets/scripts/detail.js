@@ -1,4 +1,5 @@
 import {getSingersData} from './requests/singersRequests.js';
+import { getMealsData } from './requests/mealsRequests.js';
 
 let detailCardRow = document.getElementById('detail-card-row');
 
