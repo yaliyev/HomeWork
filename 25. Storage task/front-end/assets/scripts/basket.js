@@ -7,12 +7,15 @@ let basket = [];
 
 if (basket != null) {
     basket = JSON.parse(basketStr);
+    console.log(basket);
 }
 
 
 let meals = [];
 
 let basketTableData = document.getElementById('basket-table-data');
+
+let totalBasketPriceDisplayElement = document.getElementById('total-basket-price');
 
 async function insertBasketItemsToTable(afterStart = false) {
 
@@ -23,9 +26,9 @@ async function insertBasketItemsToTable(afterStart = false) {
     basketTableData.innerHTML = "";
 
     for (let i = 0; i < basket.length; i++) {
-        let oneOfTheBasketItemsIdObject = basket[i];
+        let oneOfTheBasketItemsObject = basket[i];
 
-        let meal = meals.find((element) => element.id === oneOfTheBasketItemsIdObject.id);
+        let meal = meals.find((element) => element.id === oneOfTheBasketItemsObject.id);
 
         if (meal != undefined) {
             let tr = document.createElement("tr");
@@ -59,14 +62,41 @@ async function insertBasketItemsToTable(afterStart = false) {
 
             imageTd.appendChild(imageElement);
             priceTd.innerText = meal.price;
-            quantityTd.innerText = NaN;
-            totalPriceTd.innerText = NaN;
+            quantityTd.innerText = oneOfTheBasketItemsObject.quantity;
+            totalPriceTd.innerText = meal.price * oneOfTheBasketItemsObject.quantity;
             increaseTd.appendChild(increaseButton);
             decreaseTd.appendChild(decreaseButton);
 
             increaseButton.innerText = "+";
             decreaseButton.innerText = "-";
             deleteButton.innerHTML = `<i  class="fa-solid fa-trash"></i>`;
+
+            increaseButton.addEventListener('click',function(){
+
+                basket[i].quantity = basket[i].quantity + 1;
+                insertBasketItemsToTable(true); 
+                localStorage.setItem("basket",JSON.stringify(basket));
+                totalBasketPriceDisplayElement.innerText = "";
+                calculateTotalBasketPrice();
+                Swal.fire({icon:'success',text:'Item increased'});
+
+            });
+
+            decreaseButton.addEventListener('click',function(){
+
+                if(basket[i].quantity >1){
+                    basket[i].quantity = basket[i].quantity - 1;
+                    insertBasketItemsToTable(true); 
+                    localStorage.setItem("basket",JSON.stringify(basket));
+                    totalBasketPriceDisplayElement.innerText = "";
+                    calculateTotalBasketPrice();
+                    Swal.fire({icon:'success',text:'Item decreased'});
+                }else{
+                    Swal.fire({icon:'error',text:'Item quantity is one'});
+                }
+
+                
+            });
 
 
             deleteButton.addEventListener('click',function(){
@@ -83,7 +113,7 @@ async function insertBasketItemsToTable(afterStart = false) {
                     if(result.isConfirmed){
                         Swal.fire(
                             'Deleted!',
-                            'Singer has been deleted from adorable musicians list.',
+                            'Meal has been deleted from basket.',
                             'success'
                           )
                         basket.splice(i,1);
@@ -122,6 +152,19 @@ async function insertBasketItemsToTable(afterStart = false) {
 
     }
 
+    calculateTotalBasketPrice();
+
+}
+
+function calculateTotalBasketPrice(){
+   for(let i = 0; i < basket.length; i++){
+      let meal = meals.find(element=>{
+          return element.id == basket[i].id;
+      });
+
+      console.log(Number(meal.price));
+      totalBasketPriceDisplayElement.innerText = Number(totalBasketPriceDisplayElement.innerText) + (meal.price * basket[i].quantity) ; 
+   }
 }
 
 insertBasketItemsToTable();

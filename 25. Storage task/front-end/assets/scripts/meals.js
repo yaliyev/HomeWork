@@ -122,7 +122,7 @@ function insertMealCards(searchMode = false, searchArr) {
               timer: 1500
             });
     
-            basket.push({ id: meal.id });
+            basket.push({ id: meal.id , quantity: 1 });
             localStorage.setItem("basket", JSON.stringify(basket));
              this.classList.replace("bg-light","bg-primary");
              this.children[0].style.color = "white";
