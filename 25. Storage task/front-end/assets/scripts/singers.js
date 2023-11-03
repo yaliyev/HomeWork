@@ -81,7 +81,7 @@ function insertSingerCards(searchMode = false, searchArr) {
 
     // elements event listeners
     detailButton.addEventListener('click', function () {
-      window.location.href = `detail.html?id=${singer.id}`;
+      window.location.href = `detail.html?id=${singer.id}&object=singer`;
     });
 
     deleteButton.addEventListener('click', function () {
