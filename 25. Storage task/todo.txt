@@ -1,0 +1,10 @@
+-----TASKS------
+1)Add Meal +
+2)Meal details +
+3)Images which have better resolutions
+4)Search inputlari auto complete sondurulmesi
+5)Test ucun istifade olunan console.log cixartmaq
+6)Basket page+
+7)Add to basket in meals+
+8)Basket Badge + elave edende 1 vahid artsin
+9)light box sonda sekillere elave etmek olar

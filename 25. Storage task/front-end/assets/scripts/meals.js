@@ -1,4 +1,14 @@
 import { getMealsData } from './requests/mealsRequests.js';
+import { increaseWishListElementsCount,decreaseWishListElementsCount,increaseBasketElementsCount,decreaseBasketElementsCount } from './header.js';
+let basketStr = localStorage.getItem("basket");
+
+
+let basket = [];
+
+if (basketStr != null) {
+    basket = JSON.parse(basketStr);
+}
+
 
 let meals = [];
 
@@ -94,6 +104,37 @@ function insertMealCards(searchMode = false, searchArr) {
                 }
             })
 
+        });
+
+        shoppingButton.addEventListener('click', function () {
+          let elementInBasket = basket.find((element) => {
+            return element.id === meal.id;
+          });
+          if (elementInBasket == undefined) {
+            // allow to Add
+    
+    
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: `${meal.name} added to basket`,
+              showConfirmButton: false,
+              timer: 1500
+            });
+    
+            basket.push({ id: meal.id });
+            localStorage.setItem("basket", JSON.stringify(basket));
+            this.children[0].classList.replace("fa-regular", "fa-solid");
+             increaseBasketElementsCount();
+          } else {
+            Swal.fire({
+              position: 'center',
+              icon: 'error',
+              title: `${meal.name} is already in basket`,
+              showConfirmButton: false,
+              timer: 1500
+            });
+          }
         });
 
      
