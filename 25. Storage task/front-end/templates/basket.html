@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist Page</title>
+    <title>Basket Page</title>
     <link rel="stylesheet" href="../assets/style/base/reset.css">
     <link rel="stylesheet" href="../assets/style/layout/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    
+
     <header>
         <nav>
             <div class="row justify-content-center py-3">
@@ -31,14 +31,18 @@
                             <div class="row">
                                 <div class="col-7">
                                     <ul class="nav-menu">
-                                        <li class="nav-menu-item"><a href="main.html" class="nav-menu-item-hyperlink">Singers</a>
+                                        <li class="nav-menu-item"><a href="main.html"
+                                                class="nav-menu-item-hyperlink">Singers</a>
                                         </li>
-                                        <li class="nav-menu-item"><a href="meals.html" class="nav-menu-item-hyperlink">Meals</a>
+                                        <li class="nav-menu-item"><a href="meals.html"
+                                                class="nav-menu-item-hyperlink">Meals</a>
                                         </li>
-                                        <li class="nav-menu-item"><a href="basket.html" class="nav-menu-item-hyperlink">Basket</a>
+                                        <li class="nav-menu-item"><a href="basket.html"
+                                                class="nav-menu-item-hyperlink">Basket</a>
                                         </li>
                                         <li class="nav-menu-item"><a href="wishlist.html"
-                                                class="nav-menu-item-hyperlink">Wishlist <b><sup id="wishlist-count"></sup></b> </a></li>
+                                                class="nav-menu-item-hyperlink">Wishlist <b><sup
+                                                        id="wishlist-count"></sup></b> </a></li>
                                     </ul>
                                 </div>
                                 <div class="col-5">
@@ -66,32 +70,58 @@
                 <div class="col-10">
                     <table class="table">
                         <thead class="table-dark">
-                          <tr>
-                            <th scope="col-1">#</th>
-                            <th scope="col-2">Name</th>
-                            <th scope="col-2">Image</th>
-                            <th scope="col-1">Age</th>
-                            <th scope="col-1">Genre</th>
-                            <th scope="col-5">Delete from Favorites</th>
-                          </tr>
+                            <tr>
+                                <th scope="col-1">#</th>
+                                <th scope="col-2">Name</th>
+                                <th scope="col-2">Image</th>
+                                <th scope="col-1">Price</th>
+                                <th scope="col-1">Quantity</th>
+                                <th scope="col-2">Total Price</th>
+                                <th scope="col-1">Increase</th>
+                                <th scope="col-1">Decrease</th>
+                                <th scope="col-1">Remove</th>
+                            </tr>
                         </thead>
                         <tbody id="favourites-table-data">
-                          <!-- <tr>
-                            <th>2</th>
-                            <td>Beyonce</td>
-                            <td class="col-2">
-                                <img style="width: 60%;" src="https://www.billboard.com/wp-content/uploads/2023/06/Beyonce-RENAISSANCE-WORLD-TOUR-Warsaw-billboard-pro-1260.jpg">
-                            </td>
-                            <td>40</td>
-                            <td>R&B</td>
-                            <td>
-                                <button class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 delete-btn"><i  class="fa-solid fa-trash"></i></button>
-                            </td>
-                          </tr> -->
+                            <!-- <tr>
+                                <th>1</th>
+                                <td>Sushi</td>
+                                <td class="col-2">
+                                    <img style="width: 60%;"
+                                        src="https://cardamomandtea.com/wp-content/uploads/2021/04/img_6073d322b9a89.jpg">
+                                </td>
+                                <td>12</td>
+                                <td>3</td>
+                                <td>36</td>
+                                <td>
+                                    <button class="btn btn-success">+</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger">-</button>
+                                </td>
+                                <td>
+                                    <button
+                                        class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 delete-btn"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr> -->
                         </tbody>
-                      </table>
+                    </table>
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="basket-operations-row d-flex flex-row-reverse">
+                        <div class="basket-operations">
+                            <span>TOTAL:</span> <b>NaN</b> <button
+                                class="border border-warning  rounded bg-light text-warning  px-3 py-1 mx-1 edit-btn">Order</button>
+                        </div>
+
+                    </div>
+                   
+                </div>
+            </div>
+
         </section>
     </main>
 
@@ -101,7 +131,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="../assets/scripts/header.js"></script>
-    <script type="module" src="../assets/scripts/wishlist.js"></script>
 </body>
 
 </html>
