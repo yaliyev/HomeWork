@@ -6,6 +6,11 @@ export async function getUsersData(){
     })
     return users;
 };
+
+export async function patchUser(id,user){
+    await axios.patch(`http://localhost:3000/users/${id}`,user);
+}
+
 export async function patchOrder(id,order){
     await axios.patch(`http://localhost:3000/users/${id}`,order);
 }
