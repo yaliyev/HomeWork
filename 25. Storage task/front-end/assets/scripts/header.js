@@ -215,6 +215,7 @@ registerButton.addEventListener('click', function () {
         user.email = inputElements[1].value;
         user.username = inputElements[0].value;
         user.password = inputElements[2].value;
+        user.orders = [];
         user.balance = inputElements[4].value;
 
         users.push(user);
@@ -362,3 +363,5 @@ export function increaseBasketElementsCount() {
 export function decreaseBasketElementsCount() {
   basketCountElement.innerText = Number(basketCountElement.innerText) - 1;
 }
+
+

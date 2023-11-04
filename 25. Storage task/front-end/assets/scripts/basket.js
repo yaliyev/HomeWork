@@ -27,6 +27,7 @@ async function insertBasketItemsToTable(afterStart = false) {
     }
     
     basketTableData.innerHTML = "";
+    totalBasketPriceDisplayElement.innerText = "";
 
     for (let i = 0; i < basket.length; i++) {
         let oneOfTheBasketItemsObject = basket[i];
@@ -119,10 +120,12 @@ async function insertBasketItemsToTable(afterStart = false) {
                             'Meal has been deleted from basket.',
                             'success'
                           )
+                     
                         basket.splice(i,1);
                         localStorage.setItem("basket",JSON.stringify(basket));
                         insertBasketItemsToTable();
                         decreaseBasketElementsCount();
+                            
                     }
                   })
 
@@ -197,6 +200,8 @@ orderButton.addEventListener('click',async function(){
             localStorage.setItem('basket',JSON.stringify(basket));
             insertBasketItemsToTable(true);
             calculateTotalBasketPrice();
+            document.getElementById('basket-count').innerText = 0;
+            
         }else{
             Swal.fire({ icon: 'error', text: 'Balance is not enough for submitting order' });
         }
@@ -236,10 +241,12 @@ orderButton.addEventListener('click',async function(){
             localStorage.setItem('basket',JSON.stringify(basket));
             insertBasketItemsToTable(true);
             calculateTotalBasketPrice();
+            document.getElementById('basket-count').innerText = 0;
+            
         }else{
             Swal.fire({ icon: 'error', text: 'Balance is not enough for submitting order' });
         }
-
+        
     }else{
         Swal.fire({icon:'error',text:'You have to login first'});
     }

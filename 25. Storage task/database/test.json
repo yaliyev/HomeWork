@@ -356,7 +356,7 @@
       "username": "testuser",
       "email": "testuser@gmail.com",
       "password": "test123",
-      "balance": 7.02,
+      "balance": 30,
       "orders": [
         {
           "id": "303",
@@ -367,13 +367,42 @@
           "id": "404",
           "totalPrice": "27.50",
           "orderDate": "Nov 5th 2023, 03:15 pm"
-        },
-        {
-          "id": "405",
-          "totalPrice": "22.98",
-          "orderDate": "November 4th 2023, 1:45 pm"
         }
       ]
+    },
+    {
+      "id": "6",
+      "email": "oktay120@gmail.com",
+      "username": "oktay120",
+      "password": "Oktay123",
+      "orders": [
+        {
+          "id": "1",
+          "totalPrice": "45.96",
+          "orderDate": "November 4th 2023, 9:11 pm"
+        },
+        {
+          "id": "2",
+          "totalPrice": "39.97",
+          "orderDate": "November 4th 2023, 9:16 pm"
+        },
+        {
+          "id": "3",
+          "totalPrice": "23.98",
+          "orderDate": "November 4th 2023, 9:17 pm"
+        },
+        {
+          "id": "4",
+          "totalPrice": "47.97",
+          "orderDate": "November 4th 2023, 9:21 pm"
+        },
+        {
+          "id": "5",
+          "totalPrice": "27.98",
+          "orderDate": "November 4th 2023, 9:36 pm"
+        }
+      ],
+      "balance": 24.13999999999999
     }
   ],
   "singers": [
