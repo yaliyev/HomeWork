@@ -42,6 +42,8 @@ document.querySelector(".nav-logo-box").addEventListener('click', function () {
 
 
 registerButton.addEventListener('click', function () {
+  let validationElements = [];
+  let inputElements = [];
   Swal.fire({
     title: '<strong>User Register</strong>',
     html: `
@@ -77,17 +79,48 @@ registerButton.addEventListener('click', function () {
       'Register',
     showCancelButton: true,
     cancelButtonText:
-    'Close'
+      'Close'
   }).then((result) => {
 
     if (result.isConfirmed) {
+      let result = validationElements.every((element) => {
+        return element.innerText === ''
+      });
+      if (result) {
+        let user = {};
 
+        let maxId = 0;
+        users.forEach((element) => {
+          if (element.id > maxId)
+            maxId = element.id;
+        });
+
+        user.id = (Number(maxId) + 1).toString();
+        user.username = inputElements[0].value;
+        user.password = inputElements[1].value;
+        user.balance = inputElements[4].value;
+        fetch(`http://localhost:3000/users/`, {
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user)
+        });
+        Swal.fire({icon:'success',text:'User has been added'});
+      }
     }
 
   });
-  let container = Swal.getHtmlContainer();
 
+  let container = Swal.getHtmlContainer();
+  Array.from(container.querySelectorAll('[id*="validation"]')).forEach(function (element) {
+    validationElements.push(element);
+  });
+  Array.from(container.querySelectorAll('[id|="register"]')).forEach(function (element) {
+    inputElements.push(element);
+  })
   container.querySelector('#register-username').addEventListener('keyup', function () {
+
     let user = users.find((element) => {
       if (element.username.toLowerCase() === this.value.toLowerCase()) {
         document.querySelector('#username-validation-result').innerText = 'username is already exists';
@@ -102,9 +135,11 @@ registerButton.addEventListener('click', function () {
     if (user == undefined) {
       document.querySelector('#username-validation-result').innerText = '';
       if (this.value.match('^[A-Za-z0-9]{3,}$') == null) {
+
         document.querySelector('#username-validation-result').innerText = 'username must be minimum 3 characters';
       }
       if (this.value.trim().length == 0) {
+
         document.querySelector('#username-validation-result').innerText = 'username is required';
       }
 
@@ -115,6 +150,7 @@ registerButton.addEventListener('click', function () {
   container.querySelector('#register-email').addEventListener('keyup', function () {
     let user = users.find((element) => {
       if (element.email.toLowerCase() === this.value.toLowerCase()) {
+
         document.querySelector('#email-validation-result').innerText = 'email is already exists';
         return element;
       }
@@ -123,6 +159,7 @@ registerButton.addEventListener('click', function () {
     if (user == undefined) {
       document.querySelector('#email-validation-result').innerText = '';
       if (this.value.match('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$') == null) {
+
         document.querySelector('#email-validation-result').innerText = 'email format is incorrect';
       }
 
@@ -134,9 +171,11 @@ registerButton.addEventListener('click', function () {
 
     document.querySelector('#password-validation-result').innerText = '';
     if (this.value.match('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,}') == null) {
+
       document.querySelector('#password-validation-result').innerText = 'password must be minimum 5 characters[aA9]';
     }
     if (this.value.trim().length == 0) {
+
       document.querySelector('#password-validation-result').innerText = 'password is required';
     }
 
@@ -149,9 +188,11 @@ registerButton.addEventListener('click', function () {
 
     document.querySelector('#confirm-password-validation-result').innerText = '';
     if (this.value != container.querySelector('#register-password').value) {
+
       document.querySelector('#confirm-password-validation-result').innerText = 'confirm password & password are not the same';
     }
     if (this.value.trim().length == 0) {
+
       document.querySelector('#confirm-password-validation-result').innerText = 'confirm password is required';
     }
   });
@@ -160,9 +201,11 @@ registerButton.addEventListener('click', function () {
 
     document.querySelector('#balance-validation-result').innerText = '';
     if (Number(this.value) < 0) {
+
       document.querySelector('#balance-validation-result').innerText = 'balance must be positive';
     }
-    if(this.value.trim().length == 0) {
+    if (this.value.trim().length == 0) {
+
       document.querySelector('#balance-validation-result').innerText = 'balance is required';
     }
   });
