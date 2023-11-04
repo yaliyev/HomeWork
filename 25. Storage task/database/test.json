@@ -377,9 +377,9 @@
   "singers": [
     {
       "id": 1,
-      "name": "Adele",
+      "name": "efgwfwefgwf",
       "imageLink": "https://img-9gag-fun.9cache.com/photo/avA0Nwd_460s.jpg",
-      "age": 33,
+      "age": "33",
       "nationality": "British",
       "genre": "Pop"
     },
@@ -393,7 +393,7 @@
     },
     {
       "id": 4,
-      "name": "Bruno Mars",
+      "name": "efwe",
       "imageLink": "https://assets.simpleviewcms.com/simpleview/image/upload/c_limit,q_75,w_1200/v1/crm/lasvegas/bruno_mars_30D1F154-0475-C2D6-E773603CE857E818_30d2dc7f-a6f7-d7de-a706d382f4f5e920.jpg",
       "age": "36",
       "nationality": "American",
@@ -401,9 +401,9 @@
     },
     {
       "id": 5,
-      "name": "Taylor Swift",
+      "name": "weffwefwe",
       "imageLink": "https://s.france24.com/media/display/4b4dfeae-2504-11ee-922b-005056bf30b7/w:1280/p:4x3/2023-07-17T121826Z_1633687733_RC2O20AIEA3Q_RTRMADP_3_MUSIC-TAYLORSWIFT.JPG",
-      "age": 32,
+      "age": "32",
       "nationality": "American",
       "genre": "Pop"
     },
@@ -417,9 +417,9 @@
     },
     {
       "id": 7,
-      "name": "Ariana Grande",
+      "name": "wefwefwef",
       "imageLink": "https://cdn.britannica.com/92/211792-050-E764F875/American-singer-Ariana-Grande-2018.jpg",
-      "age": 29,
+      "age": "29",
       "nationality": "American",
       "genre": "Pop"
     },

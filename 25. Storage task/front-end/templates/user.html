@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist Page</title>
+    <title>Detail Page</title>
     <link rel="stylesheet" href="../assets/style/base/reset.css">
     <link rel="stylesheet" href="../assets/style/layout/header.css">
+    <link rel="stylesheet" href="../assets/style/components/image-zoomer.css">
+    <link rel="stylesheet" href="../assets/style/components/customized-buttons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,6 +16,7 @@
 </head>
 
 <body>
+    
     <header>
         <nav>
             <div class="row justify-content-center py-3">
@@ -67,46 +69,67 @@
 
     <main>
         <section>
-            <div class="row justify-content-center py-5">
+            <div class="row justify-content-center py-3">
                 <div class="col-10">
-                    <table class="table">
-                        <thead class="table-dark">
-                          <tr>
-                            <th scope="col-1">#</th>
-                            <th scope="col-2">Name</th>
-                            <th scope="col-2">Image</th>
-                            <th scope="col-1">Age</th>
-                            <th scope="col-1">Genre</th>
-                            <th scope="col-5">Delete from Favorites</th>
-                          </tr>
-                        </thead>
-                        <tbody id="favourites-table-data">
-                          <!-- <tr>
-                            <th>2</th>
-                            <td>Beyonce</td>
-                            <td class="col-2">
-                                <img style="width: 60%;" src="https://www.billboard.com/wp-content/uploads/2023/06/Beyonce-RENAISSANCE-WORLD-TOUR-Warsaw-billboard-pro-1260.jpg">
-                            </td>
-                            <td>40</td>
-                            <td>R&B</td>
-                            <td>
-                                <button class="border border-danger  rounded bg-light text-danger  px-3 py-1 mx-1 delete-btn"><i  class="fa-solid fa-trash"></i></button>
-                            </td>
-                          </tr> -->
-                        </tbody>
-                      </table>
+                    <div id="user-info-box" class="row">
+                        <div class="col-4">
+                           <div class="border border-secondary rounded p-4 ">
+                           <div id="user-username-box">
+                                
+                              <h5 id="user-username"></h5>
+                                  
+                            </div>
+                            <div id="user-email-box">
+                                
+                                <span>EMAIL:</span> <b id="user-email"></b>
+                                    
+                              </div>
+                            <div class="user-password-box">
+
+                                <span>PASSWORD:</span> <b id="user-password"></b>
+
+                            </div>
+                            <div id="user-balance-box">
+
+                                <span>BALANCE:</span> <b id="user-balance"></b>
+
+                            </div>
+                           </div>
+                        </div>
+                        <div class="col-8">
+                            <h4 class="display-6 text-center text-warning">User Orders</h4>
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col-1">#</th>
+                                        <th scope="col-2">Total Price</th>
+                                        <th scope="col-1">Order Date</th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody id="users-table-data">
+                                    <tr>
+                                        <th>1</th>
+                                       <td>12000</td>
+                                       <td>20th November</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+
+                    
                 </div>
+
             </div>
         </section>
     </main>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"
-        integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js" integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="../assets/scripts/header.js"></script>
-    <script type="module" src="../assets/scripts/wishlist.js"></script>
+    <script type="module" src="../assets/scripts/user.js"></script>
 </body>
 
 </html>

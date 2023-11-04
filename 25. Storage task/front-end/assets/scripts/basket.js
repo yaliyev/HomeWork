@@ -17,6 +17,8 @@ let basketTableData = document.getElementById('basket-table-data');
 
 let totalBasketPriceDisplayElement = document.getElementById('total-basket-price');
 
+let orderButton = document.getElementById('order-button');
+
 async function insertBasketItemsToTable(afterStart = false) {
 
     if(afterStart == false){
@@ -155,6 +157,20 @@ async function insertBasketItemsToTable(afterStart = false) {
     calculateTotalBasketPrice();
 
 }
+
+orderButton.addEventListener('click',function(){
+    let userStrSession = sessionStorage.getItem('user');
+    let userStrLocal = localStorage.getItem('user');
+
+    if(userStrSession != null && userStrSession != 'null'){
+        console.log(`session: ${userStrSession}`);
+    }else if(userStrLocal != null && userStrLocal != 'null'){
+        console.log(`local: ${userStrLocal}`);
+    }else{
+        Swal.fire({icon:'error',text:'You have to login first'});
+    }
+
+});
 
 function calculateTotalBasketPrice(){
    for(let i = 0; i < basket.length; i++){

@@ -45,9 +45,13 @@
                                     </ul>
                                 </div>
                                 <div class="col-5">
-                                    <div class="d-flex user-operations-buttons">
+                                    <div id="user-operations-buttons" class="d-none user-operations-buttons">
                                         <button id="user-login-button" class="btn btn-light mx-2">Login</button>
                                         <button id="user-register-button" class="btn btn-dark mx-2">Register</button>
+                                    </div>
+                                    <div id="user-loggedin-operations-buttons" class="d-none user-loggedin-operations-buttons">
+                                        <button id="user-account-button" class="btn btn-light mx-2">User</button>
+                                        <button id="user-logout-button" class="btn btn-dark mx-2"> <i class="fa-solid fa-right-from-bracket"></i> </button>
                                     </div>
 
                                 </div>
@@ -112,8 +116,8 @@
                 <div class="col-10">
                     <div class="basket-operations-row d-flex flex-row-reverse">
                         <div class="basket-operations">
-                            <span>TOTAL:</span> <b id="total-basket-price"></b> <button
-                                class="border border-warning  rounded bg-light text-warning  px-3 py-1 mx-1 edit-btn">Order</button>
+                            <span>TOTAL:</span> <b id="total-basket-price"></b>
+                             <button id="order-button" class="border border-warning  rounded bg-light text-warning  px-3 py-1 mx-1 edit-btn">Order</button>
                         </div>
 
                     </div>

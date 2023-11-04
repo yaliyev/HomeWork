@@ -33,6 +33,7 @@ let userLogoutButton = document.getElementById('user-logout-button');
 
 let isThisSessionStorage = false;
 let isThisLocalStorage = false;
+let currentUserId;
 
 function checkLoggedIn() {
   let userStrSession = sessionStorage.getItem('user');
@@ -45,6 +46,7 @@ function checkLoggedIn() {
         return element;
       }
     });
+    currentUserId = user.id;
     document.getElementById('user-operations-buttons').setAttribute('class', 'd-none user-operations-buttons');
     document.getElementById('user-loggedin-operations-buttons').setAttribute('class', 'd-flex user-operations-buttons');
     document.getElementById('user-loggedin-operations-buttons').children[0].innerText = user.username;
@@ -57,6 +59,7 @@ function checkLoggedIn() {
         return element;
       }
     });
+    currentUserId = user.id;
     document.getElementById('user-operations-buttons').setAttribute('class', 'd-none user-operations-buttons');
     document.getElementById('user-loggedin-operations-buttons').setAttribute('class', 'd-flex user-operations-buttons');
     document.getElementById('user-loggedin-operations-buttons').children[0].innerText = user.username;
@@ -77,6 +80,11 @@ document.querySelector(".nav-logo-box").addEventListener('click', function () {
   window.location.href = "/front-end/templates/main.html";
 });
 
+userAccountButton.addEventListener('click',function(){
+
+   window.location.href = `/front-end/templates/user.html?id=${currentUserId}`;
+})
+
 userLogoutButton.addEventListener('click', function () {
 
   if(isThisLocalStorage){
@@ -90,7 +98,9 @@ userLogoutButton.addEventListener('click', function () {
     'User logout',
     'User quitted the system',
     'success'
-  )
+  ).then(()=>{
+    window.location.href ="./main.html";
+  })
   checkLoggedIn();
 
 
