@@ -3,10 +3,6 @@ let favouritesStr = localStorage.getItem("favorites");
 
 let users = [];
 
-(async () => {
-  users = await getUsersData();
-})();
-
 
 let favourites = [];
 
@@ -32,10 +28,49 @@ let loginButton = document.getElementById('user-login-button');
 
 let registerButton = document.getElementById('user-register-button');
 
+let userAccountButton = document.getElementById('user-account-button');
+let userLogoutButton = document.getElementById('user-logout-button');
+function checkLoggedIn() {
+  let userStr = localStorage.getItem('user');
+  if (userStr != 'null') {
+    userStr = JSON.parse(userStr);
 
+    let user = users.find((element) => {
+      if (element.id == userStr.userID) {
+        return element;
+      }
+    });
+    document.getElementById('user-operations-buttons').setAttribute('class', 'd-none user-operations-buttons');
+    document.getElementById('user-loggedin-operations-buttons').setAttribute('class', 'd-flex user-operations-buttons');
+    document.getElementById('user-loggedin-operations-buttons').children[0].innerText = user.username;
+  } else {
+    document.getElementById('user-loggedin-operations-buttons').setAttribute('class', 'd-none user-operations-buttons');
+    document.getElementById('user-operations-buttons').setAttribute('class', 'd-flex user-operations-buttons');
+
+  }
+
+}
+
+(async () => {
+  users = await getUsersData();
+  checkLoggedIn();
+})();
 
 document.querySelector(".nav-logo-box").addEventListener('click', function () {
   window.location.href = "/front-end/templates/main.html";
+});
+
+userLogoutButton.addEventListener('click', function () {
+
+  localStorage.setItem('user', 'null');
+  Swal.fire(
+    'User logout',
+    'User quitted the system',
+    'success'
+)
+  checkLoggedIn();
+
+
 });
 
 loginButton.addEventListener('click', function () {
@@ -65,22 +100,23 @@ loginButton.addEventListener('click', function () {
       let loginUsername = document.getElementById('login-username').value;
       let loginPassword = document.getElementById('login-password').value;
 
-      let user = users.find((user)=>{
-        if(user.username == loginUsername && user.password == loginPassword){
+      let user = users.find((user) => {
+        if (user.username == loginUsername && user.password == loginPassword) {
           return user;
         }
       });
 
-      if(user == undefined){
+      if (user == undefined) {
         Swal.fire({ icon: 'error', text: 'Username and Password are wrong' });
-      }else{
-        if(document.getElementById('remember-checkbox').checked){
-          localStorage.setItem("user",JSON.stringify({"isLogged":true,"userID":user.id}));
-        }else{
-          sessionStorage.setItem("user",JSON.stringify({"isLogged":true,"userID":user.id}));
+      } else {
+        if (document.getElementById('remember-checkbox').checked) {
+          localStorage.setItem("user", JSON.stringify({ "isLogged": true, "userID": user.id }));
+        } else {
+          sessionStorage.setItem("user", JSON.stringify({ "isLogged": true, "userID": user.id }));
         }
-        
-        Swal.fire({ icon: 'success', text: 'Logged in'});
+
+        Swal.fire({ icon: 'success', text: 'Logged in' });
+        checkLoggedIn();
       }
 
     }
