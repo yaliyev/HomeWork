@@ -30,20 +30,37 @@ let registerButton = document.getElementById('user-register-button');
 
 let userAccountButton = document.getElementById('user-account-button');
 let userLogoutButton = document.getElementById('user-logout-button');
-function checkLoggedIn() {
-  let userStr = localStorage.getItem('user');
-  if (userStr != 'null') {
-    userStr = JSON.parse(userStr);
 
+let isThisSessionStorage = false;
+let isThisLocalStorage = false;
+
+function checkLoggedIn() {
+  let userStrSession = sessionStorage.getItem('user');
+  let userStrLocal = localStorage.getItem('user');
+  if (userStrSession != 'null' && userStrSession != null) {
+    isThisSessionStorage = true;
+    userStrSession = JSON.parse(userStrSession);
     let user = users.find((element) => {
-      if (element.id == userStr.userID) {
+      if (element.id == userStrSession.userID) {
         return element;
       }
     });
     document.getElementById('user-operations-buttons').setAttribute('class', 'd-none user-operations-buttons');
     document.getElementById('user-loggedin-operations-buttons').setAttribute('class', 'd-flex user-operations-buttons');
     document.getElementById('user-loggedin-operations-buttons').children[0].innerText = user.username;
-  } else {
+  } else if (userStrLocal != 'null' && userStrLocal != null) {
+    isThisLocalStorage = true;
+    userStrLocal = JSON.parse(userStrLocal);
+
+    let user = users.find((element) => {
+      if (element.id == userStrLocal.userID) {
+        return element;
+      }
+    });
+    document.getElementById('user-operations-buttons').setAttribute('class', 'd-none user-operations-buttons');
+    document.getElementById('user-loggedin-operations-buttons').setAttribute('class', 'd-flex user-operations-buttons');
+    document.getElementById('user-loggedin-operations-buttons').children[0].innerText = user.username;
+  }else {
     document.getElementById('user-loggedin-operations-buttons').setAttribute('class', 'd-none user-operations-buttons');
     document.getElementById('user-operations-buttons').setAttribute('class', 'd-flex user-operations-buttons');
 
@@ -62,12 +79,18 @@ document.querySelector(".nav-logo-box").addEventListener('click', function () {
 
 userLogoutButton.addEventListener('click', function () {
 
-  localStorage.setItem('user', 'null');
+  if(isThisLocalStorage){
+    localStorage.setItem('user', 'null');
+  }else{
+    sessionStorage.setItem('user', 'null');
+  }
+  isThisLocalStorage = false;
+  isThisSessionStorage = false;
   Swal.fire(
     'User logout',
     'User quitted the system',
     'success'
-)
+  )
   checkLoggedIn();
 
 
