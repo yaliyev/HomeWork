@@ -373,7 +373,7 @@
     {
       "id": "6",
       "email": "okaty120@gmail.com",
-      "username": "oktay121",
+      "username": "oktay200",
       "password": "Oktay321",
       "orders": [
         {
@@ -382,7 +382,7 @@
           "orderDate": "November 4th 2023, 10:35 pm"
         }
       ],
-      "balance": 142.03
+      "balance": "142.03"
     }
   ],
   "singers": [

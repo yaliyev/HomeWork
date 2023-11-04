@@ -1,5 +1,6 @@
 import { getUsersData, patchUser } from './requests/usersRequests.js';
 
+
 let users = [];
 
 let usersTableData = document.getElementById('users-table-data');
@@ -140,6 +141,8 @@ userEditButton.addEventListener('click', function () {
                     patchUser(user.id, user);
                     users[userIndex] = user;
                     loadUserData();
+                    document.getElementById('user-account-button').innerText = user.username;
+                    
 
 
                     Swal.fire({
