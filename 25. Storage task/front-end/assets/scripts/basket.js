@@ -1,4 +1,5 @@
-import { getMealsData } from './requests/mealsRequests.js';
+import { getUsersData,patchOrder } from './requests/usersRequests.js';
+import { getMealsData} from './requests/mealsRequests.js';
 import { increaseBasketElementsCount,decreaseBasketElementsCount } from './header.js';
 let basketStr = localStorage.getItem("basket");
 
@@ -158,14 +159,87 @@ async function insertBasketItemsToTable(afterStart = false) {
 
 }
 
-orderButton.addEventListener('click',function(){
+orderButton.addEventListener('click',async function(){
     let userStrSession = sessionStorage.getItem('user');
     let userStrLocal = localStorage.getItem('user');
 
+    let users = await getUsersData();
     if(userStrSession != null && userStrSession != 'null'){
         console.log(`session: ${userStrSession}`);
+         let user = users.find((element)=>{
+            if(element.id === JSON.parse(userStrSession).userID){
+                return element;
+            }
+         })
+        let orders = user.orders;
+        let order = {};
+
+        let maxId = 0;
+        orders.forEach((element) => {
+          if (element.id > maxId)
+            maxId = element.id;
+        });
+        order.id = (Number(maxId)+1).toString();
+        order.totalPrice = totalBasketPriceDisplayElement.innerText;
+        order.orderDate = moment(new Date()).format('MMMM Do YYYY, h:mm a');
+
+        if(Number(user.balance)>=order.totalPrice){
+            user.balance -= order.totalPrice;
+
+            orders.push(order);
+
+            user.orders = orders;
+            
+    
+            patchOrder(JSON.parse(userStrSession).userID,user);
+    
+            basket = [];
+            localStorage.setItem('basket',JSON.stringify(basket));
+            insertBasketItemsToTable(true);
+            calculateTotalBasketPrice();
+        }else{
+            Swal.fire({ icon: 'error', text: 'Balance is not enough for submitting order' });
+        }
+
+        
+
     }else if(userStrLocal != null && userStrLocal != 'null'){
         console.log(`local: ${userStrLocal}`);
+        let user = users.find((element)=>{
+            if(element.id === JSON.parse(userStrLocal).userID){
+                return element;
+            }
+         })
+        let orders = user.orders;
+        let order = {};
+
+        let maxId = 0;
+        orders.forEach((element) => {
+          if (element.id > maxId)
+            maxId = element.id;
+        });
+        order.id = (Number(maxId)+1).toString();
+        order.totalPrice = totalBasketPriceDisplayElement.innerText;
+        order.orderDate = moment(new Date()).format('MMMM Do YYYY, h:mm a');
+
+        if(Number(user.balance)>=order.totalPrice){
+            user.balance -= order.totalPrice;
+
+            orders.push(order);
+
+            user.orders = orders;
+            
+    
+            patchOrder(JSON.parse(userStrLocal).userID,user);
+    
+            basket = [];
+            localStorage.setItem('basket',JSON.stringify(basket));
+            insertBasketItemsToTable(true);
+            calculateTotalBasketPrice();
+        }else{
+            Swal.fire({ icon: 'error', text: 'Balance is not enough for submitting order' });
+        }
+
     }else{
         Swal.fire({icon:'error',text:'You have to login first'});
     }
@@ -173,6 +247,9 @@ orderButton.addEventListener('click',function(){
 });
 
 function calculateTotalBasketPrice(){
+    if(basket.length == 0){
+        totalBasketPriceDisplayElement.innerText = "";
+    }
    for(let i = 0; i < basket.length; i++){
       let meal = meals.find(element=>{
           return element.id == basket[i].id;

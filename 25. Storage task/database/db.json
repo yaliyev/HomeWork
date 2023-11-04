@@ -283,6 +283,7 @@
         {
             "id": "1",
             "username": "yaqub155",
+            "email":"yaqub155@gmail.com",
             "password": "123456",
             "balance": 10,
             "orders": [
@@ -301,6 +302,7 @@
         {
             "id": "2",
             "username": "john_doe",
+            "email":"john_doe@gmail.com",
             "password": "password123",
             "balance": 25,
             "orders": [
@@ -319,6 +321,7 @@
         {
             "id": "3",
             "username": "alice_smith",
+            "email":"alice_smth@gmail.com",
             "password": "p@ssw0rd",
             "balance": 50,
             "orders": [
@@ -332,6 +335,7 @@
         {
             "id": "4",
             "username": "user123",
+            "email":"user123@gmail.com",
             "password": "userpass",
             "balance": 15,
             "orders": [
@@ -350,6 +354,7 @@
         {
             "id": "5",
             "username": "testuser",
+            "email":"testuser@gmail.com",
             "password": "test123",
             "balance": 30,
             "orders": [

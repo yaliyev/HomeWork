@@ -139,6 +139,20 @@
       "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQR9rwLhqQYx08Q8BnaVTCGFIE92O11ywjnuhnMxXrheiGxefb7Gk7B6_xqqn1P"
     },
     {
+      "id": 11,
+      "name": "Chicken Stir-Fry",
+      "price": "13.99",
+      "ingredients": [
+        "Chicken",
+        "Broccoli",
+        "Carrots",
+        "Bell Peppers",
+        "Soy Sauce",
+        "Ginger"
+      ],
+      "imageLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQJFMSs0mrnHYyHyAsosueBJV1asMPaUH-5JG440WLx37YGV0H1WbGLlcDbFaXw"
+    },
+    {
       "id": 12,
       "name": "Sushi",
       "price": "15.99",
@@ -211,7 +225,7 @@
     {
       "id": 17,
       "name": "Pho",
-      "price": "12.99",
+      "price": "11.99",
       "ingredients": [
         "Rice Noodles",
         "Beef Broth",
@@ -263,24 +277,14 @@
         "Honey Mustard Sauce"
       ],
       "imageLink": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQJg_f_7Alzt2jEePRCvfa1o9A3BrS4jqCS7Ycxk3nrvqV4BS89Ue0bDrGspQPf"
-    },
-    {
-      "id": 21,
-      "name": "Dolma",
-      "price": "12",
-      "ingredients": [
-        "Leaves",
-        "Meat"
-      ],
-      "imageLink": "https://cardamomandtea.com/wp-content/uploads/2021/04/img_6073d322b9a89.jpg"
     }
   ],
   "users": [
     {
       "id": "1",
       "username": "yaqub155",
+      "email": "yaqub155@gmail.com",
       "password": "123456",
-      "email": "yaqub227@gmail.com",
       "balance": 10,
       "orders": [
         {
@@ -298,8 +302,8 @@
     {
       "id": "2",
       "username": "john_doe",
+      "email": "john_doe@gmail.com",
       "password": "password123",
-      "email": "john@gmail.com",
       "balance": 25,
       "orders": [
         {
@@ -317,8 +321,8 @@
     {
       "id": "3",
       "username": "alice_smith",
+      "email": "alice_smth@gmail.com",
       "password": "p@ssw0rd",
-      "email": "alice@gmail.com",
       "balance": 50,
       "orders": [
         {
@@ -331,8 +335,8 @@
     {
       "id": "4",
       "username": "user123",
-      "password": "userpass",
       "email": "user123@gmail.com",
+      "password": "userpass",
       "balance": 15,
       "orders": [
         {
@@ -350,9 +354,9 @@
     {
       "id": "5",
       "username": "testuser",
-      "password": "test123",
       "email": "testuser@gmail.com",
-      "balance": 30,
+      "password": "test123",
+      "balance": 7.02,
       "orders": [
         {
           "id": "303",
@@ -363,47 +367,53 @@
           "id": "404",
           "totalPrice": "27.50",
           "orderDate": "Nov 5th 2023, 03:15 pm"
+        },
+        {
+          "id": "405",
+          "totalPrice": "22.98",
+          "orderDate": "November 4th 2023, 1:45 pm"
         }
       ]
-    },
-    {
-      "id": "6",
-      "email": "Yaqub200@gmail.com",
-      "username": "Yaqub200",
-      "password": "12345Aaa",
-      "balance": "80"
     }
   ],
   "singers": [
     {
       "id": 1,
-      "name": "efgwfwefgwf",
+      "name": "Adele",
       "imageLink": "https://img-9gag-fun.9cache.com/photo/avA0Nwd_460s.jpg",
-      "age": "33",
+      "age": 33,
+      "nationality": "British",
+      "genre": "Pop"
+    },
+    {
+      "id": 2,
+      "name": "Ed Sheeran",
+      "imageLink": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg",
+      "age": 31,
       "nationality": "British",
       "genre": "Pop"
     },
     {
       "id": 3,
-      "name": "Beyoncé1",
+      "name": "Beyoncé",
       "imageLink": "https://www.billboard.com/wp-content/uploads/2023/06/Beyonce-RENAISSANCE-WORLD-TOUR-Warsaw-billboard-pro-1260.jpg",
-      "age": "40",
+      "age": 40,
       "nationality": "American",
       "genre": "R&B"
     },
     {
       "id": 4,
-      "name": "efwe",
+      "name": "Bruno Mars",
       "imageLink": "https://assets.simpleviewcms.com/simpleview/image/upload/c_limit,q_75,w_1200/v1/crm/lasvegas/bruno_mars_30D1F154-0475-C2D6-E773603CE857E818_30d2dc7f-a6f7-d7de-a706d382f4f5e920.jpg",
-      "age": "36",
+      "age": 36,
       "nationality": "American",
       "genre": "Pop"
     },
     {
       "id": 5,
-      "name": "weffwefwe",
+      "name": "Taylor Swift",
       "imageLink": "https://s.france24.com/media/display/4b4dfeae-2504-11ee-922b-005056bf30b7/w:1280/p:4x3/2023-07-17T121826Z_1633687733_RC2O20AIEA3Q_RTRMADP_3_MUSIC-TAYLORSWIFT.JPG",
-      "age": "32",
+      "age": 32,
       "nationality": "American",
       "genre": "Pop"
     },
@@ -417,9 +427,9 @@
     },
     {
       "id": 7,
-      "name": "wefwefwef",
+      "name": "Ariana Grande",
       "imageLink": "https://cdn.britannica.com/92/211792-050-E764F875/American-singer-Ariana-Grande-2018.jpg",
-      "age": "29",
+      "age": 29,
       "nationality": "American",
       "genre": "Pop"
     },
@@ -446,14 +456,6 @@
       "age": 43,
       "nationality": "Turkish",
       "genre": "Rock/Alternative Rock"
-    },
-    {
-      "id": 11,
-      "name": "Harun Tekin",
-      "age": "46",
-      "nationality": "Turkish",
-      "genre": "Rock",
-      "imageLink": "https://londonspeakerbureau.com/wp-content/uploads/2023/03/Harun-Tekin-300-300x300.jpeg"
     }
   ]
 }

@@ -47,7 +47,7 @@ function loadUserData(){
             userUsername.innerText = user.username;
             userEmail.innerText = user.email;
             userPassword.innerText = user.password;
-            userBalance.innerText = user.balance;
+            userBalance.innerText = Number(user.balance).toFixed(2);
 
             let orders = user.orders;
 
