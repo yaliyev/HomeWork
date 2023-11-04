@@ -368,9 +368,10 @@
     },
     {
       "id": "6",
-      "username": "jkp",
-      "password": "jkp@gmail.com",
-      "balance": "90"
+      "email": "Yaqub200@gmail.com",
+      "username": "Yaqub200",
+      "password": "12345Aaa",
+      "balance": "80"
     }
   ],
   "singers": [
@@ -392,7 +393,7 @@
     },
     {
       "id": 4,
-      "name": "Bruno Mars1",
+      "name": "Bruno Mars",
       "imageLink": "https://assets.simpleviewcms.com/simpleview/image/upload/c_limit,q_75,w_1200/v1/crm/lasvegas/bruno_mars_30D1F154-0475-C2D6-E773603CE857E818_30d2dc7f-a6f7-d7de-a706d382f4f5e920.jpg",
       "age": "36",
       "nationality": "American",

@@ -38,7 +38,54 @@ document.querySelector(".nav-logo-box").addEventListener('click', function () {
   window.location.href = "/front-end/templates/main.html";
 });
 
+loginButton.addEventListener('click', function () {
+  Swal.fire({
+    title: '<strong>User Login</strong>',
+    html: `
+    <div class="form-group">
+    <label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Username</b> </label>
+    <input  type="text" class="form-control" id="login-username" placeholder="Enter Username">
+<div class="form-group">
+<label style="width:100%;text-align:left;margin-top:10px;margin-bottom:10px;"><b>Password</b> </label>
+<input type="password" class="form-control" id="login-password" placeholder="Enter Password">
+</div>
+<div class="form-check">
+    <input id='remember-checkbox' type="checkbox" class="form-check-input mt-2">
+    <label style="width:100%;text-align:left;margin-top:5px;" class="form-check-label" for="exampleCheck1">Remember Me</label>
+  </div>
+  `,
+    focusConfirm: false,
+    confirmButtonText:
+      'Login',
+    showCancelButton: true,
+    cancelButtonText:
+      'Close'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      let loginUsername = document.getElementById('login-username').value;
+      let loginPassword = document.getElementById('login-password').value;
 
+      let user = users.find((user)=>{
+        if(user.username == loginUsername && user.password == loginPassword){
+          return user;
+        }
+      });
+
+      if(user == undefined){
+        Swal.fire({ icon: 'error', text: 'Username and Password are wrong' });
+      }else{
+        if(document.getElementById('remember-checkbox').checked){
+          localStorage.setItem("user",JSON.stringify({"isLogged":true,"userID":user.id}));
+        }else{
+          sessionStorage.setItem("user",JSON.stringify({"isLogged":true,"userID":user.id}));
+        }
+        
+        Swal.fire({ icon: 'success', text: 'Logged in'});
+      }
+
+    }
+  });
+});
 
 
 registerButton.addEventListener('click', function () {
@@ -96,9 +143,13 @@ registerButton.addEventListener('click', function () {
         });
 
         user.id = (Number(maxId) + 1).toString();
+        user.email = inputElements[1].value;
         user.username = inputElements[0].value;
-        user.password = inputElements[1].value;
+        user.password = inputElements[2].value;
         user.balance = inputElements[4].value;
+
+        users.push(user);
+
         fetch(`http://localhost:3000/users/`, {
           method: 'POST',
           headers: {
@@ -106,7 +157,7 @@ registerButton.addEventListener('click', function () {
           },
           body: JSON.stringify(user)
         });
-        Swal.fire({icon:'success',text:'User has been added'});
+        Swal.fire({ icon: 'success', text: 'User has been added' });
       }
     }
 

@@ -5,7 +5,7 @@ let basketStr = localStorage.getItem("basket");
 
 let basket = [];
 
-if (basket != null) {
+if (basketStr != null) {
     basket = JSON.parse(basketStr);
     console.log(basket);
 }
