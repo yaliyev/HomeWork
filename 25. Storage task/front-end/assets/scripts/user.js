@@ -48,6 +48,28 @@ function loadUserData(){
             userEmail.innerText = user.email;
             userPassword.innerText = user.password;
             userBalance.innerText = user.balance;
+
+            let orders = user.orders;
+
+            for(let i = 0; i < orders.length;i++){
+
+                let order = orders[i];
+
+                let tr = document.createElement("tr");
+                let idTh = document.createElement('th');
+                let totalPriceTd = document.createElement('td');
+                let orderDateTd = document.createElement('td');
+
+                idTh.innerText = order.id;
+                totalPriceTd.innerText = order.totalPrice;
+                orderDateTd.innerText = order.orderDate;
+
+                tr.appendChild(idTh);
+                tr.appendChild(totalPriceTd);
+                tr.appendChild(orderDateTd);
+
+                usersTableData.appendChild(tr);
+            }
     
     
         }
