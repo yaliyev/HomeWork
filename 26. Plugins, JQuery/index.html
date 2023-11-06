@@ -5,13 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plugins(Yagub Aliyev)</title>
+    <link rel="stylesheet" href="assets/node_modules/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/style/swiper-control.css">
+    <link rel="stylesheet" href="assets/node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
 <body>
 
-<script src="assets/scripts/node_modules/axios/dist/axios.min.js"></script>
-<script type="module" src="assets/scripts/requests.js"></script>
-<script type="module" src="assets/scripts/main.js"></script>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+            <div class="container">
+                <div class="navbar-header">
+                    <h4><a href="" class="text-white text-decoration-none">Football Players</a></h4>
+                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Index</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sliders.html">Sliders</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+<div class="row justify-content-center ">
+    <div class="col-lg-5 col-md-9 col-sm-12">
+        <div class="swiper mt-4">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="https://www.nzherald.co.nz/resizer/sLDj54v6mBmfljZa9s1py-m9cJM=/576x613/filters:focal(1327x18:1903x632)/cloudfront-ap-southeast-2.images.arcpublishing.com/nzme/4B4ALEPEEVD3TN76KTWF43A5ZM.JPG">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://cdn.images.express.co.uk/img/dynamic/67/750x445/1444303.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.daznservices.com/di/library/DAZN_News/ba/96/neymar-ucl-trophy-june2016_1edbi03xlo4nf1phltyhjoos9h.jpg?t=368000067"
+                        alt="">
+                </div>
+                ...
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+
+            <div class="swiper-scrollbar"></div>
+        </div>
+
+    </div>
+</div>
+
+        
+
+
+
+
+
+
+    </main>
+
+
+
+    <script src="assets/node_modules/axios/dist/axios.min.js"></script>
+    <script src="assets/node_modules/swiper/swiper-bundle.js"></script>
+    <script src="assets/scripts/swiper-control.js"></script>
+    <script type="module" src="assets/scripts/requests.js"></script>
+    <script type="module" src="assets/scripts/main.js"></script>
 </body>
 
 </html>
