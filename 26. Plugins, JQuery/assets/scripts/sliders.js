@@ -94,7 +94,7 @@ async function loadFootballerCards(notFetch = false) {
 
 
         var lightboxImage = document.createElement("a");
-        lightboxImage.src = footballer.imageURL;
+        lightboxImage.href = footballer.imageURL;
         lightboxImage.setAttribute("data-lightbox", "roadtrip");
 
 
