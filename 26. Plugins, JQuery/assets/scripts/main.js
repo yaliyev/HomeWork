@@ -1,3 +1,3 @@
 
-import {get,getByID,deleteByID,post,put,patch} from './requests.js';
+import {get,getByID,deleteByID,post,put} from './requests.js';
 

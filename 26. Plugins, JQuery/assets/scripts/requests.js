@@ -7,12 +7,10 @@ export function getByID(id){
 export function deleteByID(id){
     return axios.delete(`https://654961f8dd8ebcd4ab24898a.mockapi.io/sliders/`+id);
 }
-export function post(){
-    return axios.post(`https://654961f8dd8ebcd4ab24898a.mockapi.io/sliders/`);
+export function post(player){
+    return axios.post(`https://654961f8dd8ebcd4ab24898a.mockapi.io/sliders/`,player);
 }
-export function put(id){
-    return axios.put(`https://654961f8dd8ebcd4ab24898a.mockapi.io/sliders/`+id);
+export function put(id,player){
+    return axios.put(`https://654961f8dd8ebcd4ab24898a.mockapi.io/sliders/`+id,player);
 }
-export function patch(id){
-    return axios.patch(`https://654961f8dd8ebcd4ab24898a.mockapi.io/sliders/`+id);
-}
+

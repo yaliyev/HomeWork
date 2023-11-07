@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="assets/node_modules/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="assets/style/swiper-control.css">
     <link rel="stylesheet" href="assets/style/sliders.css">
+    <link rel="stylesheet" href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="assets/node_modules/lightbox2/dist/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+        integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
@@ -38,7 +42,12 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="col">
+                    <button id="add-player-button" class="btn btn-success">Add Player</button>
+                </div>
+            </div>
+            <div id="footballer-cards" class="row">
+                <!-- <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                     <div class="card">
 
                         <a href="https://wallpapersmug.com/download/1920x1080/805296/artwork-lionel-messi.jpg"
@@ -57,45 +66,9 @@
 
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-                    <div class="card">
-                        <a href="https://wallpapersmug.com/download/1920x1080/805296/artwork-lionel-messi.jpg"
-                        data-lightbox="roadtrip">
-
-                        <img src="https://wallpapersmug.com/download/1920x1080/805296/artwork-lionel-messi.jpg"
-                            class="card-img-top" alt="...">
-
-                    </a>
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Card title</h5>
-                            <div class="btn-box d-flex justify-content-between ">
-                                <button class="btn btn-warning">Edit</button>
-                                <button class="btn btn-danger ">Delete</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-                    <div class="card">
-                        <a href="https://wallpapersmug.com/download/1920x1080/805296/artwork-lionel-messi.jpg"
-                            data-lightbox="roadtrip">
-
-                            <img src="https://wallpapersmug.com/download/1920x1080/805296/artwork-lionel-messi.jpg"
-                                class="card-img-top" alt="...">
-
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Card title</h5>
-                            <div class="btn-box d-flex justify-content-between ">
-                                <button class="btn btn-warning">Edit</button>
-                                <button class="btn btn-danger ">Delete</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                </div> -->
+                
+                
             </div>
 
         </div>
@@ -113,8 +86,13 @@
     <script src="assets/node_modules/axios/dist/axios.min.js"></script>
     <script src="assets/node_modules/swiper/swiper-bundle.js"></script>
     <script src="assets/scripts/swiper-control.js"></script>
+    <script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="assets/node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+    integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="assets/scripts/requests.js"></script>
+    <script type="module" src="assets/scripts/sliders.js"></script>
     <script type="module" src="assets/scripts/main.js"></script>
 
     <script>
