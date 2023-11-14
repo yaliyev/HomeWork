@@ -1,14 +1,17 @@
 import TodoList from './todolist';
 import TodoItem from './todoitem';
-const Todo = () => {
+import AddToDo from './addtodo';
+const Todo = ({todos,setTodos}) => {
   return (
     <div className='border my-5 px-5 py-1'>
-     <h4 className='text-center'>ToDoList</h4>
-     <TodoList>
-       <TodoItem>10</TodoItem>
-       <TodoItem>20</TodoItem>
-       <TodoItem>30</TodoItem>
-     </TodoList>
+      <h4 className='text-center'>ToDoList</h4>
+      <AddToDo todos={todos} setTodos={setTodos} />
+      <TodoList>
+        {todos.map((todo,idx)=>{
+          return <TodoItem key={idx}>{todo.description}</TodoItem>
+        })}
+      </TodoList>
+     
     </div>
   )
 }
