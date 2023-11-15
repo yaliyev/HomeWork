@@ -9,6 +9,9 @@ const TodoItem = ({children,todos,setTodos,item}) => {
   }
   function markAsDone(){
     setLiClass('list-group-item text-primary text-decoration-line-through');
+    let arr = [...todos];
+    arr[item].isCompleted = true;
+    setTodos(arr);
   }
   return (
     <li className={liClass}> {children}
