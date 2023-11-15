@@ -5,17 +5,35 @@ const AddToDo = ({todos,setTodos}) => {
     
 
       let toDoItemDescription = document.getElementById('addtodo-input');
-      
-      let toDoItem = {
-        id: Math.trunc(Math.random()*10000),
-        description: toDoItemDescription.value,
-        isCompleted: false,
-        toDoDate: new Date()
+
+      if(toDoItemDescription.value.trim()==''){
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Cannot be empty"
+        });
+      }else if(toDoItemDescription.value.trim().length < 3){
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Should be at least 3 characters"
+        });
       }
-      let arr = [...todos];
-      arr.push(toDoItem);
-      setTodos(arr);
-      toDoItemDescription.value = '';
+      else{
+        let toDoItem = {
+          id: Math.trunc(Math.random()*10000),
+          description: toDoItemDescription.value,
+          isCompleted: false,
+          toDoDate: new Date()
+        }
+        let arr = [...todos];
+        arr.push(toDoItem);
+        setTodos(arr);
+        toDoItemDescription.value = '';
+
+      }
+      
+      
     
   }
   return (
