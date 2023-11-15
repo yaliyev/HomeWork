@@ -1,5 +1,6 @@
 import Todo from './components/todo';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 function App() {
   const [todos,setTodos] = useState([]);
 
@@ -15,5 +16,10 @@ function App() {
     </>
   )
 }
+
+App.propTypes = {
+  todos: PropTypes.array,
+  setTodos: PropTypes.func
+};
 
 export default App

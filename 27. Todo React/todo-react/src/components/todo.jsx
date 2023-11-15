@@ -1,6 +1,9 @@
 import TodoList from './todolist';
 import TodoItem from './todoitem';
 import AddToDo from './addtodo';
+import PropTypes from 'prop-types';
+
+
 const Todo = ({todos,setTodos}) => {
 
   let searchCount = 0;
@@ -46,5 +49,8 @@ const Todo = ({todos,setTodos}) => {
     </div>
   )
 }
+
+
+
 
 export default Todo

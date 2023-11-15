@@ -1,4 +1,4 @@
-
+import { v4 as uuidv4 } from 'uuid';
 const AddToDo = ({todos,setTodos}) => {
 
   function addTodoItem(){
@@ -21,7 +21,7 @@ const AddToDo = ({todos,setTodos}) => {
       }
       else{
         let toDoItem = {
-          id: Math.trunc(Math.random()*10000),
+          id: uuidv4(),
           description: toDoItemDescription.value,
           isCompleted: false,
           toDoDate: new Date()
