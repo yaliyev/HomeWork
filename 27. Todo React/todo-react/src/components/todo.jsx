@@ -7,8 +7,10 @@ const Todo = ({todos,setTodos}) => {
       <h4 className='text-center'>ToDoList</h4>
       <AddToDo todos={todos} setTodos={setTodos} />
       <TodoList>
-        {todos.map((todo,idx)=>{
-          return <TodoItem key={idx}>{todo.description}</TodoItem>
+        {todos.map((todo,index)=>{
+          return <TodoItem key={todo.id} todos={todos} setTodos={setTodos} item={index} >
+            
+            {todo.description}</TodoItem>
         })}
       </TodoList>
      

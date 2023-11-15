@@ -1,8 +1,21 @@
+import { useState } from 'react';
+const TodoItem = ({children,todos,setTodos,item}) => {
+  const [liClass,setLiClass] = useState('list-group-item text-primary');
 
-
-const TodoItem = ({children}) => {
+  function deleteToDo(){
+    let arr = [...todos];
+    arr.splice(item,1);
+    setTodos(arr);
+  }
+  function markAsDone(){
+    setLiClass('list-group-item text-primary text-decoration-line-through');
+  }
   return (
-    <li className="list-group-item text-center text-primary">{children}</li>
+    <li className={liClass}> {children}
+    <button onClick={()=>{markAsDone()}} className="btn btn-warning mx-3">Mark as done</button>
+     <button onClick={()=>{deleteToDo()}} className="btn btn-danger mx-2">Delete</button>
+
+    </li>
   )
 }
 
