@@ -1,8 +1,23 @@
 import React from 'react'
+import Product from './Product'
 
-const Products = () => {
+const Products = ({products}) => {
   return (
-    <div>Products</div>
+    <table className='table'>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Annual Price</th>
+          <th>Discount Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        {products.map(product=>{
+          return <Product product={product}/>
+        })}
+      </tbody>
+    </table>
   )
 }
 

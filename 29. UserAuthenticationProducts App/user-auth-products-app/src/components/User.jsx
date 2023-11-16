@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Login from './Login'
 import Register from './Register'
-const User = () => {
+const User = ({setUser}) => {
   const [userAction,setUserAction] = useState('login');
   let showenLayout = null;
   if(userAction == 'login'){
-     showenLayout = <Register/>;
+     showenLayout = <Register setUserAction={setUserAction}/>;
   }else{
-    showenLayout = <Login/>;
+    showenLayout = <Login setUser={setUser}/>;
   }
   return (
-    <div>
+    <>
        <div className="row justify-content-center my-3">
       <div className="col-4">
        {
@@ -29,10 +29,8 @@ const User = () => {
       </div>
       
       </div>
-      
-      
-      </div>
-    </div>
+   </div>
+    </>
   )
 }
 

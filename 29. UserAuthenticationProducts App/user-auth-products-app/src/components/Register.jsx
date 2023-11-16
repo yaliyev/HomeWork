@@ -1,14 +1,15 @@
 import React from 'react'
+import Swal from 'sweetalert2'
 import { useRef } from 'react'
-import {register} from '../user-request'
-const Register = () => {
+import {register} from '../httprequests/user-request'
+const Register = ({setUserAction}) => {
 
   let usernameRef = useRef(null);
   let passwordRef = useRef(null);
   let emailRef = useRef(null);
   let isAdminRef = useRef(null);
   
-  function registerUser(e){
+  async function registerUser(e){
     e.preventDefault();
     let username = usernameRef.current.value;
     let password = passwordRef.current.value;
@@ -16,11 +17,24 @@ const Register = () => {
     let isAdmin = isAdminRef.current.value;
 
     let user = {
-      username: username,
+      name: username,
       password: password,
       email: email,
       isAdmin: isAdmin
     }
+
+    await register(user);
+    
+    Swal.fire({
+      title: "Register",
+      text: "User has been registered",
+      icon: "success",
+      timer:1300
+    }).then(()=>{
+      setUserAction('register');
+    })
+
+  
     
   }
  
