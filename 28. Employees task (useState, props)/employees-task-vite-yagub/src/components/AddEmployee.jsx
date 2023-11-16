@@ -44,7 +44,7 @@ const AddEmployee = ({employees,setEmployees,setAverageSalary}) => {
           age: age,
           salary: Number(salary),
           isFired: false,
-          createdAt: moment().format("MMM Do YYYY"),
+          createdAt: moment().format('YYYY-MM-DD HH:mm:ss'),
           updatedAt: `Haven't updated yet`
         }
      let data = [...employees];

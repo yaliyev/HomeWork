@@ -54,6 +54,12 @@ const Employees = () => {
           result = result / employees.length;
           setAverageSalary(result);
         }} className='btn btn-warning mx-2 text-white'>Calculate Average Salary Button</button>
+
+        <button onClick={()=>{
+          let data = [...employees];
+          data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+          setEmployees(data);
+        }} className='btn btn-secondary'>Sort By Date</button>
       </div>
 
       <EmployeeTable>
@@ -150,7 +156,7 @@ const Employees = () => {
                         salary: salary,
                         isFired: isFiredBool,
                         createdAt: employee.createdAt,
-                        updatedAt: moment().format('MMMM Do YYYY, h:mm:ss a')
+                        updatedAt: moment().format('YYYY-MM-DD HH:mm:ss')
                       }
                       let data = [...employees];
                       data[idx] = editEmployee;
