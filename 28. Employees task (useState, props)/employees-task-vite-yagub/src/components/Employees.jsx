@@ -7,11 +7,37 @@ import moment from 'moment';
 const Employees = () => {
   const [employees, setEmployees] = useState([]);
 
-
+  let savedResult = [];
 
   return (
     <div className='m-5'>
+      <div className='d-flex'>
+        <input onChange={(e)=>{
+          let data = [...employees];
+          savedResult = data;
+          let resultAfterSearch= data.filter((employee)=>employee.name.indexOf(e.target.value)> -1);
+          setEmployees(resultAfterSearch);
+
+        }} className='form-control' style={{width:'200px',marginRight:'15px'}} type="text" placeholder='Search Input:' />
       <AddEmployee employees={employees} setEmployees={setEmployees} />
+      <button onClick={()=>{
+         let data = [...employees];
+         let resultAfterFiltering = data.filter((employee)=>employee.isFired);
+         setEmployees(resultAfterFiltering);
+         
+      }} className='btn btn-info mx-2 text-white'>Filter fired employees</button>
+      <button onClick={()=>{
+        let data = [...employees];
+        data.sort((a,b)=>a.salary - b.salary);
+        setEmployees(data);
+      }} className='btn btn-warning mx-2 text-white'>Sort by salary</button>
+      <button onClick={()=>{
+        let data = [...employees];
+        data.sort((a,b)=>a.age - b.age);
+        setEmployees(data);
+      }} className='btn btn-secondary mx-2 text-white'>Sort by age</button>
+      </div>
+      
       <EmployeeTable>
         <thead>
           <EmployeeTableRow>
