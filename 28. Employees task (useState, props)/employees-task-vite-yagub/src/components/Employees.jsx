@@ -3,6 +3,7 @@ import AddEmployee from './AddEmployee';
 import EmployeeTable from './EmployeeTable';
 import EmployeeTableRow from './EmployeeTableRow';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 
 const Employees = () => {
 
@@ -206,6 +207,13 @@ const Employees = () => {
       <p>Avg salary {averageSalary}</p>
     </div>
   )
+}
+
+Employees.propTypes = {
+  employees: PropTypes.array,
+  setEmployees: PropTypes.func,
+  averageSalary: PropTypes.number,
+  setAverageSalary: PropTypes.func
 }
 
 export default Employees
