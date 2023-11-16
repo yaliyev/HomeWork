@@ -2,7 +2,7 @@ import React from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import moment from 'moment';
 
-const AddEmployee = ({employees,setEmployees}) => {
+const AddEmployee = ({employees,setEmployees,setAverageSalary}) => {
 
   function addEmployee(){
     Swal.fire({
@@ -42,7 +42,7 @@ const AddEmployee = ({employees,setEmployees}) => {
           name : name,
           surname: surname,
           age: age,
-          salary: salary,
+          salary: Number(salary),
           isFired: false,
           createdAt: moment().format("MMM Do YYYY"),
           updatedAt: `Haven't updated yet`
@@ -50,6 +50,14 @@ const AddEmployee = ({employees,setEmployees}) => {
      let data = [...employees];
      data.push(employee);
      setEmployees(data);
+
+     let result = 0;
+     data.forEach((employee)=>{
+       result += Number(employee.salary);
+     });
+     result = result / data.length;
+     setAverageSalary(result);
+
       }
     })
   }

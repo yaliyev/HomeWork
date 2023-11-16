@@ -5,39 +5,57 @@ import EmployeeTableRow from './EmployeeTableRow';
 import moment from 'moment';
 
 const Employees = () => {
+
+
+
   const [employees, setEmployees] = useState([]);
+
+  const [averageSalary, setAverageSalary] = useState(0);
+
+
 
   let savedResult = [];
 
   return (
     <div className='m-5'>
       <div className='d-flex'>
-        <input onChange={(e)=>{
+        <input onChange={(e) => {
           let data = [...employees];
           savedResult = data;
-          let resultAfterSearch= data.filter((employee)=>employee.name.indexOf(e.target.value)> -1);
+          let resultAfterSearch = data.filter((employee) => employee.name.indexOf(e.target.value) > -1);
           setEmployees(resultAfterSearch);
 
-        }} className='form-control' style={{width:'200px',marginRight:'15px'}} type="text" placeholder='Search Input:' />
-      <AddEmployee employees={employees} setEmployees={setEmployees} />
-      <button onClick={()=>{
-         let data = [...employees];
-         let resultAfterFiltering = data.filter((employee)=>employee.isFired);
-         setEmployees(resultAfterFiltering);
-         
-      }} className='btn btn-info mx-2 text-white'>Filter fired employees</button>
-      <button onClick={()=>{
-        let data = [...employees];
-        data.sort((a,b)=>a.salary - b.salary);
-        setEmployees(data);
-      }} className='btn btn-warning mx-2 text-white'>Sort by salary</button>
-      <button onClick={()=>{
-        let data = [...employees];
-        data.sort((a,b)=>a.age - b.age);
-        setEmployees(data);
-      }} className='btn btn-secondary mx-2 text-white'>Sort by age</button>
+        }} className='form-control' style={{ width: '200px', marginRight: '15px' }} type="text" placeholder='Search Input:' />
+        <AddEmployee employees={employees} setEmployees={setEmployees} setAverageSalary={setAverageSalary} />
+        <button onClick={() => {
+          let data = [...employees];
+          let resultAfterFiltering = data.filter((employee) => employee.isFired);
+          setEmployees(resultAfterFiltering);
+
+        }} className='btn btn-info mx-2 text-white'>Filter fired employees</button>
+        <button onClick={() => {
+          let data = [...employees];
+          data.sort((a, b) => a.salary - b.salary);
+          setEmployees(data);
+        }} className='btn btn-warning mx-2 text-white'>Sort by salary</button>
+        <button onClick={() => {
+          let data = [...employees];
+          data.sort((a, b) => a.age - b.age);
+          setEmployees(data);
+        }} className='btn btn-secondary mx-2 text-white'>Sort by age</button>
+
+        <button onClick={() => {
+          let result = 0;
+          let data = [...employees];
+          console.log(data);
+          employees.forEach((employee) => {
+            result += employee.salary;
+          });
+          result = result / employees.length;
+          setAverageSalary(result);
+        }} className='btn btn-warning mx-2 text-white'>Calculate Average Salary Button</button>
       </div>
-      
+
       <EmployeeTable>
         <thead>
           <EmployeeTableRow>
@@ -56,12 +74,12 @@ const Employees = () => {
           {employees.map((employee, idx) => {
             let firedEmployee = employee.isFired;
             let resultTd = null;
-            if(firedEmployee == false){
-               resultTd = <td className='text-dark'>{employee.name}</td>;
-            }else{
+            if (firedEmployee == false) {
+              resultTd = <td className='text-dark'>{employee.name}</td>;
+            } else {
               resultTd = <td className='text-danger'>{employee.name}</td>;
             }
-             
+
             return <EmployeeTableRow key={idx}>
               <td>{employee.id}</td>
               {resultTd}
@@ -74,10 +92,10 @@ const Employees = () => {
               <td>
                 <button onClick={() => {
 
-                let data = [...employees];
+                  let data = [...employees];
 
-                data[idx].isFired = true;
-                setEmployees(data);
+                  data[idx].isFired = true;
+                  setEmployees(data);
 
 
                 }} className='btn btn-danger mx-2'>Fire</button>
@@ -101,7 +119,7 @@ const Employees = () => {
   <input id='edit-salary' type='number' value=`+ employee.salary + ` className='form-control' placeholder='Salary:'>
   </div> 
   <div className='form-group' style='margin-top:20px'>
-  <input id='edit-isfired' type='text' value=`+employee.isFired.toString()+ ` className='form-control' placeholder='IsFired:'>
+  <input id='edit-isfired' type='text' value=`+ employee.isFired.toString() + ` className='form-control' placeholder='IsFired:'>
   </div> 
   `,
                     showCloseButton: true,
@@ -118,9 +136,9 @@ const Employees = () => {
                       let isFired = document.getElementById('edit-isfired').value;
                       let isFiredBool;
 
-                      if(isFired == "true"){
+                      if (isFired == "true") {
                         isFiredBool = true;
-                      }else{
+                      } else {
                         isFiredBool = false;
                       }
 
@@ -137,8 +155,16 @@ const Employees = () => {
                       let data = [...employees];
                       data[idx] = editEmployee;
                       setEmployees(data);
+
+                      let result = 0;
+                      data.forEach((employee) => {
+                        result += Number(employee.salary);
+                      });
+                      result = result / data.length;
+                      setAverageSalary(result);
                     }
-                  })}} className='btn btn-warning mx-2'>Edit</button>
+                  })
+                }} className='btn btn-warning mx-2'>Edit</button>
 
                 <button onClick={() => {
                   let allowToDelete = window.confirm(`Do you agree to delete employee?(Do not destroy someone's life)`);
@@ -147,6 +173,14 @@ const Employees = () => {
                     let data = [...employees];
                     data.splice(idx, 1);
                     setEmployees(data);
+                    
+                    let result = 0;
+                    data.forEach((employee) => {
+                      result += Number(employee.salary);
+                    });
+                    result = result / data.length;
+                    setAverageSalary(result);
+
                     Swal.fire({
                       title: "Employee deleted",
                       text: "Do not delete employee again ;-(",
@@ -163,6 +197,7 @@ const Employees = () => {
         </tbody>
 
       </EmployeeTable>
+      <p>Avg salary {averageSalary}</p>
     </div>
   )
 }
