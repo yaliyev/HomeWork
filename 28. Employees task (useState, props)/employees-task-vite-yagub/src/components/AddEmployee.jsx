@@ -15,13 +15,14 @@ const AddEmployee = ({employees,setEmployees}) => {
       <input id='surname' className='form-control ' placeholder='Surname:'>
       </div>
       <div className='form-group' style='margin-top:20px'>
-      <input id='age' className='form-control' placeholder='Age:'>
+      <input id='age' type='number' className='form-control' placeholder='Age:'>
       </div>
       <div className='form-group' style='margin-top:20px'>
-      <input id='salary' className='form-control' placeholder='Salary:'>
+      <input id='salary' type='number' className='form-control' placeholder='Salary:'>
       </div> 
       `,
       showCloseButton: true,
+      showCancelButton: true,
       focusConfirm: false,
       confirmButtonText: `
        Submit
