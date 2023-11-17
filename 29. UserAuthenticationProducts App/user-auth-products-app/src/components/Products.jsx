@@ -11,10 +11,16 @@ const Products = ({products,setProducts,user}) => {
   if(user.isAdmin == 'true'){
     showenAddProductButton =  <AddProduct products={products} setProducts={setProducts}/>;
   }
+
+  function sortProductsByPrice(){
+    let data = [...products];
+    data.sort((a,b)=>a.price - b.price);
+    setProducts(data);
+  }
   return (
     <div className='mt-3'>
       <input placeholder='Search product:' type="text" style={{width:'250px',marginRight:'10px'}} />
-      <button className='btn btn-warning text-white mx-2'>Sort by price</button>
+      <button onClick={()=>{sortProductsByPrice()}} className='btn btn-warning text-white mx-2'>Sort by price</button>
       {showenAddProductButton}
       <table className='table'>
       <thead>
@@ -23,6 +29,7 @@ const Products = ({products,setProducts,user}) => {
           <th>Name</th>
           <th>Annual Price</th>
           <th>Discount Percentage</th>
+          <th>Created At</th>
           <th>Actions</th>
         </tr>
       </thead>
