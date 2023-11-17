@@ -32,7 +32,7 @@ const Login = ({setUser}) => {
         icon: "success",
         timer: 1300
       }).then(()=>{
-        setUser({name: resultUser.name});
+        setUser({name: resultUser.name,isAdmin: resultUser.isAdmin});
       });
       
     }

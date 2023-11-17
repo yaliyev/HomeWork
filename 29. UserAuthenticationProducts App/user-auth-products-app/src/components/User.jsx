@@ -3,7 +3,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Login from './Login'
 import Register from './Register'
 const User = ({setUser}) => {
-  const [userAction,setUserAction] = useState('login');
+  const [userAction,setUserAction] = useState('register');
   let showenLayout = null;
   if(userAction == 'login'){
      showenLayout = <Register setUserAction={setUserAction}/>;

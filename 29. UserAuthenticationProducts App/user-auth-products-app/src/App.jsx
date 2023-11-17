@@ -22,7 +22,7 @@ function App() {
        <>
        <div className="container mt-3">
         <Logout user={user} setUser={setUser} />
-       <Products products={products} setProducts={setProducts}/>
+       <Products user={user} products={products} setProducts={setProducts}/>
        </div>
         
         

@@ -3,7 +3,8 @@ import Swal from 'sweetalert2'
 import moment from 'moment';
 import {addProduct} from '../httprequests/product-request'
 
-const AddProduct = () => {
+
+const AddProduct = ({products,setProducts}) => {
   function addProductModal(){
     Swal.fire({
       title: "<strong>Add Product</strong>",
@@ -28,15 +29,20 @@ const AddProduct = () => {
    let name = document.getElementById('addproduct-name');
    let price = document.getElementById('addproduct-price');
    let discountPercentage = document.getElementById('addproduct-discountpercentage');
-
+let maxId = 0;
+products.forEach((product)=>{
+  if(product.id > maxId){
+    maxId = Number(product.id);
+  }
+})
    let product = {
+    id: maxId + 1,
     name: name.value,
     price: Number(price.value),
     discountPercentage: Number(discountPercentage.value),
     createdAt: moment().format('YYYY-MM-DD HH:mm:ss')
    }
   addProduct(product);
-
   let data = [...products];
   data.push(product);
   setProducts(data);

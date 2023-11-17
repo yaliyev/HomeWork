@@ -6,13 +6,16 @@ import AddProduct from './AddProduct'
 
 
 
-const Products = ({products,setProducts}) => {
-  
+const Products = ({products,setProducts,user}) => {
+  let showenAddProductButton = <></>;
+  if(user.isAdmin == 'true'){
+    showenAddProductButton =  <AddProduct products={products} setProducts={setProducts}/>;
+  }
   return (
     <div className='mt-3'>
       <input placeholder='Search product:' type="text" style={{width:'250px',marginRight:'10px'}} />
       <button className='btn btn-warning text-white mx-2'>Sort by price</button>
-      <AddProduct products={products} setProducts={setProducts}/>
+      {showenAddProductButton}
       <table className='table'>
       <thead>
         <tr>
@@ -24,8 +27,8 @@ const Products = ({products,setProducts}) => {
         </tr>
       </thead>
       <tbody>
-        {products.map(product=>{
-          return <Product key={product.id} product={product}/>
+        {products.map((product,index)=>{
+          return <Product key={index} user={user}  products={products} setProducts={setProducts} index={index}  product={product}/>
         })}
       </tbody>
     </table>

@@ -10,5 +10,8 @@ export async function addProduct(product){
     await axios.post(BASE_URL,product);
 }
 export async function editProduct(id,product){
-    await axios.patch(BASE_URL+id,product);
+    await axios.put(BASE_URL+id,product);
+}
+export async function deleteProduct(id){
+    await axios.delete(BASE_URL+id);
 }

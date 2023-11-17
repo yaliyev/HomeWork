@@ -59,7 +59,7 @@ const Register = ({setUserAction}) => {
           <label className='form-label w-100 text-start' >isAdmin:</label>
           <select ref={isAdminRef} className='form-control'>
             <option value="false">false</option>
-            <option value="false">true</option>
+            <option value="true">true</option>
           </select>
         </div>
         <div className="form-group p-2 d-flex justify-content-center ">
