@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import EditProduct from './EditProduct'
 import {deleteProduct} from '../httprequests/product-request'
 const Product = ({index,product,products,setProducts,user}) => {
@@ -30,5 +31,14 @@ const Product = ({index,product,products,setProducts,user}) => {
     </tr>
   )
 }
+
+Product.propTypes = {
+  index: PropTypes.number,
+  product: PropTypes.object,
+  products: PropTypes.array,
+  setProducts: PropTypes.func,
+  user: PropTypes.object
+}
+
 
 export default Product

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import Swal from 'sweetalert2'
 
 const Logout = ({user,setUser}) => {
@@ -20,6 +21,11 @@ const Logout = ({user,setUser}) => {
     </>
     
   )
+}
+
+Logout.propTypes = {
+  user: PropTypes.object,
+  setUser: PropTypes.func
 }
 
 export default Logout

@@ -1,4 +1,5 @@
 import { useState,useEffect } from 'react'
+import PropTypes from 'prop-types';
 import Products from './components/Products';
 import User from './components/User';
 import Logout from './components/Logout';
@@ -33,6 +34,13 @@ function App() {
       }
     </>
   )
+}
+
+App.propTypes = {
+  user: PropTypes.object,
+  setUser: PropTypes.func,
+  products: PropTypes.array,
+  setProducts: PropTypes.func
 }
 
 export default App

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Login from './Login'
 import Register from './Register'
@@ -32,6 +33,11 @@ const User = ({setUser}) => {
    </div>
     </>
   )
+}
+User.propTypes = {
+  userAction: PropTypes.string,
+  setUserAction: PropTypes.func,
+  showenLayout: PropTypes.element
 }
 
 export default User

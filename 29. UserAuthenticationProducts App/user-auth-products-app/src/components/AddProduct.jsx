@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import Swal from 'sweetalert2'
 import moment from 'moment';
 import {addProduct} from '../httprequests/product-request'
@@ -52,6 +53,11 @@ products.forEach((product)=>{
   return (
     <button onClick={()=>{addProductModal()}} className='btn btn-success'>Add Product</button>
   )
+}
+
+AddProduct.propTypes = {
+  products: PropTypes.array,
+  setProducts: PropTypes.func
 }
 
 export default AddProduct

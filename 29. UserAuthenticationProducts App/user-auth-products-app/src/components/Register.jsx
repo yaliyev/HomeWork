@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import Swal from 'sweetalert2'
 import { useRef } from 'react'
 import {register} from '../httprequests/user-request'
@@ -72,6 +73,10 @@ const Register = ({setUserAction}) => {
       </div>
 
   )
+}
+
+Register.propTypes = {
+   setUserAction: PropTypes.func
 }
 
 export default Register

@@ -1,5 +1,6 @@
 import React from 'react'
 import Swal from 'sweetalert2'
+import PropTypes from 'prop-types';
 import {editProduct} from '../httprequests/product-request'
 const EditProduct = ({index,product,products,setProducts}) => {
   function editProductModal(){
@@ -45,6 +46,13 @@ const EditProduct = ({index,product,products,setProducts}) => {
   return (
     <button onClick={()=>{editProductModal()}}  className='btn btn-warning'>Edit Product</button>
   )
+}
+
+EditProduct.propTypes = {
+  index: PropTypes.number,
+  product: PropTypes.object,
+  products: PropTypes.array,
+  setProducts: PropTypes.func
 }
 
 export default EditProduct

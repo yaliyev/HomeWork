@@ -1,5 +1,6 @@
 import React  from 'react'
 import { useState,useEffect } from 'react'
+import PropTypes from 'prop-types';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Product from './Product'
 import AddProduct from './AddProduct'
@@ -66,5 +67,9 @@ const Products = ({products,setProducts,user}) => {
     </div>
   )
 }
-
+Products.propTypes = {
+  user: PropTypes.object,
+  products: PropTypes.array,
+  setProducts: PropTypes.func
+}
 export default Products
