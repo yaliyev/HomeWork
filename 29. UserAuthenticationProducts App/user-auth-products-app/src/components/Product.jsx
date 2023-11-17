@@ -19,6 +19,7 @@ const Product = ({index,product,products,setProducts,user}) => {
     <tr>
        <td>{product.id}</td>
        <td>{product.name}</td>
+       <td>{product.price}</td>
        <td>{(product.price * (100 - product.discountPercentage)) / 100}</td>
        <td>{product.discountPercentage}</td>
        <td>{product.createdAt}</td>
