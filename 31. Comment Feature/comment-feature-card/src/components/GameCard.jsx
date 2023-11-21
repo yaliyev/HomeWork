@@ -8,14 +8,17 @@ import { CCardText } from '@coreui/react'
 import { CButton } from '@coreui/react'
 const GameCard = ({ game }) => {
   return (
-    <CCard style={{ width: '18rem',margin:'20px' }}>
-      <CCardImage orientation="top" src={game.image} />
+    <CCard className='col-3 m-5'>
+      <CCardImage style={{height:'400px',objectFit:'cover',objectPosition:'0% 0%'}} orientation="top" src={game.image} />
       <CCardBody>
         <CCardTitle>{game.name}</CCardTitle>
         <CCardText style={{ height: '190px', overflow: 'hidden' }}>
           {game.description}
         </CCardText>
+        <div className='d-flex justify-content-center '>
         <CButton href="#">Comment something</CButton>
+        </div>
+        
       </CCardBody>
     </CCard>
   )

@@ -14,9 +14,13 @@ const Games = () => {
   },[])
   return (
     <>
-      {games.map((game,index)=>{
+    <div className='row'>
+    {games.map((game,index)=>{
         return <GameCard key={index} game={game} />
       })}
+
+    </div>
+     
     </>
   )
 }
