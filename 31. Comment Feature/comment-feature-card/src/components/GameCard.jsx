@@ -8,7 +8,7 @@ import { CCardText } from '@coreui/react'
 import { CButton } from '@coreui/react'
 const GameCard = ({ game }) => {
   return (
-    <CCard style={{ width: '18rem' }}>
+    <CCard style={{ width: '18rem',margin:'20px' }}>
       <CCardImage orientation="top" src={game.image} />
       <CCardBody>
         <CCardTitle>{game.name}</CCardTitle>
