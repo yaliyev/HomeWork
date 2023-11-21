@@ -6,7 +6,7 @@ import { CCardBody } from '@coreui/react'
 import { CCardTitle } from '@coreui/react'
 import { CCardText } from '@coreui/react'
 import { CButton } from '@coreui/react'
-const GameCard = ({ game }) => {
+const GameCard = ({  game,openModal,setOpenModal,setCurrentGame,currentGame }) => {
   return (
     <CCard className='col-3 m-5'>
       <CCardImage style={{height:'400px',objectFit:'cover',objectPosition:'0% 0%'}} orientation="top" src={game.image} />
@@ -16,7 +16,7 @@ const GameCard = ({ game }) => {
           {game.description}
         </CCardText>
         <div className='d-flex justify-content-center '>
-        <CButton href="#">Comment something</CButton>
+        <CButton onClick={()=>{ setOpenModal(true);setCurrentGame(currentGame)}}>Comment something</CButton>
         </div>
         
       </CCardBody>
