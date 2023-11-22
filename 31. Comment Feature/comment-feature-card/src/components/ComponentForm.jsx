@@ -3,9 +3,8 @@ import { TextField, Button, Modal, Box, Typography, Rating } from '@mui/material
 import { addComment } from '../api/games_request';
 const ComponentForm = ({ openModal, setOpenModal ,currentGame,openAlert,setOpenAlert}) => {
   const [value, setValue] = useState(0);
-  const commentTextRef = useRef("");
-  const commentStarRef = useRef(0);
-
+  let commentTextRef = useRef("");
+  let commentStarRef = useRef(0);
   function submitComment(e){
     e.preventDefault();
       let commentText = commentTextRef.current.children[1].children[0].value;
