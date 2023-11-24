@@ -22,15 +22,14 @@ async function getData() {
     spinner.style.animationName = 'spin';
     spinner.style.display = 'block';
 
-    let data = await fetch('../assets/db.json')
+    let data = await fetch('http://localhost:3000/books')
         .then(response => {
             return response.json()
         })
         .then((data) => {
             spinner.style.animationName = '';
             spinner.style.display = 'none';
-            books = data.books;
-
+            books = data;
             createBookCards();
         })
 }
