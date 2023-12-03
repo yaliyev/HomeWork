@@ -21,3 +21,7 @@ const productSlice = createSlice({
         
     }
 })
+
+export const {add_product,edit_product,delete_product} = productSlice.actions;
+
+export default productSlice.reducer;

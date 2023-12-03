@@ -25,7 +25,7 @@ const Navbar = () => {
             textDecoration: 'underline',
             cursor: 'pointer'
           }}>
-            <Link style={{ color: 'white' }} to={"/login"}>Login
+            <Link style={{ color: 'white' }} to={"/loginPage"}>Login
              
             </Link>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
             textDecoration: 'underline',
             cursor: 'pointer'
           }}>
-            <Link style={{ color: 'white' }} to={"/register"}>Register
+            <Link style={{ color: 'white' }} to={"/registerPage"}>Register
              
             </Link>
 
