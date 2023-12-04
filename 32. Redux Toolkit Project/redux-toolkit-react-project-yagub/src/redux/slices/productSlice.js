@@ -7,7 +7,7 @@ async function loadData() {
 }
 
 const initialState = {
-    products: loadData()
+    products: []
 }
 
 const productSlice = createSlice({
