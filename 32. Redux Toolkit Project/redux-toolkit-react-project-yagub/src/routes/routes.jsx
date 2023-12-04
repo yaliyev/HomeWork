@@ -1,9 +1,9 @@
-import { useSelector } from 'react-redux';
-import LoginPage from '../pages/LoginPage';
-import Products from '../pages/Products';
+import { useSelector } from 'react-redux'
+import LoginPage from '../pages/LoginPage'
+import Products from '../pages/Products'
 import RegisterPage from '../pages/RegisterPage'
 import UserRoot from '../pages/UserRoot'
-
+import AddProduct from '../pages/AddProduct'
 
 
 export const ROUTES = [
@@ -27,6 +27,9 @@ export const ROUTES = [
             {
                 path:'/products',
                 element:<Products/>
+            },{
+                path:'/addProductPage',
+                element:<AddProduct/>
             }
         ]
     }
